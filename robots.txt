@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gems.tec.br/sitemap.xml

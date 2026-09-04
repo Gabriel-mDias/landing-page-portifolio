@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>G&amp;Ms Soluções Tecnológicas — software sob medida para o seu negócio</title>
+<meta name="description" content="Desenvolvimento de software sob medida para escritórios de advocacia, clínicas multidisciplinares e pequenos e médios negócios que não cabem em uma solução de prateleira.">
+<meta name="author" content="Gabriel Magalhães Dias">
+<link rel="canonical" href="https://gems.tec.br/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="G&amp;Ms Soluções Tecnológicas">
+<meta property="og:title" content="G&amp;Ms Soluções Tecnológicas — software sob medida">
+<meta property="og:description" content="O sistema se adapta ao seu negócio, não o contrário. Software sob medida para advocacia, clínicas e empreendimentos de pequeno e médio porte.">
+<meta property="og:url" content="https://gems.tec.br/">
+<meta property="og:image" content="https://gems.tec.br/assets/img/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/favicon.svg">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#FBF9F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15130F" media="(prefers-color-scheme: dark)">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Spectral:wght@300;400;600&display=swap">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script>
+  // Aplica o tema salvo antes da primeira pintura, evitando o flash de tema errado.
+  try {
+    var t = localStorage.getItem('gems-theme');
+    if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <a class="brand" href="#topo" aria-label="G&amp;Ms Soluções Tecnológicas — início">
+      <span class="brand__mark" aria-hidden="true">&amp;</span>
+      <span class="brand__name">G<span class="brand__amp">&amp;</span>Ms<em>soluções tecnológicas</em></span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Seções do site">
+      <a href="#servicos">Serviços</a>
+      <a href="#segmentos">Para quem</a>
+      <a href="#processo">Como trabalho</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a class="nav__cta" href="#contato">Falar comigo</a>
+    </nav>
+
+    <div class="topbar__tools">
+      <button class="iconbtn" id="theme-toggle" type="button" aria-pressed="false">
+        <span class="iconbtn__label">Tema escuro</span>
+        <svg class="ico ico--sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="4.2"/>
+          <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/>
+        </svg>
+        <svg class="ico ico--moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20 14.2A8.4 8.4 0 0 1 9.8 4a8.4 8.4 0 1 0 10.2 10.2z"/>
+        </svg>
+      </button>
+      <button class="iconbtn burger" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">
+        <span class="iconbtn__label">Menu</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- ─────────────────────────  HERO  ───────────────────────── -->
+<section class="hero" id="topo">
+  <div class="wrap hero__grid">
+
+    <div class="hero__copy">
+      <h1 class="hero__title">O sistema se adapta ao&nbsp;seu&nbsp;negócio. Não o contrário.</h1>
+      <p class="hero__lead">
+        A G&amp;Ms desenvolve software sob medida para escritórios de advocacia, clínicas
+        multidisciplinares e empreendimentos que já perceberam uma coisa: nenhuma solução
+        de prateleira foi feita pensando neles.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--solid" data-contact="whatsapp" href="https://wa.me/5522999556956?text=Ol%C3%A1%2C%20Gabriel.%20Vim%20pelo%20site%20da%20G%26Ms%20e%20gostaria%20de%20conversar%20sobre%20um%20sistema%20sob%20medida.">Falar no WhatsApp</a>
+        <a class="btn btn--ghost" href="#servicos">Ver o que eu faço</a>
+      </div>
+    </div>
+
+    <!-- O elemento central da página: o mesmo trabalho, três negócios diferentes. -->
+    <figure class="showcase">
+      <div class="showcase__tabs" role="tablist" aria-label="Exemplos por tipo de negócio">
+        <button role="tab" id="tab-adv" aria-controls="painel-adv" aria-selected="true" tabindex="0">Advocacia</button>
+        <button role="tab" id="tab-cli" aria-controls="painel-cli" aria-selected="false" tabindex="-1">Clínica</button>
+        <button role="tab" id="tab-com" aria-controls="painel-com" aria-selected="false" tabindex="-1">Comércio</button>
+      </div>
+
+      <div class="screen">
+        <div class="screen__chrome" aria-hidden="true"><span></span><span></span><span></span></div>
+
+        <div class="screen__body" role="tabpanel" id="painel-adv" aria-labelledby="tab-adv">
+          <p class="screen__title">Prazos desta semana</p>
+          <ul class="rows">
+            <li><span class="rows__k">0801234-55.2026</span><span class="rows__v">Contestação</span><span class="tag tag--hot">vence em 2 dias</span></li>
+            <li><span class="rows__k">0809871-02.2026</span><span class="rows__v">Réplica</span><span class="tag">6 dias</span></li>
+            <li><span class="rows__k">0803344-19.2026</span><span class="rows__v">Recurso</span><span class="tag">11 dias</span></li>
+          </ul>
+          <p class="screen__foot">Peça gerada do modelo do escritório, com os dados do processo já preenchidos.</p>
+        </div>
+
+        <div class="screen__body" role="tabpanel" id="painel-cli" aria-labelledby="tab-cli" hidden>
+          <p class="screen__title">Agenda de quinta</p>
+          <ul class="rows">
+            <li><span class="rows__k">08:00</span><span class="rows__v">Fisioterapia · Sala 2</span><span class="tag">4ª de 10 sessões</span></li>
+            <li><span class="rows__k">09:30</span><span class="rows__v">Psicologia · Sala 1</span><span class="tag tag--hot">convênio a faturar</span></li>
+            <li><span class="rows__k">11:00</span><span class="rows__v">Nutrição · Sala 3</span><span class="tag">retorno</span></li>
+          </ul>
+          <p class="screen__foot">Cada especialidade com o prontuário que ela usa de verdade — e o lembrete sai sozinho.</p>
+        </div>
+
+        <div class="screen__body" role="tabpanel" id="painel-com" aria-labelledby="tab-com" hidden>
+          <p class="screen__title">Ordens em aberto</p>
+          <ul class="rows">
+            <li><span class="rows__k">#4192</span><span class="rows__v">Manutenção preventiva</span><span class="tag tag--hot">aguarda peça</span></li>
+            <li><span class="rows__k">#4188</span><span class="rows__v">Instalação</span><span class="tag">em execução</span></li>
+            <li><span class="rows__k">#4171</span><span class="rows__v">Orçamento</span><span class="tag">enviado</span></li>
+          </ul>
+          <p class="screen__foot">Do orçamento à comissão do técnico, sem a planilha paralela no meio do caminho.</p>
+        </div>
+      </div>
+
+      <figcaption class="showcase__cap">Três negócios, três sistemas diferentes. Nenhum deles caberia no mesmo software pronto.</figcaption>
+    </figure>
+
+  </div>
+</section>
+
+<!-- ─────────────────────────  SINAIS  ───────────────────────── -->
+<section class="band" id="sinais">
+  <div class="wrap">
+    <h2 class="h2">Quando a solução de prateleira para de servir</h2>
+    <div class="signals">
+      <article>
+        <h3>A planilha paralela</h3>
+        <p>O sistema não cobre uma parte do processo, então alguém mantém uma planilha ao lado.
+           É nela que o trabalho de verdade acontece — e é nela que os dados se perdem.</p>
+      </article>
+      <article>
+        <h3>O processo torto</h3>
+        <p>Você mudou o jeito de atender para caber no software. Toda vez que entra gente nova,
+           alguém precisa explicar por que “aqui a gente faz assim”.</p>
+      </article>
+      <article>
+        <h3>A informação espalhada</h3>
+        <p>Cadastro no sistema, histórico no e-mail, documento no drive. Responder a uma pergunta
+           simples de cliente exige abrir três telas e confiar na memória de alguém.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────  SERVIÇOS  ───────────────────────── -->
+<section class="sec" id="servicos">
+  <div class="wrap">
+    <div class="sec__head">
+      <h2 class="h2">O que eu construo</h2>
+      <p class="sec__sub">Projetos fechados por etapa, com escopo e prazo definidos antes de começar.</p>
+    </div>
+
+    <ul class="entries">
+      <li>
+        <h3>Sistema de gestão sob medida</h3>
+        <p>Cadastros, rotinas, permissões e relatórios desenhados a partir do processo que você
+           já tem — não de um processo genérico que você teria que adotar.</p>
+      </li>
+      <li>
+        <h3>Automação de rotinas e integrações</h3>
+        <p>Geração de documentos, cobranças, avisos de prazo, importação de planilhas e conversa
+           entre sistemas que hoje não se falam. As horas repetitivas voltam para a equipe.</p>
+      </li>
+      <li>
+        <h3>Modernização de sistema legado</h3>
+        <p>Aquele sistema antigo que ninguém mais mantém. Substituição gradual, sem parar a
+           operação e sem perder o histórico de dados.</p>
+      </li>
+      <li>
+        <h3>Portais e aplicações web</h3>
+        <p>Área do cliente, agendamento online, formulários e painéis de acompanhamento.
+           Acesso de qualquer lugar, com controle de quem enxerga o quê.</p>
+      </li>
+      <li>
+        <h3>Diagnóstico e consultoria técnica</h3>
+        <p>Antes de escrever código: entender a rotina, mapear onde dói e dizer com honestidade
+           o que compensa automatizar — e o que não compensa.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ─────────────────────────  SEGMENTOS  ───────────────────────── -->
+<section class="band" id="segmentos">
+  <div class="wrap">
+    <div class="sec__head">
+      <h2 class="h2">Para quem eu trabalho</h2>
+      <p class="sec__sub">Negócios pequenos e médios em que o processo é específico o bastante para
+         que o software pronto atrapalhe mais do que ajude.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <h3>Escritórios de advocacia</h3>
+        <ul>
+          <li>Controle de prazos e andamentos, com aviso antes do vencimento</li>
+          <li>Peças e contratos gerados a partir dos modelos do escritório</li>
+          <li>Honorários, parcelamentos e repasses entre sócios</li>
+          <li>Área do cliente para acompanhar o processo sem ligar para a secretária</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Clínicas multidisciplinares</h3>
+        <ul>
+          <li>Agenda por profissional e por sala, sem choque de horário</li>
+          <li>Prontuário adequado a cada especialidade</li>
+          <li>Pacotes de sessões, convênios e faturamento</li>
+          <li>Lembrete automático de consulta, que reduz falta</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Empreendimentos em geral</h3>
+        <ul>
+          <li>Pedidos, ordens de serviço e acompanhamento de execução</li>
+          <li>Estoque, compras e custo real por serviço</li>
+          <li>Comissões de equipe calculadas sem conferência manual</li>
+          <li>Relatórios do que o seu negócio precisa medir, não do que veio pronto</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────  PROCESSO  ───────────────────────── -->
+<section class="sec" id="processo">
+  <div class="wrap">
+    <div class="sec__head">
+      <h2 class="h2">Como um projeto acontece</h2>
+      <p class="sec__sub">Quatro etapas, nesta ordem. Você sabe onde está e quanto falta em cada uma.</p>
+    </div>
+
+    <ol class="steps">
+      <li>
+        <h3>Diagnóstico</h3>
+        <p>Conversa e acompanhamento da rotina para entender o processo como ele é hoje —
+           inclusive as gambiarras. Sem custo e sem compromisso.</p>
+      </li>
+      <li>
+        <h3>Proposta e escopo</h3>
+        <p>Você recebe o que será entregue, em quais etapas, com prazo e valor fechados.
+           Nada começa antes de isso estar claro no papel.</p>
+      </li>
+      <li>
+        <h3>Entregas em etapas</h3>
+        <p>A primeira versão útil vai ao ar cedo e a equipe já começa a usar. Cada etapa
+           seguinte é ajustada com o retorno de quem usa todo dia.</p>
+      </li>
+      <li>
+        <h3>Suporte e evolução</h3>
+        <p>O sistema continua acompanhando o negócio: correções, melhorias e rotinas novas
+           conforme a operação muda.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ─────────────────────────  SOBRE  ───────────────────────── -->
+<section class="band" id="sobre">
+  <div class="wrap about">
+    <div class="about__text">
+      <h2 class="h2">Quem está por trás</h2>
+      <p>Sou <strong>Gabriel Magalhães Dias</strong>, engenheiro de software formado em Ciência da
+         Computação pela UFES, em Alegre. Trabalho na Zup Innovation com sistemas de larga escala
+         e mantenho a G&amp;Ms para atender de perto negócios que precisam de software próprio.</p>
+      <p>Ao longo dos anos montei meus próprios kits de desenvolvimento — o
+         <a href="https://github.com/Gabriel-mDias/Java-GEMS-SDK">Java-GEMS-SDK</a> e o
+         <a href="https://github.com/Gabriel-mDias/Angular-GEMS-SDK">Angular-GEMS-SDK</a> — com
+         aquilo que se repete em todo projeto: autenticação, permissões, auditoria, cadastros e
+         relatórios. É por isso que um sistema sob medida aqui não começa do zero.</p>
+      <p>Atendo remotamente todo o Brasil e presencialmente a região de
+         Bom Jesus do Itabapoana, no Rio de Janeiro.</p>
+    </div>
+    <dl class="specs">
+      <div><dt>Back-end</dt><dd>Java, Spring, SQL</dd></div>
+      <div><dt>Front-end</dt><dd>Angular, TypeScript</dd></div>
+      <div><dt>Qualidade</dt><dd>Testes automatizados, versionamento, revisão de código</dd></div>
+      <div><dt>Formação</dt><dd>Ciência da Computação — UFES, Alegre</dd></div>
+      <div><dt>Atuação</dt><dd>Zup Innovation · G&amp;Ms Soluções Tecnológicas</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ─────────────────────────  PROJETOS  ───────────────────────── -->
+<section class="sec" id="projetos">
+  <div class="wrap">
+    <div class="sec__head">
+      <h2 class="h2">Projetos abertos</h2>
+      <p class="sec__sub">Código público, para quem quiser ver como eu trabalho antes de conversar.</p>
+    </div>
+
+    <div class="repos">
+      <a class="repo" href="https://github.com/Gabriel-mDias/Java-GEMS-SDK">
+        <h3>Java-GEMS-SDK</h3>
+        <p>A base que reaproveito em todo projeto Java: o que todo sistema de gestão precisa e
+           ninguém deveria reescrever a cada vez.</p>
+        <p class="repo__meta">Java</p>
+      </a>
+      <a class="repo" href="https://github.com/Gabriel-mDias/Angular-GEMS-SDK">
+        <h3>Angular-GEMS-SDK</h3>
+        <p>O equivalente no front-end: componentes, formulários e padrões de tela que dão
+           consistência às aplicações Angular.</p>
+        <p class="repo__meta">TypeScript</p>
+      </a>
+      <a class="repo" href="https://github.com/Gabriel-mDias/sample-workspace">
+        <h3>sample-workspace</h3>
+        <p>Um CRUD completo montado sobre o SDK, servindo de referência de arquitetura para
+           projetos novos.</p>
+        <p class="repo__meta">Java</p>
+      </a>
+      <a class="repo" href="https://github.com/Gabriel-mDias/legacy-financas">
+        <h3>legacy-financas</h3>
+        <p>Projeto experimental de boas práticas e implantação — onde testo decisões antes de
+           levá-las para o código de cliente.</p>
+        <p class="repo__meta">Java</p>
+      </a>
+      <a class="repo" href="https://github.com/Gabriel-mDias/geo-photos">
+        <h3>geo-photos</h3>
+        <p>Exibição de fotos em 360° posicionadas em mapa. Um exercício de interface fora do
+           formulário tradicional.</p>
+        <p class="repo__meta">TypeScript</p>
+      </a>
+      <a class="repo" href="https://github.com/Gabriel-mDias/MedSystem">
+        <h3>MedSystem</h3>
+        <p>Sistema de consultório médico: o primeiro contato com o domínio de clínicas, que hoje
+           é um dos focos da G&amp;Ms.</p>
+        <p class="repo__meta">Java</p>
+      </a>
+    </div>
+
+    <p class="repos__more"><a href="https://github.com/Gabriel-mDias">Ver todos os repositórios no GitHub</a></p>
+  </div>
+</section>
+
+<!-- ─────────────────────────  FAQ  ───────────────────────── -->
+<section class="band" id="faq">
+  <div class="wrap faq">
+    <h2 class="h2">Perguntas frequentes</h2>
+
+    <details name="faq">
+      <summary>Quanto custa um sistema sob medida?</summary>
+      <p>Depende do tamanho do processo, e não daria para responder honestamente sem conhecê-lo.
+         Por isso o diagnóstico é gratuito: dele sai uma proposta com valor fechado por etapa,
+         para você decidir com o número na mão.</p>
+    </details>
+    <details name="faq">
+      <summary>Quanto tempo até eu conseguir usar?</summary>
+      <p>A primeira versão útil costuma ir ao ar em semanas. O projeto é dividido em etapas
+         justamente para você não esperar o sistema inteiro ficar pronto para começar a ganhar
+         tempo com ele.</p>
+    </details>
+    <details name="faq">
+      <summary>O código e os dados ficam comigo?</summary>
+      <p>Sim. O código-fonte e a base de dados são do seu negócio, e você recebe tudo o que
+         precisa para levá-los a outro fornecedor se um dia quiser.</p>
+    </details>
+    <details name="faq">
+      <summary>Eu já tenho um sistema. Preciso jogar fora?</summary>
+      <p>Quase nunca. Na maioria dos casos dá para integrar o que já funciona e substituir aos
+         poucos só a parte que atrapalha.</p>
+    </details>
+    <details name="faq">
+      <summary>Você atende presencialmente?</summary>
+      <p>Presencialmente na região de Bom Jesus do Itabapoana (RJ) e remotamente em todo o Brasil.
+         O diagnóstico funciona bem por vídeo.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ─────────────────────────  CONTATO  ───────────────────────── -->
+<section class="sec" id="contato">
+  <div class="wrap contact">
+    <div class="contact__intro">
+      <h2 class="h2">Vamos conversar sobre o seu processo</h2>
+      <p>Me conte como o seu negócio funciona hoje e onde trava. Eu respondo com uma leitura
+         honesta do que dá para resolver — mesmo que a resposta seja que você não precisa de
+         um sistema novo.</p>
+
+      <ul class="channels">
+        <li>
+          <a data-contact="whatsapp" href="https://wa.me/5522999556956?text=Ol%C3%A1%2C%20Gabriel.%20Vim%20pelo%20site%20da%20G%26Ms%20e%20gostaria%20de%20conversar%20sobre%20um%20sistema%20sob%20medida.">
+            <svg class="brandico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.04 2A9.9 9.9 0 0 0 2.1 11.9c0 1.75.46 3.46 1.34 4.97L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01a9.9 9.9 0 0 0 9.94-9.9A9.9 9.9 0 0 0 12.04 2Zm0 18.15a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.39 8.24 8.24 0 1 1 8.23 8.25Zm4.52-6.17c-.25-.13-1.47-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.12-.15.16-.25.25-.42.08-.16.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.43h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.04s.88 2.37 1 2.53c.12.17 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.3Z"/></svg>
+            <span><strong>WhatsApp</strong><em data-contact="whatsapp-label">(22) 99955-6956</em></span>
+          </a>
+        </li>
+        <li>
+          <a data-contact="email" href="mailto:gemstecnologia@gmail.com?subject=Contato%20pelo%20site%20da%20G%26Ms">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2.8" y="5" width="18.4" height="14" rx="2"/><path d="M3.4 6.4 12 12.6l8.6-6.2"/></svg>
+            <span><strong>E-mail</strong><em data-contact="email-label">gemstecnologia@gmail.com</em></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/gabriel-m-3a8463136/">
+            <svg class="brandico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14Zm1.78 13.02H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0Z"/></svg>
+            <span><strong>LinkedIn</strong><em>Gabriel Magalhães Dias</em></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/Gabriel-mDias">
+            <svg class="brandico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.26.8-.57v-2.2c-3.34.72-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.08-.75.09-.73.09-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .31.2.68.82.57A12 12 0 0 0 12 .3Z"/></svg>
+            <span><strong>GitHub</strong><em>Gabriel-mDias</em></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <form class="form" id="contact-form" novalidate>
+      <div class="field">
+        <label for="f-nome">Nome</label>
+        <input id="f-nome" name="nome" type="text" required autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="f-email">E-mail</label>
+        <input id="f-email" name="email" type="email" required autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="f-fone">WhatsApp <span class="opt">opcional</span></label>
+        <input id="f-fone" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel">
+      </div>
+      <div class="field">
+        <label for="f-seg">Tipo de negócio</label>
+        <select id="f-seg" name="segmento">
+          <option>Escritório de advocacia</option>
+          <option>Clínica ou consultório</option>
+          <option>Comércio ou prestação de serviço</option>
+          <option>Outro</option>
+        </select>
+      </div>
+      <div class="field field--full">
+        <label for="f-msg">Como o seu negócio funciona hoje e onde trava?</label>
+        <textarea id="f-msg" name="mensagem" rows="5" required></textarea>
+      </div>
+
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="form__foot">
+        <button class="btn btn--solid" type="submit" id="form-submit">Enviar mensagem</button>
+        <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <p class="foot__brand">G<span class="brand__amp">&amp;</span>Ms <em>soluções tecnológicas</em></p>
+    <nav class="foot__links" aria-label="Contato e perfis">
+      <a data-contact="email" href="mailto:gemstecnologia@gmail.com">gemstecnologia@gmail.com</a>
+      <a href="https://github.com/Gabriel-mDias">GitHub</a>
+      <a href="https://www.linkedin.com/in/gabriel-m-3a8463136/">LinkedIn</a>
+    </nav>
+    <p class="foot__legal">© <span id="year">2026</span> G&amp;Ms Soluções Tecnológicas · Bom Jesus do Itabapoana, RJ</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://gems.tec.br/#org",
+      "name": "G&Ms Soluções Tecnológicas",
+      "url": "https://gems.tec.br/",
+      "description": "Desenvolvimento de software sob medida para escritórios de advocacia, clínicas multidisciplinares e empreendimentos de pequeno e médio porte.",
+      "email": "gemstecnologia@gmail.com",
+      "telephone": "+55-22-99955-6956",
+      "founder": { "@id": "https://gems.tec.br/#gabriel" },
+      "areaServed": { "@type": "Country", "name": "Brasil" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bom Jesus do Itabapoana",
+        "addressRegion": "RJ",
+        "addressCountry": "BR"
+      },
+      "knowsAbout": ["Software sob medida", "Automação de processos", "Sistemas de gestão", "Java", "Angular"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://gems.tec.br/#gabriel",
+      "name": "Gabriel Magalhães Dias",
+      "jobTitle": "Engenheiro de software",
+      "email": "gemstecnologia@gmail.com",
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidade Federal do Espírito Santo" },
+      "knowsLanguage": "pt-BR",
+      "sameAs": [
+        "https://github.com/Gabriel-mDias",
+        "https://www.linkedin.com/in/gabriel-m-3a8463136/"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://gems.tec.br/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quanto custa um sistema sob medida?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Depende do tamanho do processo. O diagnóstico é gratuito e dele sai uma proposta com valor fechado por etapa." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto tempo até eu conseguir usar?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A primeira versão útil costuma ir ao ar em semanas. O projeto é dividido em etapas para que o cliente comece a ganhar tempo antes do sistema inteiro ficar pronto." }
+        },
+        {
+          "@type": "Question",
+          "name": "O código e os dados ficam comigo?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim. O código-fonte e a base de dados pertencem ao cliente, que recebe tudo o que precisa para levá-los a outro fornecedor." }
+        },
+        {
+          "@type": "Question",
+          "name": "Eu já tenho um sistema. Preciso jogar fora?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Na maioria dos casos é possível integrar o que já funciona e substituir gradualmente apenas a parte que atrapalha." }
+        },
+        {
+          "@type": "Question",
+          "name": "Você atende presencialmente?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Presencialmente na região de Bom Jesus do Itabapoana (RJ) e remotamente em todo o Brasil." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
