@@ -54,6 +54,23 @@ escuro — enquanto o gradiente dourado é idêntico nos dois. Ao trocar o arqui
 é o bloco `<svg class="wordmark">` do cabeçalho que muda; os paths saem de
 `gems-wordmark.svg` (ids `gms-gold` e `gms-navy`).
 
+### Ícones
+
+**Font Awesome Free 6.7.2**, sob licença [CC BY 4.0](https://fontawesome.com/license/free).
+Os 24 ícones usados estão **embutidos como sprite SVG** no topo do `index.html` — nada de CDN,
+nenhuma requisição extra, e eles herdam a cor do tema via `currentColor`.
+
+Cada um foi escolhido pelo que ilustra, não como enfeite: balança para advocacia, estetoscópio
+para clínicas, vitrine para comércio, capelo para o Meduc, passaporte para a ADACI, e um ícone
+por etapa do processo (conversa, régua e caneta, foguete, ciclo, caixa, quadro de treinamento,
+ferramentas) no lugar da numeração.
+
+**Para trocar ou acrescentar um ícone:** baixe o SVG em
+`https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/svgs/solid/<nome>.svg`,
+copie o `viewBox` e o `d` para um `<symbol id="i-...">` novo no sprite, e referencie com
+`<svg class="ico-fa"><use href="#i-..."/></svg>`. Use `.ico-lead` quando ele abrir um bloco
+acima do título.
+
 ### Tipografia
 
 Títulos em **Outfit** (geométrica, escolhida por proximidade com o desenho do wordmark);

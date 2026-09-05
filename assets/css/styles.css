@@ -137,6 +137,29 @@ svg {
 svg.brandico, svg.wordmark { fill: currentColor; stroke: none; }
 svg.wordmark path { stroke: none; }
 
+/* ------------------------------------------------------------- ícones --
+   Font Awesome Free 6.7.2 (CC BY 4.0), embutido como sprite no topo do
+   HTML. São desenhados em massa e herdam a cor de quem os contém. */
+
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+.ico-fa {
+  fill: currentColor;
+  stroke: none;
+  width: 1.05em;
+  height: 1.05em;
+  flex: none;
+}
+
+/* ícone que abre um bloco, acima do título */
+.ico-lead {
+  display: block;
+  width: 1.65rem;
+  height: 1.65rem;
+  margin-bottom: .95rem;
+  color: var(--gold);
+}
+
 a { color: var(--gold-ink); text-decoration-thickness: 1px; text-underline-offset: 3px; }
 a:hover { color: var(--ink); }
 
@@ -589,6 +612,9 @@ strong { font-weight: 600; }
   .entries li { grid-template-columns: minmax(0, 22rem) minmax(0, 1fr); }
 }
 
+.entries__head { display: flex; align-items: baseline; gap: .8rem; }
+.entries__head .ico-fa { width: 1.2rem; height: 1.2rem; color: var(--gold); align-self: flex-start; margin-top: .18rem; }
+
 .entries h3 {
   font: 600 1.25rem/1.3 var(--display);
   letter-spacing: -.015em;
@@ -754,29 +780,36 @@ strong { font-weight: 600; }
   .journey .sec__head { position: sticky; top: 7.5rem; margin-bottom: 0; }
 }
 
-/* mesma mecânica, em escala de seção: as sete etapas do projeto */
-.track--journey { counter-reset: leg; max-width: 48rem; margin-bottom: 0; }
+/* mesma mecânica, em escala de seção: as sete etapas do projeto.
+   O marcador traz o ícone da etapa em vez do número — a ordem continua
+   legível pela linha que liga um passo ao seguinte. */
+.track--journey { max-width: 48rem; margin-bottom: 0; }
 .track--journey .track__step {
-  counter-increment: leg;
-  padding: 0 0 clamp(1.75rem, 3vw, 2.4rem) 3.4rem;
+  padding: 0 0 clamp(1.75rem, 3vw, 2.4rem) 3.6rem;
   gap: .4rem;
 }
 .track--journey .track__step::before {
-  content: counter(leg);
-  display: grid;
-  place-items: center;
+  content: "";
   left: 0;
   top: 0;
-  width: 2rem;
-  height: 2rem;
-  font: 500 .84rem/1 var(--body);
-  color: var(--gold-ink);
+  width: 2.2rem;
+  height: 2.2rem;
   background: var(--gold-wash);
   border-color: var(--gold);
 }
+.track--journey .track__ico {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2.2rem;
+  height: 2.2rem;
+  padding: .58rem;
+  box-sizing: border-box;
+  color: var(--gold-ink);
+}
 .track--journey .track__step::after {
-  left: .99rem;
-  top: 2.3rem;
+  left: 1.03rem;
+  top: 2.5rem;
   bottom: .1rem;
   background: var(--line-firm);
 }
@@ -789,7 +822,9 @@ strong { font-weight: 600; }
 /* -------------------------------------------------------- casos reais -- */
 
 .case__tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
   margin: 0 0 clamp(1.75rem, 3vw, 2.5rem);
   padding: .42rem 1rem;
   border: 1px solid var(--line-firm);
@@ -798,6 +833,7 @@ strong { font-weight: 600; }
   font: 500 .84rem/1.4 var(--body);
   color: var(--muted);
 }
+.case__tag .ico-fa { width: 1rem; height: 1rem; color: var(--gold-ink); }
 .case__tag + .demo { margin-top: 0; }
 .demo + .case__tag { margin-top: clamp(1rem, 2vw, 2rem); }
 
