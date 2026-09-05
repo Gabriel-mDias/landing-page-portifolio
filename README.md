@@ -1,9 +1,9 @@
 # G&Ms Soluções Tecnológicas — site
 
-Landing page da G&Ms, publicada em **https://gems.tec.br** pelo GitHub Pages.
+Site institucional da G&Ms, publicado em **https://gems.tec.br** pelo GitHub Pages.
 
-Site estático: HTML, CSS e JavaScript sem build, dependência ou framework. O deploy é o
-próprio `git push` na branch `main`.
+Estático: HTML, CSS e JavaScript sem build, dependência ou framework. O deploy é o próprio
+`git push` na branch `main`.
 
 ## Estrutura
 
@@ -16,8 +16,9 @@ sitemap.xml
 site.webmanifest
 assets/css/styles.css tokens de cor, tipografia, layout e os dois temas
 assets/js/config.js   ← telefone, e-mail e chave do formulário
-assets/js/main.js     tema, menu, abas do hero e envio do formulário
+assets/js/main.js     tema, menu, abas do hero, revelação e envio do formulário
 assets/img/           favicon e imagem de compartilhamento (Open Graph)
+assets/logos/         arquivos originais da marca
 ```
 
 ## Rodar localmente
@@ -29,28 +30,43 @@ python -m http.server 8099
 Depois abra <http://127.0.0.1:8099>. Servidor é necessário porque o `fetch` do formulário e
 o `manifest` não funcionam via `file://`.
 
+## Marca
+
+A identidade visual do site sai da própria logo: **navy `#0A2234` + dourado `#B78548`**,
+sobre papel off-white. A tagline oficial é **"Tecnologia que gera valor para pessoas"**.
+
+### Os arquivos em `assets/logos/`
+
+| Arquivo | Uso |
+|---|---|
+| `GMs_wordmark_vetorizado_clean.svg` | **Em uso.** Vetorial. Os paths estão embutidos direto no `index.html` |
+| `G_logo_vetorizado_clean.svg` | **Em uso.** Origem do `assets/img/favicon.svg` |
+| `gems-full-logo.svg` | **Não usar no site.** Apesar da extensão, é um PNG de 1,7 MB em base64 dentro de um `<svg>` — nenhum `<path>`. Fica como referência do desenho original |
+
+Os dois vetoriais vieram de autotrace, então as bordas são levemente irregulares: invisível
+até ~60 px de altura, perceptível se ampliado. **Se aparecer o arquivo do designer** (AI, EPS
+ou SVG de origem), ele substitui os dois e melhora a marca em tamanho grande.
+
+O wordmark está **inline no `index.html`**, e não como `<img>`, porque os gradientes precisam
+responder ao tema: os stops apontam para `--logo-ink-a/b/c`, navy no claro e branco-gelo no
+escuro. O dourado é o mesmo nos dois temas. Ao trocar o arquivo da logo, é esse bloco `<svg
+class="wordmark">` no cabeçalho que muda.
+
+### Tipografia
+
+Títulos em **Outfit** (geométrica, escolhida por proximidade com o desenho do wordmark);
+corpo em **IBM Plex Sans**. Se a fonte original da logo for identificada — Montserrat e
+Poppins são as candidatas — vale trocar Outfit por ela em `--display`.
+
 ## Onde mexer
 
 | O quê | Onde |
 |---|---|
 | Telefone, e-mail, chave do formulário | `assets/js/config.js` |
 | Cores dos dois temas | topo de `assets/css/styles.css` (`:root` e os blocos de tema escuro) |
-| Campo de gradiente do topo | variável `--field` em `assets/css/styles.css` (uma versão por tema) |
-| Textos, serviços, FAQ, projetos | `index.html` |
-| Telas do case ADACI | seção `#pratica` do `index.html` (SVG e HTML, sem imagens) |
-
-### A seção "Como fica na prática"
-
-Três telas do sistema desenvolvido para a **ADACI** (assessoria em cidadania e vistos),
-desenhadas em HTML, CSS e SVG — sem imagem e sem biblioteca:
-
-1. **Árvore genealógica** com a linha de transmissão da cidadania sendo traçada
-2. **Esteira do processo**, com etapa travada por requisito não cumprido
-3. **Consulta de consulado competente** por unidade federativa
-
-Os dados são fictícios e a página diz isso explicitamente; o código do cliente é privado.
-A animação de entrada roda uma vez, por `IntersectionObserver`, e só nesses três blocos —
-sem JavaScript ou com `prefers-reduced-motion`, tudo aparece direto, já no estado final.
+| Campo de gradiente do topo | variável `--field` (uma versão por tema) |
+| Textos, serviços, processo, FAQ | `index.html` |
+| Telas dos casos | seção `#casos` do `index.html` (SVG e HTML, sem imagens) |
 
 Os valores de contato também estão escritos direto no `index.html` como fallback, para que os
 links continuem certos mesmo se o JavaScript não carregar. Ao trocar o número ou o e-mail,
@@ -64,6 +80,19 @@ atualize os dois lugares (`config.js` e os `href` correspondentes no HTML).
 
 Enquanto a chave estiver vazia, o formulário orienta o visitante a usar o WhatsApp ou o e-mail —
 a página nunca fica sem um canal de contato funcionando.
+
+### A seção "Casos reais"
+
+Telas desenhadas em HTML, CSS e SVG — sem imagem e sem biblioteca:
+
+- **ADACI** (cliente, cidadania e vistos): árvore genealógica com a linha de transmissão sendo
+  traçada, e esteira de processo com etapa travada por requisito não cumprido.
+- **Meduc** (produto próprio, gestão escolar): provisionamento de uma nova instituição, com
+  a base de dados isolada por escola.
+
+Os dados são fictícios e a página diz isso explicitamente; o código dos sistemas de cliente é
+privado. A animação de entrada roda uma vez, por `IntersectionObserver`, e só nesses blocos —
+sem JavaScript ou com `prefers-reduced-motion`, tudo aparece direto, já no estado final.
 
 ## Publicação
 
@@ -108,10 +137,10 @@ curl.exe -I https://www.gems.tec.br        # 301 para o domínio raiz
 
 ## Notas de manutenção
 
-- **Acessibilidade e SEO**: Lighthouse em 100 (acessibilidade, boas práticas, SEO). Ao mexer em
-  cor, manter contraste mínimo de 4.5:1 para texto — o dourado claro (`--brass`) é só para
-  filetes, ícones e numerais; texto e link usam `--brass-ink`.
+- **Acessibilidade e SEO**: Lighthouse em 100 (acessibilidade, boas práticas, SEO) **nos dois
+  temas**. Ao mexer em cor, manter contraste mínimo de 4.5:1 para texto — o dourado claro
+  (`--gold`) é só para filetes, ícones e numerais; texto e link usam `--gold-ink`.
 - **Dados estruturados**: o JSON-LD no fim do `index.html` descreve a empresa, a pessoa e o FAQ.
   Ao editar uma pergunta do FAQ, edite também a entrada correspondente lá.
-- **Imagem de compartilhamento**: `assets/img/og-cover.png` (1200×630). Se a headline mudar,
-  vale regerar.
+- **Imagem de compartilhamento**: `assets/img/og-cover.png` (1200×630). Se a headline ou a
+  identidade mudarem, vale regerar.

@@ -1,12 +1,12 @@
 {
   "name": "G&Ms Soluções Tecnológicas",
   "short_name": "G&Ms",
-  "description": "Software sob medida para escritórios de advocacia, clínicas multidisciplinares e empreendimentos de pequeno e médio porte.",
+  "description": "Tecnologia que gera valor para pessoas. Software sob medida para escritórios de advocacia, clínicas multidisciplinares e empreendimentos de pequeno, médio e grande porte.",
   "lang": "pt-BR",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FBF9F4",
-  "theme_color": "#FBF9F4",
+  "background_color": "#F8F7F4",
+  "theme_color": "#F8F7F4",
   "icons": [
     { "src": "/assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
   ]
