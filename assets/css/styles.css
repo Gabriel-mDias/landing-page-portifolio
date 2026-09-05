@@ -1,6 +1,6 @@
 /* =========================================================================
    G&Ms Soluções Tecnológicas
-   Paleta tirada da própria marca: navy #0A2234 e dourado #B78548.
+   Paleta tirada da própria marca: navy #172C3B e dourado #9C7449.
    Campo de gradiente no topo, superfícies em vidro sobre ele.
    Tema claro por padrão, escuro no toggle ou na preferência do sistema.
    ========================================================================= */
@@ -11,29 +11,28 @@
   --raised:     #FFFFFF;
   --line:       #E1DED6;
   --line-firm:  #C6C1B6;
-  --ink:        #0A2234;   /* navy da marca */
-  --muted:      #5A6672;
-  --gold:       #B78548;   /* filetes, ícones, numerais — nunca texto pequeno */
-  --gold-ink:   #8A6230;   /* texto e links: 5.1:1 sobre --paper */
-  --gold-wash:  #F4EBDC;
+  --ink:        #172C3B;   /* navy exato da logo */
+  --muted:      #5C6B78;
+  --gold:       #9C7449;   /* tom médio do gradiente da logo — gráficos, nunca texto pequeno */
+  --gold-ink:   #7E5E3A;   /* mesmo dourado, escurecido para texto: 5.5:1 sobre --paper,
+                              5.0:1 sobre --gold-wash (que é o pior caso, nos chips) */
+  --gold-wash:  #F3EADC;
   --alert:      #A63D24;
 
-  /* stops do wordmark embutido no cabeçalho */
-  --logo-ink-a: #071927;
-  --logo-ink-b: #12324A;
-  --logo-ink-c: #0A2234;
+  /* cor das letras do wordmark embutido no cabeçalho */
+  --logo-ink:   #172C3B;
 
   --glass-line: rgba(255, 255, 255, .80);
   --lift:
-    0 1px 2px rgba(10, 34, 52, .05),
-    0 22px 44px -24px rgba(10, 34, 52, .24),
-    0 52px 92px -64px rgba(10, 34, 52, .30);
-  --lift-sm: 0 1px 2px rgba(10, 34, 52, .06), 0 10px 24px -16px rgba(10, 34, 52, .26);
+    0 1px 2px rgba(23, 44, 59, .05),
+    0 22px 44px -24px rgba(23, 44, 59, .24),
+    0 52px 92px -64px rgba(23, 44, 59, .30);
+  --lift-sm: 0 1px 2px rgba(23, 44, 59, .06), 0 10px 24px -16px rgba(23, 44, 59, .26);
 
   --field:
-    radial-gradient(42% 38% at 10% 56%, rgba(183, 133, 72, .46), transparent 70%),
-    radial-gradient(46% 40% at 88% 44%, rgba(58, 108, 150, .34), transparent 70%),
-    radial-gradient(66% 48% at 54% 96%, rgba(18, 50, 74, .34), transparent 72%),
+    radial-gradient(42% 38% at 10% 56%, rgba(156, 116, 73, .48), transparent 70%),
+    radial-gradient(46% 40% at 88% 44%, rgba(62, 108, 144, .34), transparent 70%),
+    radial-gradient(66% 48% at 54% 96%, rgba(23, 44, 59, .34), transparent 72%),
     radial-gradient(34% 30% at 68% 18%, rgba(224, 214, 198, .58), transparent 70%),
     radial-gradient(32% 30% at 22% 16%, rgba(238, 239, 240, .78), transparent 70%);
 
@@ -51,64 +50,60 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper:      #071A28;
-    --surface:    #0C2333;
-    --raised:     #123042;
-    --line:       #17303F;
-    --line-firm:  #2B4B5E;
-    --ink:        #EAF1F6;
-    --muted:      #93A6B4;
-    --gold:       #CEA367;
-    --gold-ink:   #DDBB86;
-    --gold-wash:  #16303F;
+    --paper:      #0C1A24;
+    --surface:    #12252F;
+    --raised:     #17303D;
+    --line:       #1E3543;
+    --line-firm:  #34505F;
+    --ink:        #E9F0F5;
+    --muted:      #93A5B3;
+    --gold:       #C19059;
+    --gold-ink:   #D2A874;
+    --gold-wash:  #1B3240;
     --alert:      #E8846A;
 
-    --logo-ink-a: #F2F6F9;
-    --logo-ink-b: #D2E0EA;
-    --logo-ink-c: #EAF1F6;
+    --logo-ink:   #EDF3F7;
 
     --glass-line: rgba(255, 255, 255, .10);
     --lift: 0 1px 2px rgba(0, 0, 0, .4), 0 26px 56px -28px rgba(0, 0, 0, .85);
     --lift-sm: 0 10px 26px -18px rgba(0, 0, 0, .9);
 
     --field:
-      radial-gradient(46% 40% at 12% 58%, rgba(183, 133, 72, .32), transparent 70%),
-      radial-gradient(44% 38% at 88% 50%, rgba(24, 68, 102, .62), transparent 70%),
-      radial-gradient(64% 46% at 50% 94%, rgba(140, 100, 46, .30), transparent 72%),
-      radial-gradient(34% 32% at 70% 18%, rgba(14, 48, 74, .72), transparent 70%),
-      radial-gradient(32% 30% at 24% 16%, rgba(10, 34, 52, .70), transparent 70%);
+      radial-gradient(42% 38% at 10% 56%, rgba(193, 144, 89, .34), transparent 70%),
+      radial-gradient(46% 40% at 88% 44%, rgba(34, 84, 122, .66), transparent 70%),
+      radial-gradient(66% 48% at 54% 96%, rgba(146, 110, 71, .32), transparent 72%),
+      radial-gradient(34% 30% at 68% 18%, rgba(18, 48, 70, .72), transparent 70%),
+      radial-gradient(32% 30% at 22% 16%, rgba(12, 26, 36, .70), transparent 70%);
 
     color-scheme: dark;
   }
 }
 
 :root[data-theme="dark"] {
-  --paper:      #071A28;
-  --surface:    #0C2333;
-  --raised:     #123042;
-  --line:       #17303F;
-  --line-firm:  #2B4B5E;
-  --ink:        #EAF1F6;
-  --muted:      #93A6B4;
-  --gold:       #CEA367;
-  --gold-ink:   #DDBB86;
-  --gold-wash:  #16303F;
+  --paper:      #0C1A24;
+  --surface:    #12252F;
+  --raised:     #17303D;
+  --line:       #1E3543;
+  --line-firm:  #34505F;
+  --ink:        #E9F0F5;
+  --muted:      #93A5B3;
+  --gold:       #C19059;
+  --gold-ink:   #D2A874;
+  --gold-wash:  #1B3240;
   --alert:      #E8846A;
 
-  --logo-ink-a: #F2F6F9;
-  --logo-ink-b: #D2E0EA;
-  --logo-ink-c: #EAF1F6;
+  --logo-ink:   #EDF3F7;
 
   --glass-line: rgba(255, 255, 255, .10);
   --lift: 0 1px 2px rgba(0, 0, 0, .4), 0 26px 56px -28px rgba(0, 0, 0, .85);
   --lift-sm: 0 10px 26px -18px rgba(0, 0, 0, .9);
 
   --field:
-    radial-gradient(42% 38% at 10% 56%, rgba(183, 133, 72, .34), transparent 70%),
-    radial-gradient(46% 40% at 88% 44%, rgba(28, 82, 124, .68), transparent 70%),
-    radial-gradient(66% 48% at 54% 96%, rgba(140, 100, 46, .30), transparent 72%),
-    radial-gradient(34% 30% at 68% 18%, rgba(14, 48, 74, .72), transparent 70%),
-    radial-gradient(32% 30% at 22% 16%, rgba(10, 34, 52, .70), transparent 70%);
+    radial-gradient(42% 38% at 10% 56%, rgba(193, 144, 89, .34), transparent 70%),
+    radial-gradient(46% 40% at 88% 44%, rgba(34, 84, 122, .66), transparent 70%),
+    radial-gradient(66% 48% at 54% 96%, rgba(146, 110, 71, .32), transparent 72%),
+    radial-gradient(34% 30% at 68% 18%, rgba(18, 48, 70, .72), transparent 70%),
+    radial-gradient(32% 30% at 22% 16%, rgba(12, 26, 36, .70), transparent 70%);
 
   color-scheme: dark;
 }
@@ -383,19 +378,19 @@ strong { font-weight: 600; }
   color: #F8F7F4;
   box-shadow: var(--lift-sm);
 }
-.btn--solid:hover { background: linear-gradient(168deg, var(--gold), #8A6230); color: #FFFFFF; }
+.btn--solid:hover { background: linear-gradient(168deg, var(--gold), #6E5334); color: #FFFFFF; }
 
 :root[data-theme="dark"] .btn--solid {
   background: linear-gradient(168deg, #E2C68C, var(--gold));
-  color: #071A28;
+  color: #0C1A24;
 }
-:root[data-theme="dark"] .btn--solid:hover { background: #EBD5A6; color: #071A28; }
+:root[data-theme="dark"] .btn--solid:hover { background: #EBD5A6; color: #0C1A24; }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .btn--solid {
     background: linear-gradient(168deg, #E2C68C, var(--gold));
-    color: #071A28;
+    color: #0C1A24;
   }
-  :root:not([data-theme="light"]) .btn--solid:hover { background: #EBD5A6; color: #071A28; }
+  :root:not([data-theme="light"]) .btn--solid:hover { background: #EBD5A6; color: #0C1A24; }
 }
 
 .btn--ghost {
@@ -860,9 +855,9 @@ strong { font-weight: 600; }
 .tree__node--mute text { fill: var(--muted); }
 .tree__node--target rect { fill: var(--gold-ink); stroke: var(--gold-ink); }
 .tree__node--target text { fill: #F8F7F4; font-weight: 600; }
-:root[data-theme="dark"] .tree__node--target text { fill: #071A28; }
+:root[data-theme="dark"] .tree__node--target text { fill: #0C1A24; }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .tree__node--target text { fill: #071A28; }
+  :root:not([data-theme="light"]) .tree__node--target text { fill: #0C1A24; }
 }
 
 .tree__link path { stroke: var(--line-firm); stroke-width: 1; fill: none; }

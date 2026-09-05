@@ -32,25 +32,27 @@ o `manifest` não funcionam via `file://`.
 
 ## Marca
 
-A identidade visual do site sai da própria logo: **navy `#0A2234` + dourado `#B78548`**,
-sobre papel off-white. A tagline oficial é **"Tecnologia que gera valor para pessoas"**.
+A identidade visual do site sai da própria logo: **navy `#172C3B`** e o **dourado do gradiente
+da marca** (`#C19059` → `#9C7449` → `#926E47`), sobre papel off-white. A tagline oficial é
+**"Tecnologia que gera valor para pessoas"**.
 
 ### Os arquivos em `assets/logos/`
 
 | Arquivo | Uso |
 |---|---|
-| `GMs_wordmark_vetorizado_clean.svg` | **Em uso.** Vetorial. Os paths estão embutidos direto no `index.html` |
-| `G_logo_vetorizado_clean.svg` | **Em uso.** Origem do `assets/img/favicon.svg` |
-| `gems-full-logo.svg` | **Não usar no site.** Apesar da extensão, é um PNG de 1,7 MB em base64 dentro de um `<svg>` — nenhum `<path>`. Fica como referência do desenho original |
+| `gems-wordmark.svg` | **Em uso.** Wordmark completo. Os dois paths estão embutidos direto no `index.html` |
+| `gems-symbol-g.svg` | **Em uso.** Símbolo reduzido; origem do `assets/img/favicon.svg` |
+| `gems-full-logo.png` | Arte original com a assinatura e a tagline. Referência — não é usada no site |
 
-Os dois vetoriais vieram de autotrace, então as bordas são levemente irregulares: invisível
-até ~60 px de altura, perceptível se ampliado. **Se aparecer o arquivo do designer** (AI, EPS
-ou SVG de origem), ele substitui os dois e melhora a marca em tamanho grande.
+Os dois SVGs têm a mesma estrutura: um path dourado com o gradiente `userSpaceOnUse` da marca
+e um path navy sólido `#172C3B`. Sem raster embutido e sem `transform`, o que torna simples
+reaproveitá-los.
 
-O wordmark está **inline no `index.html`**, e não como `<img>`, porque os gradientes precisam
-responder ao tema: os stops apontam para `--logo-ink-a/b/c`, navy no claro e branco-gelo no
-escuro. O dourado é o mesmo nos dois temas. Ao trocar o arquivo da logo, é esse bloco `<svg
-class="wordmark">` no cabeçalho que muda.
+O wordmark está **inline no `index.html`**, e não como `<img>`, porque as letras precisam
+acompanhar o tema: o path navy usa `fill="var(--logo-ink)"` — navy no claro, branco-gelo no
+escuro — enquanto o gradiente dourado é idêntico nos dois. Ao trocar o arquivo da logo,
+é o bloco `<svg class="wordmark">` do cabeçalho que muda; os paths saem de
+`gems-wordmark.svg` (ids `gms-gold` e `gms-navy`).
 
 ### Tipografia
 
@@ -138,8 +140,9 @@ curl.exe -I https://www.gems.tec.br        # 301 para o domínio raiz
 ## Notas de manutenção
 
 - **Acessibilidade e SEO**: Lighthouse em 100 (acessibilidade, boas práticas, SEO) **nos dois
-  temas**. Ao mexer em cor, manter contraste mínimo de 4.5:1 para texto — o dourado claro
-  (`--gold`) é só para filetes, ícones e numerais; texto e link usam `--gold-ink`.
+  temas**. Ao mexer em cor, manter contraste mínimo de 4.5:1 para texto — `--gold` (`#9C7449`,
+  o tom médio do gradiente da marca) fica em 3.9:1 e por isso serve só para filetes, ícones e
+  numerais; texto e link usam `--gold-ink` (`#86653F`, 5.0:1).
 - **Dados estruturados**: o JSON-LD no fim do `index.html` descreve a empresa, a pessoa e o FAQ.
   Ao editar uma pergunta do FAQ, edite também a entrada correspondente lá.
 - **Imagem de compartilhamento**: `assets/img/og-cover.png` (1200×630). Se a headline ou a
