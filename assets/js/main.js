@@ -31,6 +31,17 @@
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', paintToggle);
   paintToggle();
 
+  /* ------------------------------------- cabeçalho ganha peso ao rolar -- */
+
+  var topbar = document.getElementById('topbar');
+
+  function markStuck() {
+    topbar.classList.toggle('is-stuck', window.scrollY > 12);
+  }
+
+  window.addEventListener('scroll', markStuck, { passive: true });
+  markStuck();
+
   /* -------------------------------------------------- menu em telefones -- */
 
   var navBtn = document.getElementById('nav-toggle');
@@ -86,6 +97,28 @@
       selectTab(to, true);
     });
   });
+
+  /* ------------------------------------ revelação dos blocos de demonstração --
+     Restrita às telas da seção "Como fica na prática": ali o movimento é a
+     própria explicação (a linha de transmissão sendo traçada, a barra de
+     progresso enchendo), não enfeite. */
+
+  var demos = document.querySelectorAll('.reveal');
+
+  if (!window.IntersectionObserver ||
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    demos.forEach(function (el) { el.classList.add('is-in'); });
+  } else {
+    var watcher = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-in');
+        watcher.unobserve(entry.target);
+      });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: .2 });
+
+    demos.forEach(function (el) { watcher.observe(el); });
+  }
 
   /* ------------------------------------------- contatos vindos do config -- */
 

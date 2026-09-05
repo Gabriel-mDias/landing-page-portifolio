@@ -35,13 +35,15 @@
     var t = localStorage.getItem('gems-theme');
     if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
   } catch (e) {}
+  // Só esconde o que a animação vai revelar se houver JavaScript para revelar.
+  document.documentElement.classList.add('has-js');
 </script>
 </head>
 <body>
 
 <a class="skip" href="#conteudo">Ir para o conteúdo</a>
 
-<header class="topbar">
+<header class="topbar" id="topbar">
   <div class="wrap topbar__inner">
     <a class="brand" href="#topo" aria-label="G&amp;Ms Soluções Tecnológicas — início">
       <span class="brand__mark" aria-hidden="true">&amp;</span>
@@ -51,7 +53,7 @@
     <nav class="nav" id="nav" aria-label="Seções do site">
       <a href="#servicos">Serviços</a>
       <a href="#segmentos">Para quem</a>
-      <a href="#processo">Como trabalho</a>
+      <a href="#pratica">Na prática</a>
       <a href="#sobre">Sobre</a>
       <a href="#projetos">Projetos</a>
       <a class="nav__cta" href="#contato">Falar comigo</a>
@@ -80,22 +82,21 @@
 
 <!-- ─────────────────────────  HERO  ───────────────────────── -->
 <section class="hero" id="topo">
-  <div class="wrap hero__grid">
+  <div class="hero__field" aria-hidden="true"></div>
 
-    <div class="hero__copy">
-      <h1 class="hero__title">O sistema se adapta ao&nbsp;seu&nbsp;negócio. Não o contrário.</h1>
-      <p class="hero__lead">
-        A G&amp;Ms desenvolve software sob medida para escritórios de advocacia, clínicas
-        multidisciplinares e empreendimentos que já perceberam uma coisa: nenhuma solução
-        de prateleira foi feita pensando neles.
-      </p>
-      <div class="hero__actions">
-        <a class="btn btn--solid" data-contact="whatsapp" href="https://wa.me/5522999556956?text=Ol%C3%A1%2C%20Gabriel.%20Vim%20pelo%20site%20da%20G%26Ms%20e%20gostaria%20de%20conversar%20sobre%20um%20sistema%20sob%20medida.">Falar no WhatsApp</a>
-        <a class="btn btn--ghost" href="#servicos">Ver o que eu faço</a>
-      </div>
+  <div class="wrap hero__inner">
+    <h1 class="hero__title">O sistema se adapta ao seu negócio.<br>Não o contrário.</h1>
+    <p class="hero__lead">
+      A G&amp;Ms desenvolve software sob medida para escritórios de advocacia, clínicas
+      multidisciplinares e empreendimentos que já perceberam uma coisa: nenhuma solução
+      de prateleira foi feita pensando neles.
+    </p>
+    <div class="hero__actions">
+      <a class="btn btn--solid" data-contact="whatsapp" href="https://wa.me/5522999556956?text=Ol%C3%A1%2C%20Gabriel.%20Vim%20pelo%20site%20da%20G%26Ms%20e%20gostaria%20de%20conversar%20sobre%20um%20sistema%20sob%20medida.">Falar no WhatsApp</a>
+      <a class="btn btn--ghost" href="#pratica">Ver um sistema real</a>
     </div>
 
-    <!-- O elemento central da página: o mesmo trabalho, três negócios diferentes. -->
+    <!-- O mesmo trabalho, três negócios diferentes. -->
     <figure class="showcase">
       <div class="showcase__tabs" role="tablist" aria-label="Exemplos por tipo de negócio">
         <button role="tab" id="tab-adv" aria-controls="painel-adv" aria-selected="true" tabindex="0">Advocacia</button>
@@ -103,7 +104,7 @@
         <button role="tab" id="tab-com" aria-controls="painel-com" aria-selected="false" tabindex="-1">Comércio</button>
       </div>
 
-      <div class="screen">
+      <div class="screen glass">
         <div class="screen__chrome" aria-hidden="true"><span></span><span></span><span></span></div>
 
         <div class="screen__body" role="tabpanel" id="painel-adv" aria-labelledby="tab-adv">
@@ -139,7 +140,6 @@
 
       <figcaption class="showcase__cap">Três negócios, três sistemas diferentes. Nenhum deles caberia no mesmo software pronto.</figcaption>
     </figure>
-
   </div>
 </section>
 
@@ -246,8 +246,204 @@
   </div>
 </section>
 
+<!-- ─────────────────────  NA PRÁTICA — CASE ADACI  ───────────────────── -->
+<section class="sec pratica" id="pratica">
+  <div class="hero__field hero__field--soft" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <div class="sec__head">
+      <h2 class="h2">Como fica na prática</h2>
+      <p class="sec__sub">Telas do sistema que desenvolvi para a <strong>ADACI</strong>, empresa de
+         assessoria em cidadania e vistos de migração. Um processo que nenhum ERP de mercado
+         sabe representar — e que virou software em três meses de entregas.</p>
+    </div>
+
+    <!-- 1. Árvore genealógica -->
+    <article class="demo reveal">
+      <div class="demo__text">
+        <h3>A árvore que decide o direito</h3>
+        <p>Na cidadania italiana, o que vale é o laço. O sistema guarda cada pessoa e cada
+           vínculo separadamente, e <strong>deduz sozinho</strong> o parentesco, a geração e
+           por onde a cidadania se transmite.</p>
+        <p>Ninguém digita “bisneto”. O sistema chega nisso pelos laços — e refaz o cálculo
+           quando um parente novo entra na árvore.</p>
+        <ul class="demo__notes">
+          <li>Parentesco e geração derivados, nunca digitados</li>
+          <li>Linha de transmissão destacada automaticamente</li>
+          <li>Desenho próprio, sem depender de biblioteca de terceiros</li>
+        </ul>
+      </div>
+
+      <div class="screen glass demo__screen">
+        <div class="screen__chrome" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="screen__body">
+          <p class="screen__title">Família Bianchi — linha de transmissão</p>
+
+          <div class="tree-wrap">
+          <svg class="tree" viewBox="0 0 520 320" role="img"
+               aria-label="Árvore genealógica de cinco gerações, de Giuseppe Bianchi, nascido em 1878 na Itália, até a requerente Ana Souza, nascida em 2001. A linha de transmissão da cidadania passa por Antonio, Maria e Carlos.">
+            <!-- laços laterais, até a borda superior de cada irmão -->
+            <g class="tree__link">
+              <path d="M96 62 v14 H300 V90"/>
+              <path d="M96 130 v14 H300 V158"/>
+              <path d="M96 198 v14 H300 V226"/>
+            </g>
+            <!-- linha de transmissão da cidadania -->
+            <path class="tree__line" d="M96 62 V90 M96 130 V158 M96 198 V226 M96 266 V286"/>
+
+            <g class="tree__node tree__node--root">
+              <rect x="16" y="22" width="160" height="40" rx="9"/>
+              <text x="30" y="40">Giuseppe Bianchi</text>
+              <text x="30" y="54" class="tree__meta">1878 · Itália</text>
+            </g>
+
+            <g class="tree__node">
+              <rect x="16" y="90" width="160" height="40" rx="9"/>
+              <text x="30" y="108">Antonio Bianchi</text>
+              <text x="30" y="122" class="tree__meta">1912 · filho</text>
+            </g>
+            <g class="tree__node tree__node--mute">
+              <rect x="220" y="90" width="160" height="40" rx="9"/>
+              <text x="234" y="108">Rosa Bianchi</text>
+              <text x="234" y="122" class="tree__meta">1915 · filha</text>
+            </g>
+
+            <g class="tree__node">
+              <rect x="16" y="158" width="160" height="40" rx="9"/>
+              <text x="30" y="176">Maria Bianchi</text>
+              <text x="30" y="190" class="tree__meta">1945 · neta</text>
+            </g>
+            <g class="tree__node tree__node--mute">
+              <rect x="220" y="158" width="160" height="40" rx="9"/>
+              <text x="234" y="176">Pedro Bianchi</text>
+              <text x="234" y="190" class="tree__meta">1948 · neto</text>
+            </g>
+
+            <g class="tree__node">
+              <rect x="16" y="226" width="160" height="40" rx="9"/>
+              <text x="30" y="244">Carlos Souza</text>
+              <text x="30" y="258" class="tree__meta">1978 · bisneto</text>
+            </g>
+            <g class="tree__node tree__node--mute">
+              <rect x="220" y="226" width="160" height="40" rx="9"/>
+              <text x="234" y="244">Marta Souza</text>
+              <text x="234" y="258" class="tree__meta">1981 · bisneta</text>
+            </g>
+
+            <g class="tree__node tree__node--target">
+              <rect x="16" y="286" width="216" height="26" rx="8"/>
+              <text x="30" y="304">Ana Souza · requerente · 5ª geração</text>
+            </g>
+          </svg>
+          </div>
+
+          <p class="screen__foot">Cinco gerações, quatro laços. O grau de parentesco de cada
+             pessoa é calculado, não preenchido à mão.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2. Esteira do serviço -->
+    <article class="demo demo--flip reveal">
+      <div class="demo__text">
+        <h3>A esteira que não deixa pular etapa</h3>
+        <p>Cada serviço tem a sua sequência, e cada etapa sabe o que precisa estar pronto antes
+           dela. O protocolo no consulado simplesmente <strong>não abre</strong> enquanto houver
+           documento sem chancela — a regra mora no sistema, não na memória da equipe.</p>
+        <p>Etapas condicionais aparecem só quando o caso pede, e o cliente acompanha por fora
+           sem ligar para perguntar.</p>
+        <ul class="demo__notes">
+          <li>Etapa bloqueada explica o motivo do bloqueio</li>
+          <li>Requisito sabe de quem é a responsabilidade</li>
+          <li>Acompanhamento consular de até quatro anos</li>
+        </ul>
+      </div>
+
+      <div class="screen glass demo__screen">
+        <div class="screen__chrome" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="screen__body">
+          <p class="screen__title">Processo #2418 · Cidadania italiana por descendência</p>
+
+          <ol class="track">
+            <li class="track__step is-done">
+              <span class="track__label">Reunião de documentos</span>
+              <span class="track__note">12 de 12 documentos</span>
+            </li>
+            <li class="track__step is-done">
+              <span class="track__label">Tradução juramentada</span>
+              <span class="track__note">concluída</span>
+            </li>
+            <li class="track__step is-now">
+              <span class="track__label">Apostilamento de Haia</span>
+              <span class="track__note">7 de 12 apostilados</span>
+              <span class="track__bar"><i style="--to:58%"></i></span>
+            </li>
+            <li class="track__step is-blocked">
+              <span class="track__label">Protocolo no consulado</span>
+              <span class="track__note">travado: certidão de Giuseppe sem chancela</span>
+            </li>
+            <li class="track__step">
+              <span class="track__label">Acompanhamento consular</span>
+              <span class="track__note">até 4 anos</span>
+            </li>
+          </ol>
+
+          <p class="screen__foot">A trava não é um aviso que dá para ignorar: a etapa seguinte
+             não existe até o requisito ser cumprido.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3. Jurisdição consular -->
+    <article class="demo reveal">
+      <div class="demo__text">
+        <h3>A pergunta que a equipe fazia toda semana</h3>
+        <p>“Qual consulado atende esse cliente?” virava consulta em planilha e, às vezes, em
+           processo protocolado no lugar errado. Hoje é uma pergunta que o sistema responde:
+           informe a UF e ele devolve o consulado competente.</p>
+        <p>O cadastro de consulado, contato e endereço é gravado de uma vez só — ou não é
+           gravado. Nunca fica pela metade.</p>
+        <ul class="demo__notes">
+          <li>Jurisdição territorial por unidade federativa</li>
+          <li>Cadastro em cinco passos, com validação acumulada</li>
+          <li>Gravação atômica de consulado, contato e endereço</li>
+        </ul>
+      </div>
+
+      <div class="screen glass demo__screen">
+        <div class="screen__chrome" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="screen__body">
+          <p class="screen__title">Consulado competente</p>
+
+          <div class="lookup">
+            <span class="lookup__field">Estado do cliente</span>
+            <span class="lookup__value">Espírito Santo</span>
+          </div>
+
+          <div class="answer">
+            <p class="answer__name">Consulado Geral da Itália no Rio de Janeiro</p>
+            <p class="answer__meta">Atende ES · RJ</p>
+          </div>
+
+          <ul class="rows rows--tight">
+            <li><span class="rows__k">São Paulo</span><span class="rows__v">SP (capital e interior)</span><span class="tag">ativo</span></li>
+            <li><span class="rows__k">Belo Horizonte</span><span class="rows__v">MG · GO · DF</span><span class="tag">ativo</span></li>
+            <li><span class="rows__k">Curitiba</span><span class="rows__v">PR · SC</span><span class="tag">ativo</span></li>
+          </ul>
+
+          <p class="screen__foot">Uma chamada responde o que antes dependia de alguém lembrar
+             da regra certa.</p>
+        </div>
+      </div>
+    </article>
+
+    <p class="pratica__note">Telas ilustrativas do sistema da ADACI, com dados fictícios. O
+       código é privado do cliente.</p>
+  </div>
+</section>
+
 <!-- ─────────────────────────  PROCESSO  ───────────────────────── -->
-<section class="sec" id="processo">
+<section class="band" id="processo">
   <div class="wrap">
     <div class="sec__head">
       <h2 class="h2">Como um projeto acontece</h2>
@@ -280,7 +476,7 @@
 </section>
 
 <!-- ─────────────────────────  SOBRE  ───────────────────────── -->
-<section class="band" id="sobre">
+<section class="sec" id="sobre">
   <div class="wrap about">
     <div class="about__text">
       <h2 class="h2">Quem está por trás</h2>
@@ -296,8 +492,9 @@
          Bom Jesus do Itabapoana, no Rio de Janeiro.</p>
     </div>
     <dl class="specs">
-      <div><dt>Back-end</dt><dd>Java, Spring, SQL</dd></div>
+      <div><dt>Back-end</dt><dd>Java, Spring Boot, PostgreSQL</dd></div>
       <div><dt>Front-end</dt><dd>Angular, TypeScript</dd></div>
+      <div><dt>Acesso e segurança</dt><dd>Keycloak, permissões por perfil, auditoria</dd></div>
       <div><dt>Qualidade</dt><dd>Testes automatizados, versionamento, revisão de código</dd></div>
       <div><dt>Formação</dt><dd>Ciência da Computação — UFES, Alegre</dd></div>
       <div><dt>Atuação</dt><dd>Zup Innovation · G&amp;Ms Soluções Tecnológicas</dd></div>
@@ -306,7 +503,7 @@
 </section>
 
 <!-- ─────────────────────────  PROJETOS  ───────────────────────── -->
-<section class="sec" id="projetos">
+<section class="band" id="projetos">
   <div class="wrap">
     <div class="sec__head">
       <h2 class="h2">Projetos abertos</h2>
@@ -357,7 +554,7 @@
 </section>
 
 <!-- ─────────────────────────  FAQ  ───────────────────────── -->
-<section class="band" id="faq">
+<section class="sec" id="faq">
   <div class="wrap faq">
     <h2 class="h2">Perguntas frequentes</h2>
 
@@ -392,7 +589,7 @@
 </section>
 
 <!-- ─────────────────────────  CONTATO  ───────────────────────── -->
-<section class="sec" id="contato">
+<section class="band" id="contato">
   <div class="wrap contact">
     <div class="contact__intro">
       <h2 class="h2">Vamos conversar sobre o seu processo</h2>
@@ -428,7 +625,7 @@
       </ul>
     </div>
 
-    <form class="form" id="contact-form" novalidate>
+    <form class="form glass" id="contact-form" novalidate>
       <div class="field">
         <label for="f-nome">Nome</label>
         <input id="f-nome" name="nome" type="text" required autocomplete="name">

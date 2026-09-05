@@ -35,7 +35,22 @@ o `manifest` não funcionam via `file://`.
 |---|---|
 | Telefone, e-mail, chave do formulário | `assets/js/config.js` |
 | Cores dos dois temas | topo de `assets/css/styles.css` (`:root` e os blocos de tema escuro) |
+| Campo de gradiente do topo | variável `--field` em `assets/css/styles.css` (uma versão por tema) |
 | Textos, serviços, FAQ, projetos | `index.html` |
+| Telas do case ADACI | seção `#pratica` do `index.html` (SVG e HTML, sem imagens) |
+
+### A seção "Como fica na prática"
+
+Três telas do sistema desenvolvido para a **ADACI** (assessoria em cidadania e vistos),
+desenhadas em HTML, CSS e SVG — sem imagem e sem biblioteca:
+
+1. **Árvore genealógica** com a linha de transmissão da cidadania sendo traçada
+2. **Esteira do processo**, com etapa travada por requisito não cumprido
+3. **Consulta de consulado competente** por unidade federativa
+
+Os dados são fictícios e a página diz isso explicitamente; o código do cliente é privado.
+A animação de entrada roda uma vez, por `IntersectionObserver`, e só nesses três blocos —
+sem JavaScript ou com `prefers-reduced-motion`, tudo aparece direto, já no estado final.
 
 Os valores de contato também estão escritos direto no `index.html` como fallback, para que os
 links continuem certos mesmo se o JavaScript não carregar. Ao trocar o número ou o e-mail,
