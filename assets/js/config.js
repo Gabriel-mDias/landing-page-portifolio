@@ -12,7 +12,9 @@ window.GEMS_CONFIG = {
   email: 'gemstecnologia@gmail.com',
 
   /* Access key gratuita do https://web3forms.com — gerada com o e-mail acima.
+     É pública por natureza (vai no JavaScript que todo visitante baixa) e só
+     consegue entregar no e-mail cadastrado, então não é segredo.
      Enquanto estiver vazia, o formulário orienta o visitante a usar o
      WhatsApp ou o e-mail. */
-  web3formsKey: ''
+  web3formsKey: '70b4a332-3d6f-4f04-b148-e181198cb5ab'
 };
