@@ -1,0 +1,31 @@
+/* =========================================================================
+   G&Ms Soluções Tecnológicas — Design Tokens: Tipografia
+   Display: Outfit (geométrica, refinada e moderna)
+   Corpo: IBM Plex Sans (legibilidade de engenharia impecável)
+   ========================================================================= */
+
+:root {
+  --display: 'Outfit', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --body:    'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --code:    ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace;
+
+  /* Escalas Fluidas */
+  --text-xs:   clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem);
+  --text-sm:   clamp(0.875rem, 0.825rem + 0.25vw, 0.9375rem);
+  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.0625rem);
+  --text-lg:   clamp(1.125rem, 1.05rem + 0.35vw, 1.25rem);
+  --text-xl:   clamp(1.3rem, 1.15rem + 0.6vw, 1.5rem);
+  --text-2xl:  clamp(1.6rem, 1.35rem + 1.1vw, 2rem);
+  --text-3xl:  clamp(2rem, 1.65rem + 1.6vw, 2.65rem);
+  --text-4xl:  clamp(2.5rem, 1.95rem + 2.4vw, 3.5rem);
+
+  /* Entrelinhas e Espaçamentos */
+  --leading-tight: 1.15;
+  --leading-snug:  1.3;
+  --leading-base:  1.65;
+  --leading-loose: 1.8;
+
+  --tracking-tight: -0.025em;
+  --tracking-wide:  0.08em;
+  --tracking-badge: 0.16em;
+}

@@ -1,0 +1,34 @@
+/* =========================================================================
+   G&Ms Soluções Tecnológicas — Sections: Processo
+   As 5 etapas estruturadas de ponta a ponta
+   ========================================================================= */
+
+.processo {
+  position: relative;
+}
+
+.processo-header {
+  text-align: center;
+  max-width: 65ch;
+  margin: 0 auto 3.5rem;
+}
+
+.processo-footer-note {
+  margin-top: 3.5rem;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: var(--r-md);
+  background: color-mix(in srgb, var(--surface) 60%, transparent);
+  border: 1px solid var(--line);
+  max-width: 60ch;
+  margin-inline: auto;
+}
+
+.processo-footer-note p {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  margin: 0;
+}
+.processo-footer-note strong {
+  color: var(--ink);
+}

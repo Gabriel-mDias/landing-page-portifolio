@@ -1,0 +1,339 @@
+/* =========================================================================
+   G&Ms Soluções Tecnológicas — Components: Telas Ilustrativas & Casos
+   Telas desenhadas puramente em HTML/SVG e Glassmorphism
+   ========================================================================= */
+
+.screen {
+  position: relative;
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+
+.screen__chrome {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .75rem 1rem;
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--surface) 45%, transparent);
+}
+
+.screen__chrome span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--line-firm);
+  opacity: .8;
+}
+
+.screen__body {
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.screen__title {
+  font-family: var(--display);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+
+.screen__foot {
+  font-size: var(--text-xs);
+  color: var(--muted);
+  margin: 1.25rem 0 0;
+  border-top: 1px dashed var(--line);
+  padding-top: .75rem;
+}
+
+/* Linhas de Tabela/Lista em Tela */
+.rows {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.rows li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  padding: .65rem .85rem;
+  border-radius: var(--r-sm);
+  background: color-mix(in srgb, var(--raised) 70%, transparent);
+  border: 1px solid var(--line);
+  font-size: var(--text-xs);
+  flex-wrap: wrap;
+}
+
+.rows__k {
+  font-family: var(--code);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.rows__v {
+  color: var(--ink-soft);
+  flex-grow: 1;
+}
+
+.tag {
+  display: inline-flex;
+  padding: .2rem .55rem;
+  border-radius: var(--r-sm);
+  font-size: .7rem;
+  font-weight: 500;
+  background: var(--surface);
+  color: var(--muted);
+  border: 1px solid var(--line);
+}
+
+.tag--hot {
+  background: var(--alert-wash);
+  color: var(--alert);
+  border-color: color-mix(in srgb, var(--alert) 35%, transparent);
+}
+
+/* Vitrine Hero (Showcase) */
+.showcase {
+  margin: 2.5rem 0 0;
+  position: relative;
+  z-index: 1;
+}
+
+.showcase__tabs {
+  display: flex;
+  gap: .5rem;
+  margin-bottom: -1px;
+  position: relative;
+  z-index: 2;
+  overflow-x: auto;
+  padding-bottom: .25rem;
+}
+
+.showcase__tabs [role="tab"] {
+  padding: .65rem 1.25rem;
+  border-radius: var(--r-sm) var(--r-sm) 0 0;
+  border: 1px solid var(--line);
+  border-bottom: none;
+  background: color-mix(in srgb, var(--surface) 70%, transparent);
+  color: var(--muted);
+  font-family: var(--body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--t-fast);
+}
+
+.showcase__tabs [role="tab"][aria-selected="true"] {
+  background: var(--raised);
+  color: var(--ink);
+  font-weight: 600;
+  border-top: 2px solid var(--gold);
+}
+
+.showcase__cap {
+  margin-top: .85rem;
+  font-size: var(--text-xs);
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Caso Real: Árvore Genealógica (ADACI) */
+.tree-wrap {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: .5rem;
+}
+
+.tree {
+  width: 100%;
+  min-width: 460px;
+  height: auto;
+}
+
+.tree__link path {
+  stroke: var(--line-firm);
+  stroke-width: 1.5;
+  stroke-dasharray: 3 3;
+}
+
+.tree__line {
+  stroke: var(--gold);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.tree__node rect {
+  fill: var(--raised);
+  stroke: var(--line);
+  stroke-width: 1.5;
+  rx: 8;
+}
+
+.tree__node text {
+  fill: var(--ink);
+  font-family: var(--body);
+  font-size: 11px;
+  font-weight: 600;
+  dominant-baseline: middle;
+}
+
+.tree__node .tree__meta {
+  fill: var(--muted);
+  font-size: 9.5px;
+  font-weight: 400;
+}
+
+.tree__node--root rect {
+  stroke: var(--gold);
+  fill: color-mix(in srgb, var(--gold-wash) 35%, var(--raised));
+}
+
+.tree__node--target rect {
+  stroke: var(--gold);
+  stroke-width: 2;
+  fill: var(--gold);
+}
+.tree__node--target text {
+  fill: #FFFFFF;
+}
+
+.tree__node--mute rect {
+  opacity: .55;
+  stroke-dasharray: 2 2;
+}
+.tree__node--mute text {
+  opacity: .6;
+}
+
+/* Caso Real: Esteira de Processo / Provisioning */
+.track {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .85rem;
+}
+
+.track__step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  padding: .75rem 1rem .75rem 2.25rem;
+  border-radius: var(--r-sm);
+  background: color-mix(in srgb, var(--surface) 55%, transparent);
+  border: 1px solid var(--line);
+}
+
+.track__step::before {
+  content: "";
+  position: absolute;
+  left: .95rem;
+  top: 1.15rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--line-firm);
+}
+
+.track__step.is-done::before {
+  background: var(--good);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--good) 25%, transparent);
+}
+
+.track__step.is-now::before {
+  background: var(--gold);
+  box-shadow: 0 0 0 3px var(--gold-glow);
+}
+
+.track__step.is-blocked::before {
+  background: var(--alert);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--alert) 25%, transparent);
+}
+
+.track__label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.track__note {
+  font-size: var(--text-xs);
+  color: var(--muted);
+}
+
+.track__bar {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: var(--line);
+  border-radius: 2px;
+  margin-top: .4rem;
+  overflow: hidden;
+}
+.track__bar i {
+  display: block;
+  height: 100%;
+  width: var(--to, 0%);
+  background: var(--gold);
+  transition: width 1s ease-out;
+}
+
+/* Lookups do Meduc */
+.lookups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: .75rem;
+  margin-bottom: 1.25rem;
+}
+
+.lookup {
+  padding: .65rem .85rem;
+  border-radius: var(--r-sm);
+  background: color-mix(in srgb, var(--surface) 50%, transparent);
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+}
+
+.lookup__field {
+  font-size: .6875rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--muted);
+}
+
+.lookup__value {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* Animação Reveal via IntersectionObserver */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.is-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

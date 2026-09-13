@@ -1,132 +1,112 @@
-# G&Ms Soluções Tecnológicas — site
+# G&Ms Soluções Tecnológicas — Site Institucional (V2 Modular)
 
-Site institucional da G&Ms, publicado em **https://gems.tec.br** pelo GitHub Pages.
+Site institucional da G&Ms Soluções Tecnológicas, publicado em **[https://gems.tec.br](https://gems.tec.br)** pelo GitHub Pages.
 
-Estático: HTML, CSS e JavaScript sem build, dependência ou framework. O deploy é o próprio
-`git push` na branch `main`.
+---
 
-## Estrutura
+## 1. Visão Geral da Nova Versão (V2)
+
+Esta nova versão da landing page foi totalmente refatorada para alinhar a comunicação com os objetivos estratégicos da G&Ms e resolver limitações técnicas e estéticas da versão anterior:
+
+1. **Foco no Público-Alvo Real**: Pequenos e médios empreendedores de **Bom Jesus do Itabapoana e região** (além de atendimento remoto em todo o Brasil), apresentando a tecnologia como uma aliada simples e direta para destravar processos e reduzir custos.
+2. **Nova Tríade de Serviços**:
+   - **Landing Pages**: Porta de entrada para presença digital rápida e acessível.
+   - **Consultorias em TI**: Diagnóstico e mapeamento sincero de processos, automações e melhorias.
+   - **Sistemas Web Personalizados (ERP Customizado)**: O carro-chefe da empresa, trazendo esteiras operacionais sob medida e controle gerencial ponta a ponta.
+3. **Novo Pilar Criativo de Gestão (Antes vs. Depois)**:
+   - Componentes visuais interativos que mostram a transformação real em três áreas críticas: **Gestão do Trabalho**, **Gestão da Equipe** e **Gestão Financeira & Estoque** — sem métricas fictícias ou números artificiais.
+4. **Processo Transparente em 5 Etapas**:
+   - Linha do tempo visual inspirada nas melhores práticas de design (Optsolv e Stripe), detalhando desde a primeira conversa até a homologação iterativa e suporte contínuo.
+5. **Casos Reais Reestruturados**:
+   - As telas ilustrativas da **ADACI** (árvore genealógica e transmissão de cidadania italiana) e do **Meduc** (gestão escolar multi-tenant com isolamento seguro de dados) foram reposicionadas como vitrine de maturidade técnica do serviço de Sistemas Web.
+
+---
+
+## 2. Decisões Técnicas e Arquiteturais
+
+### Por que uma Arquitetura Modular Nativa (Zero-Build / Pure ESM)?
+Durante a fase de planejamento e entrevista técnica (`/grill-me`), avaliou-se a introdução de ferramentas de build como Vite ou bundlers complexos. Optou-se pela **Arquitetura Modular Nativa (Opção A)** pelos seguintes motivos:
+- **Deploy Sem Atrito**: O GitHub Pages continua sendo servido diretamente a partir do `git push` na branch `main`, sem risco de falha em pipelines de CI/CD ou necessidade de gerar e rastrear pastas `dist/`.
+- **Clean Code e Princípio da Responsabilidade Única (SRP)**:
+  - O CSS foi particionado em **tokens** (`colors.css`, `typography.css`, `elevation.css`), **base** (`reset.css`, `global.css`), **componentes** (`buttons.css`, `cards.css`, `screens.css`, `timeline.css`, `forms.css`, `topbar.css`, `footer.css`) e **seções** (`hero.css`, `pilares.css`, `servicos.css`, `processo.css`, `sobre.css`, `faq.css`, `contato.css`), unificados via `@import` no `assets/css/styles.css`.
+  - O JavaScript deixou de ser um IIFE monolítico e passou a adotar **ES Modules nativos do navegador** (`<script type="module" src="assets/js/main.js">`). Cada funcionalidade reside em seu próprio módulo em `assets/js/modules/` (`theme.js`, `navigation.js`, `showcase-tabs.js`, `pillars-toggle.js`, `scroll-reveal.js`, `contact-form.js`).
+- **Performance e Manutenibilidade**: Manutenção cirúrgica — quem for alterar a timeline ou as cores edita apenas o arquivo responsável, sem efeitos colaterais.
+
+Para consultar o detalhamento completo da arquitetura, leia [`docs/arquitetura.md`](docs/arquitetura.md). Para tokens de cores e contrastes, consulte [`docs/guia-de-estilo.md`](docs/guia-de-estilo.md).
+
+---
+
+## 3. Estrutura do Repositório
 
 ```
-index.html            página única, com todas as seções
-404.html              página de erro do Pages
-CNAME                 domínio custom (gems.tec.br) — não remover
-robots.txt            liberado, com referência ao sitemap
-sitemap.xml
-site.webmanifest
-assets/css/styles.css tokens de cor, tipografia, layout e os dois temas
-assets/js/config.js   ← telefone, e-mail e chave do formulário
-assets/js/main.js     tema, menu, abas do hero, revelação e envio do formulário
-assets/img/           favicon e imagem de compartilhamento (Open Graph)
-assets/logos/         arquivos originais da marca
+index.html                  Página única semântica e acessível (V2)
+404.html                    Página de erro do GitHub Pages
+CNAME                       Domínio customizado (gems.tec.br) — não remover
+robots.txt                  Permissões de rastreamento e link para o sitemap
+sitemap.xml                 Mapa XML para indexação no Google
+site.webmanifest            Manifesto web / PWA
+docs/
+  arquitetura.md            Documentação técnica da arquitetura modular e Clean Code
+  guia-de-estilo.md         Tokens de design, regras de contraste e acessibilidade
+assets/
+  css/
+    styles.css              Entrypoint agregador que importa os submódulos
+    tokens/                 Cores, tipografia e elevação/sombras
+    base/                   Reset e estilos globais
+    components/             Botões, cards, telas, timeline, forms, topbar e footer
+    sections/               Estilos específicos de cada seção da landing page
+  js/
+    config.js               Telefone, e-mail e chave do formulário Web3Forms
+    main.js                 Orquestrador principal da aplicação (ES Module)
+    modules/                Módulos de tema, navegação, abas, pilares e formulário
+  img/                      Favicon e imagem de compartilhamento Open Graph (og-cover)
+  logos/                    Arquivos originais e vetores da marca
 ```
 
-## Rodar localmente
+---
+
+## 4. Como Rodar Localmente
+
+Para rodar localmente com suporte a ES Modules e envio do formulário:
 
 ```powershell
 python -m http.server 8099
 ```
 
-Depois abra <http://127.0.0.1:8099>. Servidor é necessário porque o `fetch` do formulário e
-o `manifest` não funcionam via `file://`.
+Depois abra no navegador: **<http://127.0.0.1:8099>**.
 
-## Marca
+> **Nota:** Servidor HTTP local é necessário porque módulos JavaScript (`type="module"`), `manifest` e requisições `fetch` são bloqueados por segurança em URLs do tipo `file://`.
 
-A identidade visual do site sai da própria logo: **navy `#172C3B`** e o **dourado do gradiente
-da marca** (`#C19059` → `#9C7449` → `#926E47`), sobre papel off-white. A tagline oficial é
-**"Tecnologia que gera valor para pessoas"**.
+---
 
-### Os arquivos em `assets/logos/`
+## 5. Como Configurar e Manter
 
-| Arquivo | Uso |
+| O quê | Onde alterar |
 |---|---|
-| `gems-wordmark.svg` | **Em uso.** Wordmark completo. Os dois paths estão embutidos direto no `index.html` |
-| `gems-symbol-g.svg` | **Em uso.** Símbolo reduzido; origem do `assets/img/favicon.svg` |
-| `gems-full-logo.png` | Arte original com a assinatura e a tagline. Referência — não é usada no site |
+| Telefone, e-mail e chave do formulário | `assets/js/config.js` |
+| Cores dos dois temas | `assets/css/tokens/colors.css` |
+| Tipografia e escalas | `assets/css/tokens/typography.css` |
+| Conteúdo dos serviços e textos | `index.html` |
+| Estilos de componentes específicos | `assets/css/components/` |
+| Comportamento de scripts | `assets/js/modules/` |
 
-Os dois SVGs têm a mesma estrutura: um path dourado com o gradiente `userSpaceOnUse` da marca
-e um path navy sólido `#172C3B`. Sem raster embutido e sem `transform`, o que torna simples
-reaproveitá-los.
+### Ativar o Formulário de Contato
+1. Crie uma chave gratuita em <https://web3forms.com> vinculada ao e-mail **gemstecnologia@gmail.com**.
+2. Cole a chave em `web3formsKey` no arquivo `assets/js/config.js`.
+3. Faça commit e push. Enquanto a chave não estiver preenchida, o formulário orientará o visitante a utilizar o WhatsApp ou o e-mail direto.
 
-O wordmark está **inline no `index.html`**, e não como `<img>`, porque as letras precisam
-acompanhar o tema: o path navy usa `fill="var(--logo-ink)"` — navy no claro, branco-gelo no
-escuro — enquanto o gradiente dourado é idêntico nos dois. Ao trocar o arquivo da logo,
-é o bloco `<svg class="wordmark">` do cabeçalho que muda; os paths saem de
-`gems-wordmark.svg` (ids `gms-gold` e `gms-navy`).
+---
 
-### Ícones
-
-**Font Awesome Free 6.7.2**, sob licença [CC BY 4.0](https://fontawesome.com/license/free).
-Os 24 ícones usados estão **embutidos como sprite SVG** no topo do `index.html` — nada de CDN,
-nenhuma requisição extra, e eles herdam a cor do tema via `currentColor`.
-
-Cada um foi escolhido pelo que ilustra, não como enfeite: balança para advocacia, estetoscópio
-para clínicas, vitrine para comércio, capelo para o Meduc, passaporte para a ADACI, e um ícone
-por etapa do processo (conversa, régua e caneta, foguete, ciclo, caixa, quadro de treinamento,
-ferramentas) no lugar da numeração.
-
-**Para trocar ou acrescentar um ícone:** baixe o SVG em
-`https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/svgs/solid/<nome>.svg`,
-copie o `viewBox` e o `d` para um `<symbol id="i-...">` novo no sprite, e referencie com
-`<svg class="ico-fa"><use href="#i-..."/></svg>`. Use `.ico-lead` quando ele abrir um bloco
-acima do título.
-
-### Tipografia
-
-Títulos em **Outfit** (geométrica, escolhida por proximidade com o desenho do wordmark);
-corpo em **IBM Plex Sans**. Se a fonte original da logo for identificada — Montserrat e
-Poppins são as candidatas — vale trocar Outfit por ela em `--display`.
-
-## Onde mexer
-
-| O quê | Onde |
-|---|---|
-| Telefone, e-mail, chave do formulário | `assets/js/config.js` |
-| Cores dos dois temas | topo de `assets/css/styles.css` (`:root` e os blocos de tema escuro) |
-| Campo de gradiente do topo | variável `--field` (uma versão por tema) |
-| Textos, serviços, processo, FAQ | `index.html` |
-| Telas dos casos | seção `#casos` do `index.html` (SVG e HTML, sem imagens) |
-
-Os valores de contato também estão escritos direto no `index.html` como fallback, para que os
-links continuem certos mesmo se o JavaScript não carregar. Ao trocar o número ou o e-mail,
-atualize os dois lugares (`config.js` e os `href` correspondentes no HTML).
-
-### Ativar o formulário de contato
-
-1. Crie uma access key gratuita em <https://web3forms.com> usando **gemstecnologia@gmail.com**.
-2. Cole a chave em `web3formsKey`, no `assets/js/config.js`.
-3. Commit e push.
-
-Enquanto a chave estiver vazia, o formulário orienta o visitante a usar o WhatsApp ou o e-mail —
-a página nunca fica sem um canal de contato funcionando.
-
-### A seção "Casos reais"
-
-Telas desenhadas em HTML, CSS e SVG — sem imagem e sem biblioteca:
-
-- **ADACI** (cliente, cidadania e vistos): árvore genealógica com a linha de transmissão sendo
-  traçada, e esteira de processo com etapa travada por requisito não cumprido.
-- **Meduc** (produto próprio, gestão escolar): provisionamento de uma nova instituição, com
-  a base de dados isolada por escola.
-
-Os dados são fictícios e a página diz isso explicitamente; o código dos sistemas de cliente é
-privado. A animação de entrada roda uma vez, por `IntersectionObserver`, e só nesses blocos —
-sem JavaScript ou com `prefers-reduced-motion`, tudo aparece direto, já no estado final.
-
-## Publicação
+## 6. Publicação e Infraestrutura
 
 ### 1. GitHub Pages
-
-Em **Settings → Pages** do repositório:
-
 - **Source**: `Deploy from a branch`
 - **Branch**: `main` / `/ (root)`
-- **Custom domain**: `gems.tec.br` (o arquivo `CNAME` já existe no repo)
-- **Enforce HTTPS**: marcar **só depois** que o DNS propagar e o certificado for emitido
+- **Custom domain**: `gems.tec.br`
+- **Enforce HTTPS**: Ativo após propagação de DNS.
 
-### 2. DNS no Registro.br
-
-No painel do domínio → **DNS / Editar zona**, criar:
+### 2. Apontamento DNS no Registro.br
+No painel do domínio `gems.tec.br` → **DNS / Editar zona**:
 
 | Nome | Tipo | Valor |
 |---|---|---|
@@ -140,27 +120,4 @@ No painel do domínio → **DNS / Editar zona**, criar:
 | `@` | AAAA | `2606:50c0:8003::153` |
 | `www` | CNAME | `gabriel-mdias.github.io.` |
 
-O redirecionamento de `www` para o domínio raiz é feito pelo próprio GitHub Pages.
-
-**Recomendado:** verificar o domínio em <https://github.com/settings/pages> → *Add a domain*.
-O GitHub gera um registro TXT `_github-pages-challenge-gabriel-mdias`; criando-o na mesma zona,
-nenhuma outra conta do GitHub consegue reivindicar o domínio.
-
-### 3. Conferir
-
-```powershell
-Resolve-DnsName gems.tec.br -Type A        # deve retornar os quatro 185.199.10x.153
-curl.exe -I https://gems.tec.br            # 200, certificado válido
-curl.exe -I https://www.gems.tec.br        # 301 para o domínio raiz
-```
-
-## Notas de manutenção
-
-- **Acessibilidade e SEO**: Lighthouse em 100 (acessibilidade, boas práticas, SEO) **nos dois
-  temas**. Ao mexer em cor, manter contraste mínimo de 4.5:1 para texto — `--gold` (`#9C7449`,
-  o tom médio do gradiente da marca) fica em 3.9:1 e por isso serve só para filetes, ícones e
-  numerais; texto e link usam `--gold-ink` (`#86653F`, 5.0:1).
-- **Dados estruturados**: o JSON-LD no fim do `index.html` descreve a empresa, a pessoa e o FAQ.
-  Ao editar uma pergunta do FAQ, edite também a entrada correspondente lá.
-- **Imagem de compartilhamento**: `assets/img/og-cover.png` (1200×630). Se a headline ou a
-  identidade mudarem, vale regerar.
+O redirecionamento de `www` para o domínio raiz é feito automaticamente pelo GitHub Pages.

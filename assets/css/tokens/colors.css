@@ -1,0 +1,132 @@
+/* =========================================================================
+   G&Ms Soluções Tecnológicas — Design Tokens: Cores
+   Identidade: Navy (#172C3B) e Dourado (#9C7449 / #C19059)
+   Contraste estrito para WCAG AAA/AA em ambos os temas
+   ========================================================================= */
+
+:root {
+  --paper:       #F8F7F4;
+  --surface:     #EFEDE8;
+  --surface-alt: #E8E5DC;
+  --raised:      #FFFFFF;
+  --line:        #E1DED6;
+  --line-firm:   #C6C1B6;
+  --ink:         #172C3B;   /* navy oficial da marca */
+  --ink-soft:    #2B4354;
+  --muted:       #5C6B78;
+  
+  /* Dourados da marca */
+  --gold:        #9C7449;   /* tom médio — filetes, ícones, acentos */
+  --gold-light:  #C19059;   /* tom claro da marca */
+  --gold-dark:   #926E47;   /* tom escuro do gradiente */
+  --gold-ink:    #7E5E3A;   /* escurecido para contraste > 5:1 em texto */
+  --gold-wash:   #F3EADC;   /* fundo suave para badges */
+  --gold-glow:   rgba(156, 116, 73, 0.18);
+
+  /* Estados e Acentos */
+  --alert:       #A63D24;
+  --alert-wash:  #FBEAE5;
+  --good:        #1E6F43;
+  --good-wash:   #EAF5EE;
+  --bad:         #9E2A2B;
+  --bad-wash:    #FCEEED;
+
+  /* Logo */
+  --logo-ink:    #172C3B;
+
+  /* Vidro e Sombras */
+  --glass-line:  rgba(255, 255, 255, .80);
+  --glass-bg:    linear-gradient(180deg, rgba(255, 255, 255, .88), rgba(255, 255, 255, .68));
+
+  /* Campo de gradiente hero (tema claro) */
+  --field:
+    radial-gradient(42% 38% at 10% 56%, rgba(156, 116, 73, .48), transparent 70%),
+    radial-gradient(46% 40% at 88% 44%, rgba(62, 108, 144, .34), transparent 70%),
+    radial-gradient(66% 48% at 54% 96%, rgba(23, 44, 59, .34), transparent 72%),
+    radial-gradient(34% 30% at 68% 18%, rgba(224, 214, 198, .58), transparent 70%),
+    radial-gradient(32% 30% at 22% 16%, rgba(238, 239, 240, .78), transparent 70%);
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper:       #0C1A24;
+    --surface:     #12252F;
+    --surface-alt: #162C38;
+    --raised:      #17303D;
+    --line:        #1E3543;
+    --line-firm:   #34505F;
+    --ink:         #E9F0F5;
+    --ink-soft:    #CFDCE5;
+    --muted:       #93A5B3;
+
+    --gold:        #C19059;
+    --gold-light:  #D8AB77;
+    --gold-dark:   #A37845;
+    --gold-ink:    #D2A874;
+    --gold-wash:   #1B3240;
+    --gold-glow:   rgba(193, 144, 89, 0.22);
+
+    --alert:       #E8846A;
+    --alert-wash:  #341913;
+    --good:        #48BB78;
+    --good-wash:   #102E20;
+    --bad:         #F56565;
+    --bad-wash:    #361919;
+
+    --logo-ink:    #EDF3F7;
+
+    --glass-line:  rgba(255, 255, 255, .10);
+    --glass-bg:    linear-gradient(180deg, rgba(23, 48, 61, .85), rgba(18, 37, 47, .70));
+
+    --field:
+      radial-gradient(42% 38% at 10% 56%, rgba(193, 144, 89, .34), transparent 70%),
+      radial-gradient(46% 40% at 88% 44%, rgba(34, 84, 122, .66), transparent 70%),
+      radial-gradient(66% 48% at 54% 96%, rgba(146, 110, 71, .32), transparent 72%),
+      radial-gradient(34% 30% at 68% 18%, rgba(18, 48, 70, .72), transparent 70%),
+      radial-gradient(32% 30% at 22% 16%, rgba(12, 26, 36, .70), transparent 70%);
+
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --paper:       #0C1A24;
+  --surface:     #12252F;
+  --surface-alt: #162C38;
+  --raised:      #17303D;
+  --line:        #1E3543;
+  --line-firm:   #34505F;
+  --ink:         #E9F0F5;
+  --ink-soft:    #CFDCE5;
+  --muted:       #93A5B3;
+
+  --gold:        #C19059;
+  --gold-light:  #D8AB77;
+  --gold-dark:   #A37845;
+  --gold-ink:    #D2A874;
+  --gold-wash:   #1B3240;
+  --gold-glow:   rgba(193, 144, 89, 0.22);
+
+  --alert:       #E8846A;
+  --alert-wash:  #341913;
+  --good:        #48BB78;
+  --good-wash:   #102E20;
+  --bad:         #F56565;
+  --bad-wash:    #361919;
+
+  --logo-ink:    #EDF3F7;
+
+  --glass-line:  rgba(255, 255, 255, .10);
+  --glass-bg:    linear-gradient(180deg, rgba(23, 48, 61, .85), rgba(18, 37, 47, .70));
+
+  --field:
+    radial-gradient(42% 38% at 10% 56%, rgba(193, 144, 89, .34), transparent 70%),
+    radial-gradient(46% 40% at 88% 44%, rgba(34, 84, 122, .66), transparent 70%),
+    radial-gradient(66% 48% at 54% 96%, rgba(146, 110, 71, .32), transparent 72%),
+    radial-gradient(34% 30% at 68% 18%, rgba(18, 48, 70, .72), transparent 70%),
+    radial-gradient(32% 30% at 22% 16%, rgba(12, 26, 36, .70), transparent 70%);
+
+  color-scheme: dark;
+}

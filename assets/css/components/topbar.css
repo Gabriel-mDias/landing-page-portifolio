@@ -1,0 +1,155 @@
+/* =========================================================================
+   G&Ms Soluções Tecnológicas — Components: Topbar & Navegação
+   ========================================================================= */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--paper) 75%, transparent);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  backdrop-filter: blur(16px) saturate(1.4);
+  border-bottom: 1px solid transparent;
+  transition: background-color var(--t-base), border-color var(--t-base), box-shadow var(--t-base);
+}
+
+.topbar.is-stuck {
+  background: color-mix(in srgb, var(--paper) 90%, transparent);
+  border-bottom-color: var(--line);
+  box-shadow: 0 10px 30px -20px rgba(10, 34, 52, .45);
+}
+
+.topbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: .95rem;
+}
+
+/* Marca e Logo */
+.brand {
+  display: inline-grid;
+  gap: .25rem;
+  justify-items: start;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.wordmark {
+  display: block;
+  height: 1.95rem;
+  width: auto;
+}
+@media (max-width: 440px) {
+  .wordmark { height: 1.65rem; }
+}
+
+.brand__sig {
+  font-family: var(--body);
+  font-size: .625rem;
+  font-weight: 500;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+@media (max-width: 440px) {
+  .brand__sig { display: none; }
+}
+
+.brand__amp {
+  color: var(--gold-ink);
+  font-style: normal;
+}
+
+/* Menu de Navegação */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  transition: color var(--t-fast);
+  padding: .25rem 0;
+  position: relative;
+}
+
+.nav a:not(.nav__cta):hover {
+  color: var(--ink);
+}
+
+.nav a:not(.nav__cta)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width var(--t-fast);
+}
+.nav a:not(.nav__cta):hover::after {
+  width: 100%;
+}
+
+.nav__cta {
+  background: var(--ink);
+  color: var(--paper) !important;
+  padding: .55rem 1.15rem !important;
+  border-radius: var(--r-sm);
+  transition: background-color var(--t-fast), transform var(--t-fast) !important;
+}
+.nav__cta:hover {
+  background: var(--gold) !important;
+  color: #FFFFFF !important;
+  transform: translateY(-1px);
+}
+
+/* Ferramental da Topbar */
+.topbar__tools {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+/* Menu Mobile Responsivo */
+@media (max-width: 860px) {
+  .nav {
+    position: fixed;
+    inset: 4.5rem var(--gut) auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--raised);
+    border: 1px solid var(--line);
+    border-radius: var(--r-md);
+    box-shadow: var(--lift-lg);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-12px);
+    transition: opacity var(--t-base), transform var(--t-base);
+    z-index: 100;
+  }
+
+  .nav[data-open="true"] {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .nav a {
+    font-size: var(--text-base);
+    padding: .5rem;
+  }
+
+  .nav__cta {
+    text-align: center;
+    margin-top: .5rem;
+  }
+}

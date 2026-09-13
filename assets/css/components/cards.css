@@ -1,0 +1,100 @@
+/* =========================================================================
+   G&Ms Soluções Tecnológicas — Components: Cards & Painéis
+   ========================================================================= */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.75rem;
+}
+
+.card {
+  position: relative;
+  background: var(--raised);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  box-shadow: var(--lift-sm);
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform var(--t-base),
+    box-shadow var(--t-base),
+    border-color var(--t-base);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--lift);
+  border-color: color-mix(in srgb, var(--gold) 45%, var(--line));
+}
+
+.card__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.card h3 {
+  font-family: var(--display);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  margin: 0 0 .5rem;
+  color: var(--ink);
+}
+
+.card p {
+  color: var(--muted);
+  font-size: var(--text-sm);
+  line-height: var(--leading-base);
+  margin: 0 0 1.25rem;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .65rem;
+  flex-grow: 1;
+}
+
+.card li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+  line-height: var(--leading-snug);
+}
+
+.card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .45em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+/* Card Destaque / Carro-Chefe */
+.card--highlight {
+  background: var(--raised);
+  border: 2px solid var(--gold);
+  box-shadow: var(--lift), 0 0 24px var(--gold-glow);
+}
+
+.card--highlight::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold-light), var(--gold-dark));
+  border-radius: var(--r-md) var(--r-md) 0 0;
+}
