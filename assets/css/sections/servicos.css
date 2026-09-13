@@ -1,0 +1,218 @@
+/* =========================================================================
+   G&Ms Soluções Tecnológicas — Sections: Serviços
+   A Tríade de Oferta: Landing Pages, Consultoria e Sistemas Web (ERP)
+   ========================================================================= */
+
+.servicos {
+  position: relative;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+
+@media (max-width: 1040px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-card {
+  position: relative;
+  background: var(--raised);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  box-shadow: var(--lift-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--t-base), box-shadow var(--t-base), border-color var(--t-base);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--lift);
+  border-color: color-mix(in srgb, var(--gold) 45%, var(--line));
+}
+
+/* Destaque do Carro-Chefe (Sistemas Web) */
+.service-card--flagship {
+  border: 2px solid var(--gold);
+  box-shadow: var(--lift), 0 0 28px var(--gold-glow);
+  background: var(--raised);
+}
+
+.service-card--flagship::before {
+  content: "Carro-Chefe da Casa";
+  position: absolute;
+  top: -12px;
+  right: 1.5rem;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold-dark));
+  color: #FFFFFF;
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: .3rem .85rem;
+  border-radius: var(--r-full);
+  box-shadow: 0 2px 8px var(--gold-glow);
+}
+
+.service-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gold-ink);
+  margin-bottom: 1rem;
+}
+
+.service-card__icon {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: var(--r-md);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.service-card__icon .ico-fa {
+  width: 1.65rem;
+  height: 1.65rem;
+}
+
+.service-card h3 {
+  font-family: var(--display);
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 .75rem;
+}
+
+.service-card p.service-card__desc {
+  color: var(--muted);
+  font-size: var(--text-sm);
+  line-height: var(--leading-base);
+  margin: 0 0 1.5rem;
+  min-height: 4.5em;
+}
+
+.service-card__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  flex-grow: 1;
+}
+
+.service-card__features li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+  line-height: var(--leading-snug);
+}
+
+.service-card__features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .45em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.service-card__footer {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+/* Casos Reais Embutidos como Vitrine dos Sistemas Web */
+.cases-showcase-block {
+  margin-top: 4.5rem;
+  padding-top: 3.5rem;
+  border-top: 1px dashed var(--line-firm);
+}
+
+.cases-showcase-block__head {
+  text-align: center;
+  max-width: 65ch;
+  margin: 0 auto 3rem;
+}
+
+.demo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 3.5rem;
+}
+
+@media (max-width: 900px) {
+  .demo {
+    grid-template-columns: 1fr;
+  }
+}
+
+.demo--flip .demo__text {
+  order: 2;
+}
+@media (max-width: 900px) {
+  .demo--flip .demo__text {
+    order: unset;
+  }
+}
+
+.demo__text h3 {
+  font-family: var(--display);
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 .75rem;
+}
+
+.demo__text p {
+  color: var(--muted);
+  font-size: var(--text-base);
+  line-height: var(--leading-base);
+  margin: 0 0 1.25rem;
+}
+
+.demo__notes {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.demo__notes li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+
+.demo__notes li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: 700;
+}

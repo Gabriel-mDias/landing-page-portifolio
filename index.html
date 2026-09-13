@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>G&amp;Ms Soluções Tecnológicas — tecnologia que gera valor para pessoas</title>
-<meta name="description" content="Software sob medida para escritórios de advocacia, clínicas multidisciplinares e empreendimentos de pequeno, médio e grande porte. Atendimento presencial em Bom Jesus do Itabapoana e região.">
+<title>G&amp;Ms Soluções Tecnológicas — Sistemas Web, Consultoria e Landing Pages</title>
+<meta name="description" content="Soluções tecnológicas sob medida para pequenos e médios empreendimentos em Bom Jesus do Itabapoana e região. Landing pages, consultoria em TI e sistemas web ERP personalizados.">
 <meta name="author" content="G&amp;Ms Soluções Tecnológicas">
 <link rel="canonical" href="https://gems.tec.br/">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="G&amp;Ms Soluções Tecnológicas">
-<meta property="og:title" content="G&amp;Ms Soluções Tecnológicas — tecnologia que gera valor para pessoas">
-<meta property="og:description" content="O sistema responde a você, não à empresa que o entregou. Software sob medida para advocacia, clínicas e empreendimentos.">
+<meta property="og:title" content="G&amp;Ms Soluções Tecnológicas — Tecnologia que gera valor para pessoas">
+<meta property="og:description" content="Projetos customizados que transformam sua gestão de trabalho, equipe e finanças. Atendimento presencial em Bom Jesus do Itabapoana e região, e remoto em todo o Brasil.">
 <meta property="og:url" content="https://gems.tec.br/">
 <meta property="og:image" content="https://gems.tec.br/assets/img/og-cover.png">
 <meta property="og:image:width" content="1200">
@@ -23,59 +23,57 @@
 <link rel="apple-touch-icon" href="assets/img/favicon.svg">
 <link rel="manifest" href="site.webmanifest">
 <meta name="theme-color" content="#F8F7F4" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#071A28" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#0C1A24" media="(prefers-color-scheme: dark)">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Outfit:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap">
 <link rel="stylesheet" href="assets/css/styles.css">
+
 <script>
-  // Aplica o tema salvo antes da primeira pintura, evitando o flash de tema errado.
+  // Aplica o tema salvo antes da primeira renderização para prevenir flashes visuais
   try {
-    var t = localStorage.getItem('gems-theme');
+    const t = localStorage.getItem('gems-theme');
     if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
   } catch (e) {}
-  // Só esconde o que a animação vai revelar se houver JavaScript para revelar.
   document.documentElement.classList.add('has-js');
 </script>
 </head>
 <body>
 
-<!-- Ícones: Font Awesome Free 6.7.2 (CC BY 4.0) — https://fontawesome.com/license/free
-     Embutidos como sprite para não depender de CDN e herdarem a cor do tema. -->
+<!-- Ícones: Font Awesome Free 6.7.2 (CC BY 4.0) embutidos como sprite local -->
 <svg class="sprite" aria-hidden="true" focusable="false"><defs>
   <symbol id="i-case-adaci" viewBox="0 0 448 512"><path d="M0 64C0 28.7 28.7 0 64 0L384 0c35.3 0 64 28.7 64 64l0 384c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 64zM183 278.8c-27.9-13.2-48.4-39.4-53.7-70.8l39.1 0c1.6 30.4 7.7 53.8 14.6 70.8zm41.3 9.2l-.3 0-.3 0c-2.4-3.5-5.7-8.9-9.1-16.5c-6-13.6-12.4-34.3-14.2-63.5l47.1 0c-1.8 29.2-8.1 49.9-14.2 63.5c-3.4 7.6-6.7 13-9.1 16.5zm40.7-9.2c6.8-17.1 12.9-40.4 14.6-70.8l39.1 0c-5.3 31.4-25.8 57.6-53.7 70.8zM279.6 176c-1.6-30.4-7.7-53.8-14.6-70.8c27.9 13.2 48.4 39.4 53.7 70.8l-39.1 0zM223.7 96l.3 0 .3 0c2.4 3.5 5.7 8.9 9.1 16.5c6 13.6 12.4 34.3 14.2 63.5l-47.1 0c1.8-29.2 8.1-49.9 14.2-63.5c3.4-7.6 6.7-13 9.1-16.5zM183 105.2c-6.8 17.1-12.9 40.4-14.6 70.8l-39.1 0c5.3-31.4 25.8-57.6 53.7-70.8zM352 192A128 128 0 1 0 96 192a128 128 0 1 0 256 0zM112 384c-8.8 0-16 7.2-16 16s7.2 16 16 16l224 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-224 0z"/></symbol>
   <symbol id="i-case-meduc" viewBox="0 0 640 512"><path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9l0 28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5l0-24.6c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"/></symbol>
   <symbol id="i-seg-advocacia" viewBox="0 0 640 512"><path d="M384 32l128 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L398.4 96c-5.2 25.8-22.9 47.1-46.4 57.3L352 448l160 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-192 0-192 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l160 0 0-294.7c-23.5-10.3-41.2-31.6-46.4-57.3L128 96c-17.7 0-32-14.3-32-32s14.3-32 32-32l128 0c14.6-19.4 37.8-32 64-32s49.4 12.6 64 32zm55.6 288l144.9 0L512 195.8 439.6 320zM512 416c-62.9 0-115.2-34-126-78.9c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8l95.2 163.2c5.7 9.8 9.3 21.1 6.7 32.1C627.2 382 574.9 416 512 416zM126.8 195.8L54.4 320l144.9 0L126.8 195.8zM.9 337.1c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8l95.2 163.2c5.7 9.8 9.3 21.1 6.7 32.1C242 382 189.7 416 126.8 416S11.7 382 .9 337.1z"/></symbol>
   <symbol id="i-seg-clinica" viewBox="0 0 576 512"><path d="M142.4 21.9c5.6 16.8-3.5 34.9-20.2 40.5L96 71.1 96 192c0 53 43 96 96 96s96-43 96-96l0-120.9-26.1-8.7c-16.8-5.6-25.8-23.7-20.2-40.5s23.7-25.8 40.5-20.2l26.1 8.7C334.4 19.1 352 43.5 352 71.1L352 192c0 77.2-54.6 141.6-127.3 156.7C231 404.6 278.4 448 336 448c61.9 0 112-50.1 112-112l0-70.7c-28.3-12.3-48-40.5-48-73.3c0-44.2 35.8-80 80-80s80 35.8 80 80c0 32.8-19.7 61-48 73.3l0 70.7c0 97.2-78.8 176-176 176c-92.9 0-168.9-71.9-175.5-163.1C87.2 334.2 32 269.6 32 192L32 71.1c0-27.5 17.6-52 43.8-60.7l26.1-8.7c16.8-5.6 34.9 3.5 40.5 20.2zM480 224a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></symbol>
   <symbol id="i-seg-comercio" viewBox="0 0 576 512"><path d="M547.6 103.8L490.3 13.1C485.2 5 476.1 0 466.4 0L109.6 0C99.9 0 90.8 5 85.7 13.1L28.3 103.8c-29.6 46.8-3.4 111.9 51.9 119.4c4 .5 8.1 .8 12.1 .8c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.2 0 49.3-11.4 65.2-29c16 17.6 39.1 29 65.2 29c4.1 0 8.1-.3 12.1-.8c55.5-7.4 81.8-72.5 52.1-119.4zM499.7 254.9c0 0 0 0-.1 0c-5.3 .7-10.7 1.1-16.2 1.1c-12.4 0-24.3-1.9-35.4-5.3L448 384l-320 0 0-133.4c-11.2 3.5-23.2 5.4-35.6 5.4c-5.5 0-11-.4-16.3-1.1l-.1 0c-4.1-.6-8.1-1.3-12-2.3L64 384l0 64c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-64 0-131.4c-4 1-8 1.8-12.3 2.3z"/></symbol>
-  <symbol id="i-sin-espalhado" viewBox="0 0 576 512"><path d="M64 32C64 14.3 49.7 0 32 0S0 14.3 0 32l0 96L0 384c0 35.3 28.7 64 64 64l192 0 0-64L64 384l0-224 192 0 0-64L64 96l0-64zM288 192c0 17.7 14.3 32 32 32l224 0c17.7 0 32-14.3 32-32l0-128c0-17.7-14.3-32-32-32l-98.7 0c-8.5 0-16.6-3.4-22.6-9.4L409.4 9.4c-6-6-14.1-9.4-22.6-9.4L320 0c-17.7 0-32 14.3-32 32l0 160zm0 288c0 17.7 14.3 32 32 32l224 0c17.7 0 32-14.3 32-32l0-128c0-17.7-14.3-32-32-32l-98.7 0c-8.5 0-16.6-3.4-22.6-9.4l-13.3-13.3c-6-6-14.1-9.4-22.6-9.4L320 288c-17.7 0-32 14.3-32 32l0 160z"/></symbol>
-  <symbol id="i-sin-planilha" viewBox="0 0 512 512"><path d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zm88 64l0 64-88 0 0-64 88 0zm56 0l88 0 0 64-88 0 0-64zm240 0l0 64-88 0 0-64 88 0zM64 224l88 0 0 64-88 0 0-64zm232 0l0 64-88 0 0-64 88 0zm64 0l88 0 0 64-88 0 0-64zM152 352l0 64-88 0 0-64 88 0zm56 0l88 0 0 64-88 0 0-64zm240 0l0 64-88 0 0-64 88 0z"/></symbol>
-  <symbol id="i-sin-torto" viewBox="0 0 512 512"><path d="M403.8 34.4c12-5 25.7-2.2 34.9 6.9l64 64c6 6 9.4 14.1 9.4 22.6s-3.4 16.6-9.4 22.6l-64 64c-9.2 9.2-22.9 11.9-34.9 6.9s-19.8-16.6-19.8-29.6l0-32-32 0c-10.1 0-19.6 4.7-25.6 12.8L284 229.3 244 176l31.2-41.6C293.3 110.2 321.8 96 352 96l32 0 0-32c0-12.9 7.8-24.6 19.8-29.6zM164 282.7L204 336l-31.2 41.6C154.7 401.8 126.2 416 96 416l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c10.1 0 19.6-4.7 25.6-12.8L164 282.7zm274.6 188c-9.2 9.2-22.9 11.9-34.9 6.9s-19.8-16.6-19.8-29.6l0-32-32 0c-30.2 0-58.7-14.2-76.8-38.4L121.6 172.8c-6-8.1-15.5-12.8-25.6-12.8l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c30.2 0 58.7 14.2 76.8 38.4L326.4 339.2c6 8.1 15.5 12.8 25.6 12.8l32 0 0-32c0-12.9 7.8-24.6 19.8-29.6s25.7-2.2 34.9 6.9l64 64c6 6 9.4 14.1 9.4 22.6s-3.4 16.6-9.4 22.6l-64 64z"/></symbol>
-  <symbol id="i-srv-automacao" viewBox="0 0 640 512"><path d="M308.5 135.3c7.1-6.3 9.9-16.2 6.2-25c-2.3-5.3-4.8-10.5-7.6-15.5L304 89.4c-3-5-6.3-9.9-9.8-14.6c-5.7-7.6-15.7-10.1-24.7-7.1l-28.2 9.3c-10.7-8.8-23-16-36.2-20.9L199 27.1c-1.9-9.3-9.1-16.7-18.5-17.8C173.9 8.4 167.2 8 160.4 8l-.7 0c-6.8 0-13.5 .4-20.1 1.2c-9.4 1.1-16.6 8.6-18.5 17.8L115 56.1c-13.3 5-25.5 12.1-36.2 20.9L50.5 67.8c-9-3-19-.5-24.7 7.1c-3.5 4.7-6.8 9.6-9.9 14.6l-3 5.3c-2.8 5-5.3 10.2-7.6 15.6c-3.7 8.7-.9 18.6 6.2 25l22.2 19.8C32.6 161.9 32 168.9 32 176s.6 14.1 1.7 20.9L11.5 216.7c-7.1 6.3-9.9 16.2-6.2 25c2.3 5.3 4.8 10.5 7.6 15.6l3 5.2c3 5.1 6.3 9.9 9.9 14.6c5.7 7.6 15.7 10.1 24.7 7.1l28.2-9.3c10.7 8.8 23 16 36.2 20.9l6.1 29.1c1.9 9.3 9.1 16.7 18.5 17.8c6.7 .8 13.5 1.2 20.4 1.2s13.7-.4 20.4-1.2c9.4-1.1 16.6-8.6 18.5-17.8l6.1-29.1c13.3-5 25.5-12.1 36.2-20.9l28.2 9.3c9 3 19 .5 24.7-7.1c3.5-4.7 6.8-9.5 9.8-14.6l3.1-5.4c2.8-5 5.3-10.2 7.6-15.5c3.7-8.7 .9-18.6-6.2-25l-22.2-19.8c1.1-6.8 1.7-13.8 1.7-20.9s-.6-14.1-1.7-20.9l22.2-19.8zM112 176a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zM504.7 500.5c6.3 7.1 16.2 9.9 25 6.2c5.3-2.3 10.5-4.8 15.5-7.6l5.4-3.1c5-3 9.9-6.3 14.6-9.8c7.6-5.7 10.1-15.7 7.1-24.7l-9.3-28.2c8.8-10.7 16-23 20.9-36.2l29.1-6.1c9.3-1.9 16.7-9.1 17.8-18.5c.8-6.7 1.2-13.5 1.2-20.4s-.4-13.7-1.2-20.4c-1.1-9.4-8.6-16.6-17.8-18.5L583.9 307c-5-13.3-12.1-25.5-20.9-36.2l9.3-28.2c3-9 .5-19-7.1-24.7c-4.7-3.5-9.6-6.8-14.6-9.9l-5.3-3c-5-2.8-10.2-5.3-15.6-7.6c-8.7-3.7-18.6-.9-25 6.2l-19.8 22.2c-6.8-1.1-13.8-1.7-20.9-1.7s-14.1 .6-20.9 1.7l-19.8-22.2c-6.3-7.1-16.2-9.9-25-6.2c-5.3 2.3-10.5 4.8-15.6 7.6l-5.2 3c-5.1 3-9.9 6.3-14.6 9.9c-7.6 5.7-10.1 15.7-7.1 24.7l9.3 28.2c-8.8 10.7-16 23-20.9 36.2L315.1 313c-9.3 1.9-16.7 9.1-17.8 18.5c-.8 6.7-1.2 13.5-1.2 20.4s.4 13.7 1.2 20.4c1.1 9.4 8.6 16.6 17.8 18.5l29.1 6.1c5 13.3 12.1 25.5 20.9 36.2l-9.3 28.2c-3 9-.5 19 7.1 24.7c4.7 3.5 9.5 6.8 14.6 9.8l5.4 3.1c5 2.8 10.2 5.3 15.5 7.6c8.7 3.7 18.6 .9 25-6.2l19.8-22.2c6.8 1.1 13.8 1.7 20.9 1.7s14.1-.6 20.9-1.7l19.8 22.2zM464 304a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></symbol>
-  <symbol id="i-srv-diagnos" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zm-312 8l0 64c0 13.3 10.7 24 24 24s24-10.7 24-24l0-64c0-13.3-10.7-24-24-24s-24 10.7-24 24zm80-96l0 160c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24s-24 10.7-24 24zm80 64l0 96c0 13.3 10.7 24 24 24s24-10.7 24-24l0-96c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></symbol>
-  <symbol id="i-srv-gestao" viewBox="0 0 512 512"><path d="M0 96C0 60.7 28.7 32 64 32l384 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zm64 0l0 64 64 0 0-64L64 96zm384 0L192 96l0 64 256 0 0-64zM64 224l0 64 64 0 0-64-64 0zm384 0l-256 0 0 64 256 0 0-64zM64 352l0 64 64 0 0-64-64 0zm384 0l-256 0 0 64 256 0 0-64z"/></symbol>
-  <symbol id="i-srv-legado" viewBox="0 0 576 512"><path d="M160 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l50.7 0L9.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L256 109.3l0 50.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-128c0-17.7-14.3-32-32-32L160 0zM576 80a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM448 208a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM400 384a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm48 80a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm128 0a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM272 384a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm48 80a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM144 512a48 48 0 1 0 0-96 48 48 0 1 0 0 96zM576 336a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm-48-80a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></symbol>
-  <symbol id="i-srv-portal" viewBox="0 0 512 512"><path d="M352 256c0 22.2-1.2 43.6-3.3 64l-185.3 0c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64l185.3 0c2.2 20.4 3.3 41.8 3.3 64zm28.8-64l123.1 0c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64l-123.1 0c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32l-116.7 0c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0l-176.6 0c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0L18.6 160C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192l123.1 0c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64L8.1 320C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6l176.6 0c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352l116.7 0zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6l116.7 0z"/></symbol>
-  <symbol id="i-st-conversa" viewBox="0 0 640 512"><path d="M208 352c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176c0 38.6 14.7 74.3 39.6 103.4c-3.5 9.4-8.7 17.7-14.2 24.7c-4.8 6.2-9.7 11-13.3 14.3c-1.8 1.6-3.3 2.9-4.3 3.7c-.5 .4-.9 .7-1.1 .8l-.2 .2s0 0 0 0s0 0 0 0C1 327.2-1.4 334.4 .8 340.9S9.1 352 16 352c21.8 0 43.8-5.6 62.1-12.5c9.2-3.5 17.8-7.4 25.2-11.4C134.1 343.3 169.8 352 208 352zM448 176c0 112.3-99.1 196.9-216.5 207C255.8 457.4 336.4 512 432 512c38.2 0 73.9-8.7 104.7-23.9c7.5 4 16 7.9 25.2 11.4c18.3 6.9 40.3 12.5 62.1 12.5c6.9 0 13.1-4.5 15.2-11.1c2.1-6.6-.2-13.8-5.8-17.9c0 0 0 0 0 0s0 0 0 0l-.2-.2c-.2-.2-.6-.4-1.1-.8c-1-.8-2.5-2-4.3-3.7c-3.6-3.3-8.5-8.1-13.3-14.3c-5.5-7-10.7-15.4-14.2-24.7c24.9-29 39.6-64.7 39.6-103.4c0-92.8-84.9-168.9-192.6-175.5c.4 5.1 .6 10.3 .6 15.5z"/></symbol>
-  <symbol id="i-st-entrega" viewBox="0 0 640 512"><path d="M58.9 42.1c3-6.1 9.6-9.6 16.3-8.7L320 64 564.8 33.4c6.7-.8 13.3 2.7 16.3 8.7l41.7 83.4c9 17.9-.6 39.6-19.8 45.1L439.6 217.3c-13.9 4-28.8-1.9-36.2-14.3L320 64 236.6 203c-7.4 12.4-22.3 18.3-36.2 14.3L37.1 170.6c-19.3-5.5-28.8-27.2-19.8-45.1L58.9 42.1zM321.1 128l54.9 91.4c14.9 24.8 44.6 36.6 72.5 28.6L576 211.6l0 167c0 22-15 41.2-36.4 46.6l-204.1 51c-10.2 2.6-20.9 2.6-31 0l-204.1-51C79 419.7 64 400.5 64 378.5l0-167L191.6 248c27.8 8 57.6-3.8 72.5-28.6L318.9 128l2.2 0z"/></symbol>
+  
+  <!-- Ícones dos Serviços -->
+  <symbol id="i-srv-landing" viewBox="0 0 576 512"><path d="M64 0C28.7 0 0 28.7 0 64L0 352c0 35.3 28.7 64 64 64l176 0-10.7 32L160 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l256 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-69.3 0-10.7-32 176 0c35.3 0 64-28.7 64-64l0-288c0-35.3-28.7-64-64-64L64 0zM512 64l0 224L64 288 64 64l448 0z"/></symbol>
+  <symbol id="i-srv-consultoria" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zm-312 8l0 64c0 13.3 10.7 24 24 24s24-10.7 24-24l0-64c0-13.3-10.7-24-24-24s-24 10.7-24 24zm80-96l0 160c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24s-24 10.7-24 24zm80 64l0 96c0 13.3 10.7 24 24 24s24-10.7 24-24l0-96c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></symbol>
+  <symbol id="i-srv-erp" viewBox="0 0 512 512"><path d="M0 96C0 60.7 28.7 32 64 32l384 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zm64 0l0 64 64 0 0-64L64 96zm384 0L192 96l0 64 256 0 0-64zM64 224l0 64 64 0 0-64-64 0zm384 0l-256 0 0 64 256 0 0-64zM64 352l0 64 64 0 0-64-64 0zm384 0l-256 0 0 64 256 0 0-64z"/></symbol>
+  
+  <!-- Ícones dos Pilares de Gestão -->
+  <symbol id="i-pil-trabalho" viewBox="0 0 512 512"><path d="M184 48l144 0c4.4 0 8 3.6 8 8l0 40-160 0 0-40c0-4.4 3.6-8 8-8zm-56 8l0 40L64 96C28.7 96 0 124.7 0 160l0 96 192 0 128 0 192 0 0-96c0-35.3-28.7-64-64-64l-64 0 0-40c0-30.9-25.1-56-56-56L184 0c-30.9 0-56 25.1-56 56zM512 288l-192 0 0 32c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32l0-32L0 288 0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-128z"/></symbol>
+  <symbol id="i-pil-equipe" viewBox="0 0 640 512"><path d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192l74.7 0c58.9 0 106.7 47.8 106.7 106.7L288 320l-288 0 0-21.3zM352 320l0-21.3c0-58.9 47.8-106.7 106.7-106.7l74.7 0C592.2 192 640 239.8 640 298.7l0 21.3-288 0zM320 256a64 64 0 1 1 0-128 64 64 0 1 1 0 128zm-96 149.3c0-35.3 28.7-64 64-64l64 0c35.3 0 64 28.7 64 64l0 42.7-192 0 0-42.7z"/></symbol>
+  <symbol id="i-pil-financeiro" viewBox="0 0 576 512"><path d="M64 64C28.7 64 0 92.7 0 128L0 384c0 35.3 28.7 64 64 64l448 0c35.3 0 64-28.7 64-64l0-256c0-35.3-28.7-64-64-64L64 64zm64 160a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zM400 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM96 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm384-96l-32 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l32 0 0 64z"/></symbol>
+
+  <!-- Ícones do Processo -->
+  <symbol id="i-st-ouvir" viewBox="0 0 640 512"><path d="M208 352c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176c0 38.6 14.7 74.3 39.6 103.4c-3.5 9.4-8.7 17.7-14.2 24.7c-4.8 6.2-9.7 11-13.3 14.3c-1.8 1.6-3.3 2.9-4.3 3.7c-.5 .4-.9 .7-1.1 .8l-.2 .2s0 0 0 0s0 0 0 0C1 327.2-1.4 334.4 .8 340.9S9.1 352 16 352c21.8 0 43.8-5.6 62.1-12.5c9.2-3.5 17.8-7.4 25.2-11.4C134.1 343.3 169.8 352 208 352zM448 176c0 112.3-99.1 196.9-216.5 207C255.8 457.4 336.4 512 432 512c38.2 0 73.9-8.7 104.7-23.9c7.5 4 16 7.9 25.2 11.4c18.3 6.9 40.3 12.5 62.1 12.5c6.9 0 13.1-4.5 15.2-11.1c2.1-6.6-.2-13.8-5.8-17.9c0 0 0 0 0 0s0 0 0 0l-.2-.2c-.2-.2-.6-.4-1.1-.8c-1-.8-2.5-2-4.3-3.7c-3.6-3.3-8.5-8.1-13.3-14.3c-5.5-7-10.7-15.4-14.2-24.7c24.9-29 39.6-64.7 39.6-103.4c0-92.8-84.9-168.9-192.6-175.5c.4 5.1 .6 10.3 .6 15.5z"/></symbol>
+  <symbol id="i-st-analise" viewBox="0 0 512 512"><path d="M469.3 19.3l23.4 23.4c25 25 25 65.5 0 90.5l-56.4 56.4L322.3 75.7l56.4-56.4c25-25 65.5-25 90.5 0zM44.9 353.2L299.7 98.3 413.7 212.3 158.8 467.1c-6.7 6.7-15.1 11.6-24.2 14.2l-104 29.7c-8.4 2.4-17.4 .1-23.6-6.1s-8.5-15.2-6.1-23.6l29.7-104c2.6-9.2 7.5-17.5 14.2-24.2zM249.4 103.4L103.4 249.4 16 161.9c-18.7-18.7-18.7-49.1 0-67.9L94.1 16c18.7-18.7 49.1-18.7 67.9 0l19.8 19.8c-.3 .3-.7 .6-1 .9l-64 64c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l64-64c.3-.3 .6-.7 .9-1l45.1 45.1zM408.6 262.6l45.1 45.1c-.3 .3-.7 .6-1 .9l-64 64c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l64-64c.3-.3 .6-.7 .9-1L496 350.1c18.7 18.7 18.7 49.1 0 67.9L417.9 496c-18.7 18.7-49.1 18.7-67.9 0l-87.4-87.4L408.6 262.6z"/></symbol>
   <symbol id="i-st-homolog" viewBox="0 0 512 512"><path d="M105.1 202.6c7.7-21.8 20.2-42.3 37.8-59.8c62.5-62.5 163.8-62.5 226.3 0L386.3 160 352 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l111.5 0c0 0 0 0 0 0l.4 0c17.7 0 32-14.3 32-32l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 35.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0C73.2 122 55.6 150.7 44.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5zM39 289.3c-5 1.5-9.8 4.2-13.7 8.2c-4 4-6.7 8.8-8.1 14c-.3 1.2-.6 2.5-.8 3.8c-.3 1.7-.4 3.4-.4 5.1L16 432c0 17.7 14.3 32 32 32s32-14.3 32-32l0-35.1 17.6 17.5c0 0 0 0 0 0c87.5 87.4 229.3 87.4 316.7 0c24.4-24.4 42.1-53.1 52.9-83.8c5.9-16.7-2.9-34.9-19.5-40.8s-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.5 62.5-163.8 62.5-226.3 0l-.1-.1L125.6 352l34.4 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L48.4 288c-1.6 0-3.2 .1-4.8 .3s-3.1 .5-4.6 1z"/></symbol>
-  <symbol id="i-st-manuten" viewBox="0 0 512 512"><path d="M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4l54.1 0 109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109 0-54.1c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7L352 176c-8.8 0-16-7.2-16-16l0-57.4c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 104 28.7L429 274.5c49-23 83-72.8 83-130.5zM56 432a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></symbol>
-  <symbol id="i-st-mvp" viewBox="0 0 512 512"><path d="M156.6 384.9L125.7 354c-8.5-8.5-11.5-20.8-7.7-32.2c3-8.9 7-20.5 11.8-33.8L24 288c-8.6 0-16.6-4.6-20.9-12.1s-4.2-16.7 .2-24.1l52.5-88.5c13-21.9 36.5-35.3 61.9-35.3l82.3 0c2.4-4 4.8-7.7 7.2-11.3C289.1-4.1 411.1-8.1 483.9 5.3c11.6 2.1 20.6 11.2 22.8 22.8c13.4 72.9 9.3 194.8-111.4 276.7c-3.5 2.4-7.3 4.8-11.3 7.2l0 82.3c0 25.4-13.4 49-35.3 61.9l-88.5 52.5c-7.4 4.4-16.6 4.5-24.1 .2s-12.1-12.2-12.1-20.9l0-107.2c-14.1 4.9-26.4 8.9-35.7 11.9c-11.2 3.6-23.4 .5-31.8-7.8zM384 168a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></symbol>
-  <symbol id="i-st-prototipo" viewBox="0 0 512 512"><path d="M469.3 19.3l23.4 23.4c25 25 25 65.5 0 90.5l-56.4 56.4L322.3 75.7l56.4-56.4c25-25 65.5-25 90.5 0zM44.9 353.2L299.7 98.3 413.7 212.3 158.8 467.1c-6.7 6.7-15.1 11.6-24.2 14.2l-104 29.7c-8.4 2.4-17.4 .1-23.6-6.1s-8.5-15.2-6.1-23.6l29.7-104c2.6-9.2 7.5-17.5 14.2-24.2zM249.4 103.4L103.4 249.4 16 161.9c-18.7-18.7-18.7-49.1 0-67.9L94.1 16c18.7-18.7 49.1-18.7 67.9 0l19.8 19.8c-.3 .3-.7 .6-1 .9l-64 64c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l64-64c.3-.3 .6-.7 .9-1l45.1 45.1zM408.6 262.6l45.1 45.1c-.3 .3-.7 .6-1 .9l-64 64c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l64-64c.3-.3 .6-.7 .9-1L496 350.1c18.7 18.7 18.7 49.1 0 67.9L417.9 496c-18.7 18.7-49.1 18.7-67.9 0l-87.4-87.4L408.6 262.6z"/></symbol>
-  <symbol id="i-st-publica" viewBox="0 0 640 512"><path d="M160 64c0-35.3 28.7-64 64-64L576 0c35.3 0 64 28.7 64 64l0 288c0 35.3-28.7 64-64 64l-239.2 0c-11.8-25.5-29.9-47.5-52.4-64l99.6 0 0-32c0-17.7 14.3-32 32-32l64 0c17.7 0 32 14.3 32 32l0 32 64 0 0-288L224 64l0 49.1C205.2 102.2 183.3 96 160 96l0-32zm0 64a96 96 0 1 1 0 192 96 96 0 1 1 0-192zM133.3 352l53.3 0C260.3 352 320 411.7 320 485.3c0 14.7-11.9 26.7-26.7 26.7L26.7 512C11.9 512 0 500.1 0 485.3C0 411.7 59.7 352 133.3 352z"/></symbol>
-  <symbol id="i-val-acordo" viewBox="0 0 640 512"><path d="M323.4 85.2l-96.8 78.4c-16.1 13-19.2 36.4-7 53.1c12.9 17.8 38 21.3 55.3 7.8l99.3-77.2c7-5.4 17-4.2 22.5 2.8s4.2 17-2.8 22.5l-20.9 16.2L512 316.8 512 128l-.7 0-3.9-2.5L434.8 79c-15.3-9.8-33.2-15-51.4-15c-21.8 0-43 7.5-60 21.2zm22.8 124.4l-51.7 40.2C263 274.4 217.3 268 193.7 235.6c-22.2-30.5-16.6-73.1 12.7-96.8l83.2-67.3c-11.6-4.9-24.1-7.4-36.8-7.4C234 64 215.7 69.6 200 80l-72 48 0 224 28.2 0 91.4 83.4c19.6 17.9 49.9 16.5 67.8-3.1c5.5-6.1 9.2-13.2 11.1-20.6l17 15.6c19.5 17.9 49.9 16.6 67.8-2.9c4.5-4.9 7.8-10.6 9.9-16.5c19.4 13 45.8 10.3 62.1-7.5c17.9-19.5 16.6-49.9-2.9-67.8l-134.2-123zM16 128c-8.8 0-16 7.2-16 16L0 352c0 17.7 14.3 32 32 32l32 0c17.7 0 32-14.3 32-32l0-224-80 0zM48 320a16 16 0 1 1 0 32 16 16 0 1 1 0-32zM544 128l0 224c0 17.7 14.3 32 32 32l32 0c17.7 0 32-14.3 32-32l0-208c0-8.8-7.2-16-16-16l-80 0zm32 208a16 16 0 1 1 32 0 16 16 0 1 1 -32 0z"/></symbol>
-  <symbol id="i-val-conducao" viewBox="0 0 512 512"><path d="M512 96c0 50.2-59.1 125.1-84.6 155c-3.8 4.4-9.4 6.1-14.5 5L320 256c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c53 0 96 43 96 96s-43 96-96 96l-276.4 0c8.7-9.9 19.3-22.6 30-36.8c6.3-8.4 12.8-17.6 19-27.2L416 448c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0c-53 0-96-43-96-96s43-96 96-96l39.8 0c-21-31.5-39.8-67.7-39.8-96c0-53 43-96 96-96s96 43 96 96zM117.1 489.1c-3.8 4.3-7.2 8.1-10.1 11.3l-1.8 2-.2-.2c-6 4.6-14.6 4-20-1.8C59.8 473 0 402.5 0 352c0-53 43-96 96-96s96 43 96 96c0 30-21.1 67-43.5 97.9c-10.7 14.7-21.7 28-30.8 38.5l-.6 .7zM128 352a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM416 128a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></symbol>
-  <symbol id="i-val-ouvir" viewBox="0 0 512 512"><path d="M398.3 3.4c-15.8-7.9-35-1.5-42.9 14.3c-7.9 15.8-1.5 34.9 14.2 42.9l.4 .2c.4 .2 1.1 .6 2.1 1.2c2 1.2 5 3 8.7 5.6c7.5 5.2 17.6 13.2 27.7 24.2C428.5 113.4 448 146 448 192c0 17.7 14.3 32 32 32s32-14.3 32-32c0-66-28.5-113.4-56.5-143.7C441.6 33.2 427.7 22.2 417.3 15c-5.3-3.7-9.7-6.4-13-8.3c-1.6-1-3-1.7-4-2.2c-.5-.3-.9-.5-1.2-.7l-.4-.2-.2-.1c0 0 0 0-.1 0c0 0 0 0 0 0L384 32 398.3 3.4zM128.7 227.5c6.2-56 53.7-99.5 111.3-99.5c61.9 0 112 50.1 112 112c0 29.3-11.2 55.9-29.6 75.9c-17 18.4-34.4 45.1-34.4 78l0 6.1c0 26.5-21.5 48-48 48c-17.7 0-32 14.3-32 32s14.3 32 32 32c61.9 0 112-50.1 112-112l0-6.1c0-9.8 5.4-21.7 17.4-34.7C398.3 327.9 416 286 416 240c0-97.2-78.8-176-176-176C149.4 64 74.8 132.5 65.1 220.5c-1.9 17.6 10.7 33.4 28.3 35.3s33.4-10.7 35.3-28.3zM32 512a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM192 352a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3l64 64c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-64-64c-12.5-12.5-32.8-12.5-45.3 0zM208 240c0-17.7 14.3-32 32-32s32 14.3 32 32c0 13.3 10.7 24 24 24s24-10.7 24-24c0-44.2-35.8-80-80-80s-80 35.8-80 80c0 13.3 10.7 24 24 24s24-10.7 24-24z"/></symbol>
-  <symbol id="i-val-resultado" viewBox="0 0 512 512"><path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64L0 400c0 44.2 35.8 80 80 80l400 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 416c-8.8 0-16-7.2-16-16L64 64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"/></symbol>
+  <symbol id="i-st-treinamento" viewBox="0 0 640 512"><path d="M160 64c0-35.3 28.7-64 64-64L576 0c35.3 0 64 28.7 64 64l0 288c0 35.3-28.7 64-64 64l-239.2 0c-11.8-25.5-29.9-47.5-52.4-64l99.6 0 0-32c0-17.7 14.3-32 32-32l64 0c17.7 0 32 14.3 32 32l0 32 64 0 0-288L224 64l0 49.1C205.2 102.2 183.3 96 160 96l0-32zm0 64a96 96 0 1 1 0 192 96 96 0 1 1 0-192zM133.3 352l53.3 0C260.3 352 320 411.7 320 485.3c0 14.7-11.9 26.7-26.7 26.7L26.7 512C11.9 512 0 500.1 0 485.3C0 411.7 59.7 352 133.3 352z"/></symbol>
+  <symbol id="i-st-suporte" viewBox="0 0 512 512"><path d="M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4l54.1 0 109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109 0-54.1c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7L352 176c-8.8 0-16-7.2-16-16l0-57.4c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 104 28.7L429 274.5c49-23 83-72.8 83-130.5zM56 432a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></symbol>
 </defs></svg>
 
-<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<a class="skip" href="#conteudo">Ir para o conteúdo principal</a>
 
+<!-- ─────────────────────────  TOPBAR  ───────────────────────── -->
 <header class="topbar" id="topbar">
   <div class="wrap topbar__inner">
-    <a class="brand" href="#topo" aria-label="G&amp;Ms Soluções Tecnológicas — início">
-      <!-- Wordmark embutido para que o navy acompanhe o tema; o dourado é o mesmo nos dois. -->
+    <a class="brand" href="#topo" aria-label="G&amp;Ms Soluções Tecnológicas — Início">
+      <!-- Wordmark oficial embutido para sincronização automática de cores no tema escuro/claro -->
       <svg class="wordmark" viewBox="0 0 876.5 272.5" aria-hidden="true" focusable="false">
         <defs>
           <linearGradient id="wm-gold" gradientUnits="userSpaceOnUse" x1="117.12" y1="-117.12" x2="-94.37" y2="94.38">
@@ -92,16 +90,16 @@
 
     <nav class="nav" id="nav" aria-label="Seções do site">
       <a href="#servicos">Serviços</a>
-      <a href="#segmentos">Para quem</a>
-      <a href="#jeito">Nosso jeito</a>
-      <a href="#processo">Processo</a>
-      <a href="#casos">Casos</a>
+      <a href="#pilares">Impacto na Gestão</a>
+      <a href="#processo">Nosso Processo</a>
+      <a href="#sobre">Sobre Mim</a>
+      <a href="#faq">Dúvidas</a>
       <a class="nav__cta" href="#contato">Falar com a gente</a>
     </nav>
 
     <div class="topbar__tools">
       <button class="iconbtn" id="theme-toggle" type="button" aria-pressed="false">
-        <span class="iconbtn__label">Tema escuro</span>
+        <span class="iconbtn__label">Alternar tema escuro/claro</span>
         <svg class="ico ico--sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <circle cx="12" cy="12" r="4.2"/>
           <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/>
@@ -110,8 +108,9 @@
           <path d="M20 14.2A8.4 8.4 0 0 1 9.8 4a8.4 8.4 0 1 0 10.2 10.2z"/>
         </svg>
       </button>
+
       <button class="iconbtn burger" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">
-        <span class="iconbtn__label">Menu</span>
+        <span class="iconbtn__label">Menu principal</span>
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </div>
@@ -125,652 +124,749 @@
   <div class="hero__field" aria-hidden="true"></div>
 
   <div class="wrap hero__inner">
-    <h1 class="hero__title">O sistema se adapta ao seu negócio.<br>Não o contrário.</h1>
-    <p class="hero__lead">
-      A G&amp;Ms desenvolve software sob medida para escritórios de advocacia, clínicas
-      multidisciplinares e empreendimentos que já perceberam uma coisa: nenhuma solução
-      de prateleira foi feita pensando neles.
-    </p>
-    <div class="hero__actions">
-      <a class="btn btn--solid" data-contact="whatsapp" href="https://wa.me/5522999556956?text=Ol%C3%A1%2C%20Gabriel.%20Vim%20pelo%20site%20da%20G%26Ms%20e%20gostaria%20de%20conversar%20sobre%20um%20sistema%20sob%20medida.">Falar no WhatsApp</a>
-      <a class="btn btn--ghost" href="#casos">Ver um sistema real</a>
+    <div class="hero__badge">
+      <span class="hero__badge-pulse" aria-hidden="true"></span>
+      <span>Atendimento presencial em Bom Jesus do Itabapoana e região</span>
     </div>
+
+    <h1 class="hero__title">
+      Tecnologia que <span>descomplica sua gestão</span> e faz sua empresa crescer.
+    </h1>
+
+    <p class="hero__lead">
+      A G&amp;Ms desenvolve soluções digitais sob medida para pequenos e médios empreendimentos
+      que querem organizar processos, reduzir custos e ter controle de ponta a ponta — sem ficar reféns de sistemas genéricos de prateleira.
+    </p>
+
+    <div class="hero__actions">
+      <a class="btn btn--solid" data-contact="whatsapp" href="https://wa.me/5522999556956?text=Ol%C3%A1%2C%20Gabriel.%20Vim%20pelo%20site%20da%20G%26Ms%20e%20gostaria%20de%20conversar%20sobre%20solu%C3%A7%C3%B5es%20tecnol%C3%B3gicas%20para%20minha%20empresa.">Conversar no WhatsApp</a>
+      <a class="btn btn--ghost" href="#servicos">Conhecer Nossos Serviços</a>
+    </div>
+
     <p class="hero__tagline">Tecnologia que gera valor para pessoas</p>
 
-    <!-- O mesmo trabalho, três negócios diferentes. -->
+    <!-- Stacks em Destaque (Inspirado na Ateliware) -->
+    <div class="hero__stacks">
+      <span class="hero__stacks-label">Engenharia corporativa:</span>
+      <div class="hero__stacks-list">
+        <span class="stack-chip">Java</span>
+        <span class="stack-chip">Spring Boot</span>
+        <span class="stack-chip">Angular</span>
+        <span class="stack-chip">TypeScript</span>
+        <span class="stack-chip">PostgreSQL</span>
+        <span class="stack-chip">Keycloak</span>
+      </div>
+    </div>
+
+    <!-- Vitrine Hero: A mesma tecnologia, três negócios diferentes -->
     <figure class="showcase">
-      <div class="showcase__tabs" role="tablist" aria-label="Exemplos por tipo de negócio">
+      <div class="showcase__tabs" role="tablist" aria-label="Exemplos de telas por segmento">
         <button role="tab" id="tab-adv" aria-controls="painel-adv" aria-selected="true" tabindex="0">Advocacia</button>
         <button role="tab" id="tab-cli" aria-controls="painel-cli" aria-selected="false" tabindex="-1">Clínica</button>
-        <button role="tab" id="tab-com" aria-controls="painel-com" aria-selected="false" tabindex="-1">Comércio</button>
+        <button role="tab" id="tab-com" aria-controls="painel-com" aria-selected="false" tabindex="-1">Comércio &amp; Serviços</button>
       </div>
 
       <div class="screen glass">
         <div class="screen__chrome" aria-hidden="true"><span></span><span></span><span></span></div>
 
         <div class="screen__body" role="tabpanel" id="painel-adv" aria-labelledby="tab-adv">
-          <p class="screen__title">Prazos desta semana</p>
+          <p class="screen__title">Prazos e Andamentos da Semana</p>
           <ul class="rows">
-            <li><span class="rows__k">0801234-55.2026</span><span class="rows__v">Contestação</span><span class="tag tag--hot">vence em 2 dias</span></li>
-            <li><span class="rows__k">0809871-02.2026</span><span class="rows__v">Réplica</span><span class="tag">6 dias</span></li>
-            <li><span class="rows__k">0803344-19.2026</span><span class="rows__v">Recurso</span><span class="tag">11 dias</span></li>
+            <li><span class="rows__k">0801234-55.2026</span><span class="rows__v">Contestação Cível</span><span class="tag tag--hot">vence em 2 dias</span></li>
+            <li><span class="rows__k">0809871-02.2026</span><span class="rows__v">Réplica Trabalhista</span><span class="tag">6 dias</span></li>
+            <li><span class="rows__k">0803344-19.2026</span><span class="rows__v">Recurso de Apelação</span><span class="tag">11 dias</span></li>
           </ul>
-          <p class="screen__foot">Peça gerada do modelo do escritório, com os dados do processo já preenchidos.</p>
+          <p class="screen__foot">Peças e minutas geradas dos modelos do escritório, com dados do processo preenchidos automaticamente.</p>
         </div>
 
         <div class="screen__body" role="tabpanel" id="painel-cli" aria-labelledby="tab-cli" hidden>
-          <p class="screen__title">Agenda de quinta</p>
+          <p class="screen__title">Agenda Multidisciplinar e Faturamento</p>
           <ul class="rows">
             <li><span class="rows__k">08:00</span><span class="rows__v">Fisioterapia · Sala 2</span><span class="tag">4ª de 10 sessões</span></li>
             <li><span class="rows__k">09:30</span><span class="rows__v">Psicologia · Sala 1</span><span class="tag tag--hot">convênio a faturar</span></li>
-            <li><span class="rows__k">11:00</span><span class="rows__v">Nutrição · Sala 3</span><span class="tag">retorno</span></li>
+            <li><span class="rows__k">11:00</span><span class="rows__v">Nutrição · Sala 3</span><span class="tag">retorno agendado</span></li>
           </ul>
-          <p class="screen__foot">Cada especialidade com o prontuário que ela usa de verdade — e o lembrete sai sozinho.</p>
+          <p class="screen__foot">Prontuário específico para cada especialidade e lembrete automático via WhatsApp que reduz faltas.</p>
         </div>
 
         <div class="screen__body" role="tabpanel" id="painel-com" aria-labelledby="tab-com" hidden>
-          <p class="screen__title">Ordens em aberto</p>
+          <p class="screen__title">Ordens de Serviço e Estoque</p>
           <ul class="rows">
             <li><span class="rows__k">#4192</span><span class="rows__v">Manutenção preventiva</span><span class="tag tag--hot">aguarda peça</span></li>
-            <li><span class="rows__k">#4188</span><span class="rows__v">Instalação</span><span class="tag">em execução</span></li>
-            <li><span class="rows__k">#4171</span><span class="rows__v">Orçamento</span><span class="tag">enviado</span></li>
+            <li><span class="rows__k">#4188</span><span class="rows__v">Instalação comercial</span><span class="tag">em execução</span></li>
+            <li><span class="rows__k">#4171</span><span class="rows__v">Orçamento aprovado</span><span class="tag">faturamento liberado</span></li>
           </ul>
-          <p class="screen__foot">Do orçamento à comissão do técnico, sem a planilha paralela no meio do caminho.</p>
+          <p class="screen__foot">Do pedido à comissão dos técnicos, sem a planilha manual paralela no meio do caminho.</p>
         </div>
       </div>
 
-      <figcaption class="showcase__cap">Três negócios, três sistemas diferentes. Nenhum deles caberia no mesmo software pronto.</figcaption>
+      <figcaption class="showcase__cap">Nenhum desses negócios caberia no mesmo software de prateleira genérico.</figcaption>
     </figure>
   </div>
 </section>
 
-<!-- ─────────────────────────  SINAIS  ───────────────────────── -->
-<section class="band" id="sinais">
-  <div class="wrap">
-    <h2 class="h2">Quando a solução de prateleira para de servir</h2>
-    <div class="signals">
-      <article>
-        <svg class="ico-fa ico-lead" aria-hidden="true" focusable="false"><use href="#i-sin-planilha"/></svg>
-        <h3>A planilha paralela</h3>
-        <p>O sistema não cobre uma parte do processo, então alguém mantém uma planilha ao lado.
-           É nela que o trabalho de verdade acontece — e é nela que os dados se perdem.</p>
-      </article>
-      <article>
-        <svg class="ico-fa ico-lead" aria-hidden="true" focusable="false"><use href="#i-sin-torto"/></svg>
-        <h3>O processo torto</h3>
-        <p>Você mudou o jeito de atender para caber no software. Toda vez que entra gente nova,
-           alguém precisa explicar por que “aqui a gente faz assim”.</p>
-      </article>
-      <article>
-        <svg class="ico-fa ico-lead" aria-hidden="true" focusable="false"><use href="#i-sin-espalhado"/></svg>
-        <h3>A informação espalhada</h3>
-        <p>Cadastro no sistema, histórico no e-mail, documento no drive. Responder a uma pergunta
-           simples de cliente exige abrir três telas e confiar na memória de alguém.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
 <!-- ─────────────────────────  SERVIÇOS  ───────────────────────── -->
-<section class="sec" id="servicos">
+<section class="sec servicos" id="servicos">
   <div class="wrap">
     <div class="sec__head">
-      <h2 class="h2">O que construímos</h2>
-      <p class="sec__sub">Projetos fechados por etapa, com escopo, prazo e valor definidos antes de começar.</p>
+      <span class="sec__tag">Nossos Serviços</span>
+      <h2 class="h2">Soluções planejadas para o estágio do seu empreendimento</h2>
+      <p class="sec__sub">Da sua porta de entrada na internet à estruturação completa da sua operação e gestão.</p>
     </div>
 
-    <ul class="entries">
-      <li>
-        <div class="entries__head">
-          <svg class="ico-fa" aria-hidden="true" focusable="false"><use href="#i-srv-gestao"/></svg>
-          <h3>Sistema de gestão sob medida</h3>
+    <div class="services-grid">
+      <!-- Serviço 1: Landing Pages -->
+      <article class="service-card">
+        <span class="service-card__badge">Porta de Entrada Digital</span>
+        <div class="service-card__icon" aria-hidden="true">
+          <svg class="ico-fa"><use href="#i-srv-landing"/></svg>
         </div>
-        <p>Cadastros, rotinas, permissões e relatórios desenhados a partir do processo que você
-           já tem — não de um processo genérico que você teria que adotar.</p>
-      </li>
-      <li>
-        <div class="entries__head">
-          <svg class="ico-fa" aria-hidden="true" focusable="false"><use href="#i-srv-automacao"/></svg>
-          <h3>Automação de rotinas e integrações</h3>
+        <h3>Landing Pages</h3>
+        <p class="service-card__desc">
+          Um serviço de valor reduzido focado em ser a sua porta de entrada para o mundo digital.
+          Rápido, acessível e construído para apresentar sua empresa com elegância e captar clientes.
+        </p>
+        <ul class="service-card__features">
+          <li>Apresentação da empresa, equipe e diferenciais</li>
+          <li>Design responsivo com carregamento ultrarrápido</li>
+          <li>Formulário funcional integrado a e-mail e WhatsApp</li>
+          <li>SEO local para busca no Google na região</li>
+        </ul>
+        <div class="service-card__footer">
+          <a class="btn btn--ghost" data-contact="whatsapp" href="#contato">Quero uma Landing Page</a>
         </div>
-        <p>Geração de documentos, cobranças, avisos de prazo, importação de planilhas e conversa
-           entre sistemas que hoje não se falam. As horas repetitivas voltam para a equipe.</p>
-      </li>
-      <li>
-        <div class="entries__head">
-          <svg class="ico-fa" aria-hidden="true" focusable="false"><use href="#i-srv-legado"/></svg>
-          <h3>Modernização de sistema legado</h3>
+      </article>
+
+      <!-- Serviço 2: Consultorias em TI -->
+      <article class="service-card">
+        <span class="service-card__badge">Diagnóstico Estratégico</span>
+        <div class="service-card__icon" aria-hidden="true">
+          <svg class="ico-fa"><use href="#i-srv-consultoria"/></svg>
         </div>
-        <p>Aquele sistema antigo que ninguém mais mantém. Substituição gradual, sem parar a
-           operação e sem perder o histórico de dados.</p>
-      </li>
-      <li>
-        <div class="entries__head">
-          <svg class="ico-fa" aria-hidden="true" focusable="false"><use href="#i-srv-portal"/></svg>
-          <h3>Portais e aplicações web</h3>
+        <h3>Consultorias em TI</h3>
+        <p class="service-card__desc">
+          Análise sincera de ponta a ponta no seu negócio. Levantamos suas dores reais e apontamos
+          o caminho mais eficiente: automações, integrações, melhorias pontuais ou um sistema sob medida.
+        </p>
+        <ul class="service-card__features">
+          <li>Mapeamento completo de processos e gargalos</li>
+          <li>Identificação de automações para rotinas repetitivas</li>
+          <li>Integração entre softwares que hoje não se comunicam</li>
+          <li>Proposta detalhada com cronograma e orçamento justo</li>
+        </ul>
+        <div class="service-card__footer">
+          <a class="btn btn--ghost" data-contact="whatsapp" href="#contato">Agendar Consultoria</a>
         </div>
-        <p>Área do cliente, agendamento online, formulários e painéis de acompanhamento.
-           Acesso de qualquer lugar, com controle de quem enxerga o quê.</p>
-      </li>
-      <li>
-        <div class="entries__head">
-          <svg class="ico-fa" aria-hidden="true" focusable="false"><use href="#i-srv-diagnos"/></svg>
-          <h3>Diagnóstico e consultoria técnica</h3>
+      </article>
+
+      <!-- Serviço 3: Sistemas Web Personalizados (ERP Customizado) -->
+      <article class="service-card service-card--flagship">
+        <span class="service-card__badge">Principal Serviço</span>
+        <div class="service-card__icon" aria-hidden="true">
+          <svg class="ico-fa"><use href="#i-srv-erp"/></svg>
         </div>
-        <p>Antes de escrever código: entender a rotina, mapear onde dói e dizer com honestidade
-           o que compensa automatizar — e o que não compensa.</p>
-      </li>
-    </ul>
+        <h3>Sistemas Web Customizados</h3>
+        <p class="service-card__desc">
+          O carro-chefe da G&amp;Ms: um ERP sob medida para o seu modelo operacional.
+          Elimine planilhas paralelas e ganhe esteiras de trabalho integradas com relatórios estratégicos.
+        </p>
+        <ul class="service-card__features">
+          <li>Esteiras de serviço personalizadas de ponta a ponta</li>
+          <li>Gestão de trabalho, colaboradores, finanças e estoque</li>
+          <li>Dashboards e tomadas de decisão baseadas em dados</li>
+          <li>Integração com sistemas legados ou externos</li>
+          <li>Treinamento personalizado e suporte contínuo</li>
+        </ul>
+        <div class="service-card__footer">
+          <a class="btn btn--solid" data-contact="whatsapp" href="#contato">Construir Meu Sistema</a>
+        </div>
+      </article>
+    </div>
+
+    <!-- Casos Reais Embutidos como Vitrine de Sistemas Web -->
+    <div class="cases-showcase-block" id="casos">
+      <div class="cases-showcase-block__head">
+        <span class="sec__tag">Vitrine Técnica</span>
+        <h2 class="h2">Casos Reais: A Complexidade Que Nenhum Software Pronto Resolve</h2>
+        <p class="sec__sub">Telas desenhadas puramente em código. Arquiteturas reais pensadas para regras de negócio específicas.</p>
+      </div>
+
+      <!-- Caso ADACI -->
+      <article class="demo reveal">
+        <div class="demo__text">
+          <span class="badge badge--gold"><svg class="ico-fa"><use href="#i-case-adaci"/></svg> ADACI · Cidadania &amp; Vistos</span>
+          <h3>A árvore que calcula o direito à cidadania</h3>
+          <p>
+            Na cidadania italiana, cada vínculo familiar importa. O sistema guarda pessoas e parentescos isoladamente,
+            e <strong>deduz sozinho</strong> a linha de transmissão, a geração e a jurisdição consular sem digitação manual.
+          </p>
+          <ul class="demo__notes">
+            <li>Grau de parentesco e geração derivados automaticamente</li>
+            <li>Linha de transmissão destacada em tempo real</li>
+            <li>Regras de impedimento consular checadas pelo sistema</li>
+          </ul>
+        </div>
+
+        <div class="screen glass demo__screen">
+          <div class="screen__chrome" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="screen__body">
+            <p class="screen__title">Família Bianchi — Linha de Transmissão da Cidadania</p>
+            <div class="tree-wrap">
+              <svg class="tree" viewBox="0 0 520 320" role="img" aria-label="Árvore genealógica de 5 gerações calculada pelo sistema da ADACI">
+                <g class="tree__link">
+                  <path d="M96 62 v14 H300 V90"/>
+                  <path d="M96 130 v14 H300 V158"/>
+                  <path d="M96 198 v14 H300 V226"/>
+                </g>
+                <path class="tree__line" d="M96 62 V90 M96 130 V158 M96 198 V226 M96 266 V286"/>
+
+                <g class="tree__node tree__node--root">
+                  <rect x="16" y="22" width="160" height="40" rx="8"/>
+                  <text x="30" y="40">Giuseppe Bianchi</text>
+                  <text x="30" y="54" class="tree__meta">1878 · Itália (Dante Causa)</text>
+                </g>
+                <g class="tree__node">
+                  <rect x="16" y="90" width="160" height="40" rx="8"/>
+                  <text x="30" y="108">Antonio Bianchi</text>
+                  <text x="30" y="122" class="tree__meta">1912 · filho</text>
+                </g>
+                <g class="tree__node tree__node--mute">
+                  <rect x="220" y="90" width="160" height="40" rx="8"/>
+                  <text x="234" y="108">Rosa Bianchi</text>
+                  <text x="234" y="122" class="tree__meta">1915 · filha</text>
+                </g>
+                <g class="tree__node">
+                  <rect x="16" y="158" width="160" height="40" rx="8"/>
+                  <text x="30" y="176">Maria Bianchi</text>
+                  <text x="30" y="190" class="tree__meta">1945 · neta</text>
+                </g>
+                <g class="tree__node tree__node--mute">
+                  <rect x="220" y="158" width="160" height="40" rx="8"/>
+                  <text x="234" y="176">Pedro Bianchi</text>
+                  <text x="234" y="190" class="tree__meta">1948 · neto</text>
+                </g>
+                <g class="tree__node">
+                  <rect x="16" y="226" width="160" height="40" rx="8"/>
+                  <text x="30" y="244">Carlos Souza</text>
+                  <text x="30" y="258" class="tree__meta">1978 · bisneto</text>
+                </g>
+                <g class="tree__node tree__node--mute">
+                  <rect x="220" y="226" width="160" height="40" rx="8"/>
+                  <text x="234" y="244">Marta Souza</text>
+                  <text x="234" y="258" class="tree__meta">1981 · bisneta</text>
+                </g>
+                <g class="tree__node tree__node--target">
+                  <rect x="16" y="286" width="220" height="26" rx="8"/>
+                  <text x="30" y="304">Ana Souza · Requerente (5ª geração)</text>
+                </g>
+              </svg>
+            </div>
+            <p class="screen__foot">Cinco gerações, quatro laços. O cálculo de transmissão é derivado matematicamente pelo sistema.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Caso Meduc -->
+      <article class="demo demo--flip reveal">
+        <div class="demo__text">
+          <span class="badge badge--gold"><svg class="ico-fa"><use href="#i-case-meduc"/></svg> Meduc · Gestão Escolar Multi-Tenant</span>
+          <h3>Isolamento de dados e provisionamento em minutos</h3>
+          <p>
+            O Meduc atende diversas escolas simultâneas com uma arquitetura segura: cada instituição possui
+            seu banco de dados isolado por construção. Alunos e finanças de uma escola jamais encostam nas de outra.
+          </p>
+          <ul class="demo__notes">
+            <li>Bases isoladas automaticamente no cadastro da instituição</li>
+            <li>Migrações e atualizações aplicadas em lote e com segurança</li>
+            <li>Controle de acesso refinado por perfil pedagógico e administrativo</li>
+          </ul>
+        </div>
+
+        <div class="screen glass demo__screen">
+          <div class="screen__chrome" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="screen__body">
+            <p class="screen__title">Nova Instituição — Provisionamento Multi-Tenant</p>
+            <div class="lookups">
+              <div class="lookup">
+                <span class="lookup__field">Instituição</span>
+                <span class="lookup__value">Colégio São Lucas</span>
+              </div>
+              <div class="lookup">
+                <span class="lookup__field">Sigla</span>
+                <span class="lookup__value">saolucas</span>
+              </div>
+            </div>
+            <ol class="track">
+              <li class="track__step is-done">
+                <span class="track__label">Tenant criado no controle de acesso</span>
+              </li>
+              <li class="track__step is-done">
+                <span class="track__label">Base de dados isolada criada</span>
+                <span class="track__note">banco: instituicao_saolucas</span>
+              </li>
+              <li class="track__step is-done">
+                <span class="track__label">Estrutura e tabelas provisionadas</span>
+                <span class="track__note">28 migrações executadas com sucesso</span>
+              </li>
+              <li class="track__step is-now">
+                <span class="track__label">Convite do administrador enviado</span>
+                <span class="track__note">direcao@saolucas.edu.br</span>
+              </li>
+            </ol>
+            <p class="screen__foot">Do cadastro ao primeiro login da diretoria, sem intervenção manual no banco de dados.</p>
+          </div>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
 
-<!-- ─────────────────────────  SEGMENTOS  ───────────────────────── -->
-<section class="band" id="segmentos">
+<!-- ─────────────────────────  PILARES DE GESTÃO  ───────────────────────── -->
+<section class="band pilares" id="pilares">
   <div class="wrap">
-    <div class="sec__head">
-      <h2 class="h2">Para quem trabalhamos</h2>
-      <p class="sec__sub">De consultório com dois profissionais a operação com dezenas de
-         colaboradores. O que define o projeto é a especificidade do processo, não o tamanho
-         da empresa.</p>
+    <div class="sec__head sec__head--center">
+      <span class="sec__tag">Impacto no seu Negócio</span>
+      <h2 class="h2">Como a Tecnologia Personalizada Transforma sua Operação</h2>
+      <p class="sec__sub">
+        Veja na prática o contraste entre a rotina comum com ferramentas improvisadas e a tranquilidade de ter um sistema moldado para a sua realidade.
+      </p>
     </div>
 
-    <div class="cards">
-      <article class="card">
-        <svg class="ico-fa ico-lead" aria-hidden="true" focusable="false"><use href="#i-seg-advocacia"/></svg>
-        <h3>Escritórios de advocacia</h3>
-        <ul>
-          <li>Controle de prazos e andamentos, com aviso antes do vencimento</li>
-          <li>Peças e contratos gerados a partir dos modelos do escritório</li>
-          <li>Honorários, parcelamentos e repasses entre sócios</li>
-          <li>Área do cliente para acompanhar o processo sem ligar para a secretária</li>
-        </ul>
-      </article>
-      <article class="card">
-        <svg class="ico-fa ico-lead" aria-hidden="true" focusable="false"><use href="#i-seg-clinica"/></svg>
-        <h3>Clínicas multidisciplinares</h3>
-        <ul>
-          <li>Agenda por profissional e por sala, sem choque de horário</li>
-          <li>Prontuário adequado a cada especialidade</li>
-          <li>Pacotes de sessões, convênios e faturamento</li>
-          <li>Lembrete automático de consulta, que reduz falta</li>
-        </ul>
-      </article>
-      <article class="card">
-        <svg class="ico-fa ico-lead" aria-hidden="true" focusable="false"><use href="#i-seg-comercio"/></svg>
-        <h3>Empreendimentos em geral</h3>
-        <ul>
-          <li>Pedidos, ordens de serviço e acompanhamento de execução</li>
-          <li>Estoque, compras e custo real por serviço</li>
-          <li>Comissões de equipe calculadas sem conferência manual</li>
-          <li>Relatórios do que o seu negócio precisa medir, não do que veio pronto</li>
-        </ul>
-      </article>
+    <!-- Botões de Alternância entre os Pilares -->
+    <div class="pilares__nav" role="tablist" aria-label="Alternar pilares de gestão">
+      <button class="pillar-btn is-active" data-pillar="trabalho" role="tab" aria-selected="true">
+        <svg class="ico-fa"><use href="#i-pil-trabalho"/></svg> Gestão do Trabalho
+      </button>
+      <button class="pillar-btn" data-pillar="equipe" role="tab" aria-selected="false">
+        <svg class="ico-fa"><use href="#i-pil-equipe"/></svg> Gestão da Equipe
+      </button>
+      <button class="pillar-btn" data-pillar="financeiro" role="tab" aria-selected="false">
+        <svg class="ico-fa"><use href="#i-pil-financeiro"/></svg> Gestão Financeira
+      </button>
     </div>
 
-    <p class="local">
-      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21.5s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10.4" r="2.6"/></svg>
-      <span><strong>Presencial em Bom Jesus do Itabapoana e região.</strong> Dá para sentar
-      junto com a sua equipe, ver a rotina funcionando e entender o que uma reunião por vídeo
-      não mostra. Para o resto do Brasil, atendemos remotamente.</span>
-    </p>
-  </div>
-</section>
+    <div class="pilares__grid">
+      <!-- Pilar 1: Gestão do Trabalho -->
+      <div class="pillar-card" id="pillar-trabalho">
+        <div class="pillar-card__header">
+          <div class="pillar-card__info">
+            <h3>Gestão do Trabalho e Processos</h3>
+            <p>Controle das demandas do início ao fim, com histórico centralizado e redução imediata de retrabalho.</p>
+          </div>
+          <span class="badge badge--gold">Visibilidade Total</span>
+        </div>
 
-<!-- ─────────────────────  NOSSO JEITO DE TRABALHAR  ───────────────────── -->
-<section class="sec jeito" id="jeito">
-  <div class="hero__field hero__field--soft" aria-hidden="true"></div>
+        <div class="pillar-compare">
+          <div class="pillar-pane pillar-pane--before">
+            <h4 class="pillar-pane__title">Como é hoje (O Cenário Típico)</h4>
+            <ul class="pillar-list">
+              <li><span class="icon-dot">✕</span> Planilhas paralelas que cada funcionário preenche de um jeito.</li>
+              <li><span class="icon-dot">✕</span> Demandas combinadas pelo WhatsApp que se perdem no dia a dia.</li>
+              <li><span class="icon-dot">✕</span> Retrabalho constante por falta de padronização nas tarefas.</li>
+              <li><span class="icon-dot">✕</span> Decisões tomadas no "achismo", sem dados consolidados da operação.</li>
+            </ul>
+          </div>
 
-  <div class="wrap">
-    <p class="manifesto">O sistema responde a você.<br>Não à empresa que o entregou.</p>
-    <p class="manifesto__sub">Queremos resolver o seu problema — não apenas entregar uma
-       solução tecnicamente correta. É o que muda o que a gente pergunta, o que a gente
-       propõe e o que a gente recusa.</p>
+          <div class="pillar-pane pillar-pane--after">
+            <h4 class="pillar-pane__title">Com a G&amp;Ms (Processo Sob Medida)</h4>
+            <ul class="pillar-list">
+              <li><span class="icon-dot">✓</span> Fluxo de trabalho em esteira clara: cada um sabe o próximo passo.</li>
+              <li><span class="icon-dot">✓</span> Informações centralizadas em tela única, com histórico rastreável.</li>
+              <li><span class="icon-dot">✓</span> Eliminação de tarefas manuais repetitivas via automação.</li>
+              <li><span class="icon-dot">✓</span> Tomada de decisão ágil apoiada em relatórios confiáveis em tempo real.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-    <div class="values">
-      <article>
-        <svg class="ico-fa ico-lead" aria-hidden="true" focusable="false"><use href="#i-val-ouvir"/></svg>
-        <h3>Ouvir antes de propor</h3>
-        <p>A primeira conversa não é sobre tecnologia. É sobre como o seu negócio funciona
-           hoje, quem faz o quê e o que te tira o sono. Só depois disso a gente fala de
-           solução.</p>
-      </article>
-      <article>
-        <svg class="ico-fa ico-lead" aria-hidden="true" focusable="false"><use href="#i-val-acordo"/></svg>
-        <h3>Combinado é combinado</h3>
-        <p>Valor, prazo e escopo acordados são o que acontece. Mudança de rumo se conversa
-           antes e entra no planejamento — nunca aparece como surpresa na fatura.</p>
-      </article>
-      <article>
-        <svg class="ico-fa ico-lead" aria-hidden="true" focusable="false"><use href="#i-val-conducao"/></svg>
-        <h3>Projeto sem sobressalto</h3>
-        <p>Você sabe em que etapa o projeto está e o que vem a seguir. A condução é
-           tranquila, e a sua equipe não precisa parar de trabalhar para o projeto andar.</p>
-      </article>
-      <article>
-        <svg class="ico-fa ico-lead" aria-hidden="true" focusable="false"><use href="#i-val-resultado"/></svg>
-        <h3>Entrega que funciona no dia seguinte</h3>
-        <p>Pronto não é o sistema estar no ar. É a sua equipe usando bem, com autonomia,
-           e o resultado aparecendo na operação. É aí que a gente considera entregue.</p>
-      </article>
+      <!-- Pilar 2: Gestão da Equipe -->
+      <div class="pillar-card" id="pillar-equipe" hidden>
+        <div class="pillar-card__header">
+          <div class="pillar-card__info">
+            <h3>Gestão da Equipe e Produtividade</h3>
+            <p>Clareza de responsabilidades individuais e gerais, dando autonomia aos colaboradores sem perder o controle.</p>
+          </div>
+          <span class="badge badge--gold">Autonomia com Controle</span>
+        </div>
+
+        <div class="pillar-compare">
+          <div class="pillar-pane pillar-pane--before">
+            <h4 class="pillar-pane__title">Como é hoje (O Cenário Típico)</h4>
+            <ul class="pillar-list">
+              <li><span class="icon-dot">✕</span> O empresário precisa checar pessoalmente tudo para garantir que foi feito.</li>
+              <li><span class="icon-dot">✕</span> Se um colaborador falta, ninguém sabe em que pé está o atendimento.</li>
+              <li><span class="icon-dot">✕</span> Dificuldade em medir quem está sobrecarregado ou ocioso.</li>
+              <li><span class="icon-dot">✕</span> Custos com colaboradores sem visão direta do retorno gerado.</li>
+            </ul>
+          </div>
+
+          <div class="pillar-pane pillar-pane--after">
+            <h4 class="pillar-pane__title">Com a G&amp;Ms (Processo Sob Medida)</h4>
+            <ul class="pillar-list">
+              <li><span class="icon-dot">✓</span> Tarefas atribuídas com prazos e status atualizados automaticamente.</li>
+              <li><span class="icon-dot">✓</span> A regra do negócio mora no sistema: qualquer pessoa autorizada dá continuidade.</li>
+              <li><span class="icon-dot">✓</span> Relatórios de produtividade gerais e individuais sem esforço manual.</li>
+              <li><span class="icon-dot">✓</span> Transparência total sobre custos e resultados gerados por setor.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pilar 3: Gestão Financeira -->
+      <div class="pillar-card" id="pillar-financeiro" hidden>
+        <div class="pillar-card__header">
+          <div class="pillar-card__info">
+            <h3>Gestão Financeira e Controle Operacional</h3>
+            <p>Fluxo de caixa sob controle, contas a pagar e receber sincronizadas e estoque alinhado às vendas.</p>
+          </div>
+          <span class="badge badge--gold">Saúde Financeira</span>
+        </div>
+
+        <div class="pillar-compare">
+          <div class="pillar-pane pillar-pane--before">
+            <h4 class="pillar-pane__title">Como é hoje (O Cenário Típico)</h4>
+            <ul class="pillar-list">
+              <li><span class="icon-dot">✕</span> Faturamento e despesas lançados com atraso ou esquecidos em notas de papel.</li>
+              <li><span class="icon-dot">✕</span> Inadimplência que só é percebida semanas após o vencimento.</li>
+              <li><span class="icon-dot">✕</span> Falta de produtos de surpresa e dinheiro parado em estoque que não gira.</li>
+              <li><span class="icon-dot">✕</span> Dúvida no final do mês se o negócio realmente deu lucro líquido.</li>
+            </ul>
+          </div>
+
+          <div class="pillar-pane pillar-pane--after">
+            <h4 class="pillar-pane__title">Com a G&amp;Ms (Processo Sob Medida)</h4>
+            <ul class="pillar-list">
+              <li><span class="icon-dot">✓</span> Visão exata do fluxo de caixa e previsão de entradas e saídas.</li>
+              <li><span class="icon-dot">✓</span> Alertas de contas a receber e avisos de cobrança facilitados.</li>
+              <li><span class="icon-dot">✓</span> Estoque integrado à esteira de pedidos com baixa em tempo real.</li>
+              <li><span class="icon-dot">✓</span> Cadastro estruturado de clientes, fornecedores e margem real por serviço.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Banner de Vantagem Competitiva e Escalabilidade -->
+    <div class="pillar-footer-banner">
+      <div class="pillar-footer-banner__text">
+        <h4>Vantagem Competitiva &amp; Escalabilidade</h4>
+        <p>Projetos desenvolvidos sob medida crescem com a sua empresa. Você não precisa trocar de software a cada nova etapa de expansão.</p>
+      </div>
+      <a class="btn btn--solid btn--sm" href="#contato">Falar sobre meu negócio</a>
     </div>
   </div>
 </section>
 
 <!-- ─────────────────────────  PROCESSO  ───────────────────────── -->
-<section class="band" id="processo">
-  <div class="wrap journey">
-    <div class="sec__head">
-      <h2 class="h2">Como um projeto acontece</h2>
-      <p class="sec__sub">Sete etapas, nesta ordem. Em cada uma você sabe onde está,
-         o que já foi entregue e o que vem depois.</p>
+<section class="sec processo" id="processo">
+  <div class="wrap">
+    <div class="processo-header">
+      <span class="sec__tag">Metodologia Transparente</span>
+      <h2 class="h2">Como funciona o nosso processo em 5 etapas</h2>
+      <p class="sec__sub">
+        Em cada momento você sabe exatamente onde o projeto está, o que já foi validado e o que vem em seguida.
+      </p>
     </div>
 
-    <ol class="track track--journey">
-      <li class="track__step">
-        <svg class="ico-fa track__ico" aria-hidden="true" focusable="false"><use href="#i-st-conversa"/></svg>
-        <span class="track__label">Conversa inicial</span>
-        <span class="track__note">Presencial ou por vídeo. Você apresenta o empreendimento ou
-          o problema, a gente escuta e pergunta. Sem custo e sem compromisso.</span>
+    <!-- Timeline Inspirada na Optsolv e Stripe -->
+    <ol class="timeline">
+      <li class="timeline__item">
+        <div class="timeline__node">01</div>
+        <div class="timeline__card">
+          <span class="timeline__step-num">Etapa 1 · Diagnóstico</span>
+          <h3 class="timeline__title">Te ouvimos e entendemos o seu negócio</h3>
+          <p class="timeline__desc">
+            Sentamos com você (presencialmente ou por videoconferência) para entender sua rotina real: processos,
+            colaboradores, rotinas financeiras, clientes e onde estão os gargalos. Sem jargões técnicos complexos.
+          </p>
+        </div>
       </li>
-      <li class="track__step">
-        <svg class="ico-fa track__ico" aria-hidden="true" focusable="false"><use href="#i-st-prototipo"/></svg>
-        <span class="track__label">Análise e protótipo</span>
-        <span class="track__note">Levantamos os requisitos e mostramos protótipos das telas.
-          Você confirma como a solução vai ser antes de existir uma linha de código.</span>
+
+      <li class="timeline__item">
+        <div class="timeline__node">02</div>
+        <div class="timeline__card">
+          <span class="timeline__step-num">Etapa 2 · Planejamento</span>
+          <h3 class="timeline__title">Analisamos e apresentamos a solução viável</h3>
+          <p class="timeline__desc">
+            Com as necessidades mapeadas, apresentamos uma proposta transparente: com escopo do projeto,
+            cronograma de entregas, orçamento justo e condições claras de pagamento.
+          </p>
+        </div>
       </li>
-      <li class="track__step">
-        <svg class="ico-fa track__ico" aria-hidden="true" focusable="false"><use href="#i-st-mvp"/></svg>
-        <span class="track__label">Entrega do MVP</span>
-        <span class="track__note">A primeira versão útil, com o essencial funcionando, para
-          você pegar no sistema cedo — e não só no fim.</span>
+
+      <li class="timeline__item">
+        <div class="timeline__node">03</div>
+        <div class="timeline__card">
+          <span class="timeline__step-num">Etapa 3 · Construção</span>
+          <h3 class="timeline__title">Rodadas iterativas de homologação</h3>
+          <p class="timeline__desc">
+            Você participa ativamente da construção. O sistema é demonstrado em etapas úteis, e você pode testar,
+            pedir ajustes e redirecionar rotinas para garantir que o resultado final seja exatamente o que você precisa.
+          </p>
+        </div>
       </li>
-      <li class="track__step">
-        <svg class="ico-fa track__ico" aria-hidden="true" focusable="false"><use href="#i-st-homolog"/></svg>
-        <span class="track__label">Rodadas de homologação</span>
-        <span class="track__note">Você e sua equipe usam, apontam e a gente ajusta. Quantas
-          rodadas forem necessárias até estar do jeito que o negócio precisa.</span>
+
+      <li class="timeline__item">
+        <div class="timeline__node">04</div>
+        <div class="timeline__card">
+          <span class="timeline__step-num">Etapa 4 · Implantação</span>
+          <h3 class="timeline__title">Lançamento e treinamento personalizado</h3>
+          <p class="timeline__desc">
+            Com o sistema aprovado, colocamos a aplicação no ar com segurança e realizamos treinamento sob medida
+            para você e seus colaboradores, garantindo que a equipe use a ferramenta com autonomia no dia seguinte.
+          </p>
+        </div>
       </li>
-      <li class="track__step">
-        <svg class="ico-fa track__ico" aria-hidden="true" focusable="false"><use href="#i-st-entrega"/></svg>
-        <span class="track__label">Entrega do produto</span>
-        <span class="track__note">A versão final, homologada por você, dentro do que foi
-          acordado no início.</span>
-      </li>
-      <li class="track__step">
-        <svg class="ico-fa track__ico" aria-hidden="true" focusable="false"><use href="#i-st-publica"/></svg>
-        <span class="track__label">Publicação assistida</span>
-        <span class="track__note">Colocamos no ar junto com você, com apoio intensificado nas
-          primeiras semanas e treinamento dos seus colaboradores.</span>
-      </li>
-      <li class="track__step">
-        <svg class="ico-fa track__ico" aria-hidden="true" focusable="false"><use href="#i-st-manuten"/></svg>
-        <span class="track__label">Manutenção e vida útil</span>
-        <span class="track__note">Correções, melhorias e rotinas novas enquanto o sistema
-          estiver servindo o negócio.</span>
+
+      <li class="timeline__item">
+        <div class="timeline__node">05</div>
+        <div class="timeline__card">
+          <span class="timeline__step-num">Etapa 5 · Evolução</span>
+          <h3 class="timeline__title">Suporte e melhorias contínuas</h3>
+          <p class="timeline__desc">
+            Não sumimos após a entrega. Continuamos ao seu lado para tirar dúvidas, realizar manutenções preventivas
+            e adicionar novas funcionalidades conforme o seu empreendimento evolui.
+          </p>
+        </div>
       </li>
     </ol>
-  </div>
-</section>
 
-<!-- ─────────────────────────  CASOS REAIS  ───────────────────────── -->
-<section class="sec" id="casos">
-  <div class="wrap">
-    <div class="sec__head">
-      <h2 class="h2">Casos reais</h2>
-      <p class="sec__sub">Telas de sistemas que construímos, desenhadas aqui na página.
-         Processos que nenhum software de prateleira sabe representar.</p>
+    <div class="processo-footer-note">
+      <p>
+        <strong>Compromisso G&amp;Ms:</strong> Se durante a consultoria identificarmos que o seu negócio não precisa de um sistema customizado, seremos sinceros e indicaremos a melhor alternativa.
+      </p>
     </div>
-
-    <!-- ADACI ------------------------------------------------------- -->
-    <p class="case__tag"><svg class="ico-fa" aria-hidden="true" focusable="false"><use href="#i-case-adaci"/></svg>ADACI · assessoria em cidadania e vistos de migração</p>
-
-    <article class="demo reveal">
-      <div class="demo__text">
-        <h3>A árvore que decide o direito</h3>
-        <p>Na cidadania italiana, o que vale é o laço. O sistema guarda cada pessoa e cada
-           vínculo separadamente, e <strong>deduz sozinho</strong> o parentesco, a geração e
-           por onde a cidadania se transmite.</p>
-        <p>Ninguém digita “bisneto”. O sistema chega nisso pelos laços — e refaz o cálculo
-           quando um parente novo entra na árvore.</p>
-        <ul class="demo__notes">
-          <li>Parentesco e geração derivados, nunca digitados</li>
-          <li>Linha de transmissão destacada automaticamente</li>
-          <li>Desenho próprio, sem depender de biblioteca de terceiros</li>
-        </ul>
-      </div>
-
-      <div class="screen glass demo__screen">
-        <div class="screen__chrome" aria-hidden="true"><span></span><span></span><span></span></div>
-        <div class="screen__body">
-          <p class="screen__title">Família Bianchi — linha de transmissão</p>
-
-          <div class="tree-wrap">
-          <svg class="tree" viewBox="0 0 520 320" role="img"
-               aria-label="Árvore genealógica de cinco gerações, de Giuseppe Bianchi, nascido em 1878 na Itália, até a requerente Ana Souza, nascida em 2001. A linha de transmissão da cidadania passa por Antonio, Maria e Carlos.">
-            <!-- laços laterais, até a borda superior de cada irmão -->
-            <g class="tree__link">
-              <path d="M96 62 v14 H300 V90"/>
-              <path d="M96 130 v14 H300 V158"/>
-              <path d="M96 198 v14 H300 V226"/>
-            </g>
-            <!-- linha de transmissão da cidadania -->
-            <path class="tree__line" d="M96 62 V90 M96 130 V158 M96 198 V226 M96 266 V286"/>
-
-            <g class="tree__node tree__node--root">
-              <rect x="16" y="22" width="160" height="40" rx="9"/>
-              <text x="30" y="40">Giuseppe Bianchi</text>
-              <text x="30" y="54" class="tree__meta">1878 · Itália</text>
-            </g>
-
-            <g class="tree__node">
-              <rect x="16" y="90" width="160" height="40" rx="9"/>
-              <text x="30" y="108">Antonio Bianchi</text>
-              <text x="30" y="122" class="tree__meta">1912 · filho</text>
-            </g>
-            <g class="tree__node tree__node--mute">
-              <rect x="220" y="90" width="160" height="40" rx="9"/>
-              <text x="234" y="108">Rosa Bianchi</text>
-              <text x="234" y="122" class="tree__meta">1915 · filha</text>
-            </g>
-
-            <g class="tree__node">
-              <rect x="16" y="158" width="160" height="40" rx="9"/>
-              <text x="30" y="176">Maria Bianchi</text>
-              <text x="30" y="190" class="tree__meta">1945 · neta</text>
-            </g>
-            <g class="tree__node tree__node--mute">
-              <rect x="220" y="158" width="160" height="40" rx="9"/>
-              <text x="234" y="176">Pedro Bianchi</text>
-              <text x="234" y="190" class="tree__meta">1948 · neto</text>
-            </g>
-
-            <g class="tree__node">
-              <rect x="16" y="226" width="160" height="40" rx="9"/>
-              <text x="30" y="244">Carlos Souza</text>
-              <text x="30" y="258" class="tree__meta">1978 · bisneto</text>
-            </g>
-            <g class="tree__node tree__node--mute">
-              <rect x="220" y="226" width="160" height="40" rx="9"/>
-              <text x="234" y="244">Marta Souza</text>
-              <text x="234" y="258" class="tree__meta">1981 · bisneta</text>
-            </g>
-
-            <g class="tree__node tree__node--target">
-              <rect x="16" y="286" width="216" height="26" rx="8"/>
-              <text x="30" y="304">Ana Souza · requerente · 5ª geração</text>
-            </g>
-          </svg>
-          </div>
-
-          <p class="screen__foot">Cinco gerações, quatro laços. O grau de parentesco de cada
-             pessoa é calculado, não preenchido à mão.</p>
-        </div>
-      </div>
-    </article>
-
-    <article class="demo demo--flip reveal">
-      <div class="demo__text">
-        <h3>A esteira que não deixa pular etapa</h3>
-        <p>Cada serviço tem a sua sequência, e cada etapa sabe o que precisa estar pronto antes
-           dela. O protocolo no consulado simplesmente <strong>não abre</strong> enquanto houver
-           documento sem chancela — a regra mora no sistema, não na memória da equipe.</p>
-        <p>Na mesma linha, o sistema responde sozinho qual consulado atende cada estado: uma
-           pergunta que antes virava consulta em planilha e, às vezes, processo protocolado no
-           lugar errado.</p>
-        <ul class="demo__notes">
-          <li>Etapa bloqueada explica o motivo do bloqueio</li>
-          <li>Requisito sabe de quem é a responsabilidade</li>
-          <li>Jurisdição consular resolvida pela unidade federativa</li>
-        </ul>
-      </div>
-
-      <div class="screen glass demo__screen">
-        <div class="screen__chrome" aria-hidden="true"><span></span><span></span><span></span></div>
-        <div class="screen__body">
-          <p class="screen__title">Processo #2418 · Cidadania italiana por descendência</p>
-
-          <ol class="track">
-            <li class="track__step is-done">
-              <span class="track__label">Reunião de documentos</span>
-              <span class="track__note">12 de 12 documentos</span>
-            </li>
-            <li class="track__step is-done">
-              <span class="track__label">Tradução juramentada</span>
-              <span class="track__note">concluída</span>
-            </li>
-            <li class="track__step is-now">
-              <span class="track__label">Apostilamento de Haia</span>
-              <span class="track__note">7 de 12 apostilados</span>
-              <span class="track__bar"><i style="--to:58%"></i></span>
-            </li>
-            <li class="track__step is-blocked">
-              <span class="track__label">Protocolo no consulado</span>
-              <span class="track__note">travado: certidão de Giuseppe sem chancela</span>
-            </li>
-            <li class="track__step">
-              <span class="track__label">Acompanhamento consular</span>
-              <span class="track__note">até 4 anos</span>
-            </li>
-          </ol>
-
-          <p class="screen__foot">A trava não é um aviso que dá para ignorar: a etapa seguinte
-             não existe até o requisito ser cumprido.</p>
-        </div>
-      </div>
-    </article>
-
-    <!-- MEDUC ------------------------------------------------------- -->
-    <p class="case__tag"><svg class="ico-fa" aria-hidden="true" focusable="false"><use href="#i-case-meduc"/></svg>Meduc · plataforma da G&amp;Ms para gestão escolar</p>
-
-    <article class="demo reveal">
-      <div class="demo__text">
-        <h3>Uma escola nova entra em minutos</h3>
-        <p>O Meduc é produto nosso: uma plataforma de gestão escolar que atende várias
-           instituições ao mesmo tempo, cada uma com a <strong>base de dados separada</strong>
-           das demais. Nota, matrícula e ficha de aluno de uma escola não encostam na de outra.</p>
-        <p>Colocar uma instituição no ar não é projeto: é um cadastro. O provisionamento
-           inteiro acontece encadeado, e se qualquer passo falhar nada é gravado pela metade.</p>
-        <ul class="demo__notes">
-          <li>Dados de cada instituição isolados por construção</li>
-          <li>Atualização do sistema chega a todas as escolas de uma vez</li>
-          <li>Acesso e permissões por perfil, escola a escola</li>
-        </ul>
-      </div>
-
-      <div class="screen glass demo__screen">
-        <div class="screen__chrome" aria-hidden="true"><span></span><span></span><span></span></div>
-        <div class="screen__body">
-          <p class="screen__title">Nova instituição</p>
-
-          <div class="lookups">
-            <div class="lookup">
-              <span class="lookup__field">Instituição</span>
-              <span class="lookup__value">Colégio São Lucas</span>
-            </div>
-            <div class="lookup">
-              <span class="lookup__field">Sigla</span>
-              <span class="lookup__value">saolucas</span>
-            </div>
-          </div>
-
-          <ol class="track track--provision">
-            <li class="track__step is-done">
-              <span class="track__label">Organização criada no controle de acesso</span>
-            </li>
-            <li class="track__step is-done">
-              <span class="track__label">Base isolada criada</span>
-              <span class="track__note">instituicao_saolucas</span>
-            </li>
-            <li class="track__step is-done">
-              <span class="track__label">Estrutura do sistema aplicada</span>
-              <span class="track__note">28 migrações</span>
-            </li>
-            <li class="track__step is-now">
-              <span class="track__label">Administrador convidado</span>
-              <span class="track__note">direcao@saolucas.exemplo.br</span>
-            </li>
-          </ol>
-
-          <p class="screen__foot">Do cadastro ao primeiro login da diretoria, sem ninguém
-             precisar mexer no banco de dados.</p>
-        </div>
-      </div>
-    </article>
-
-    <p class="pratica__note">Telas ilustrativas, com dados fictícios. O código dos sistemas
-       de cliente é privado.</p>
   </div>
 </section>
 
 <!-- ─────────────────────────  SOBRE  ───────────────────────── -->
-<section class="band" id="sobre">
-  <div class="wrap about">
-    <div class="about__text">
-      <h2 class="h2">Quem está por trás</h2>
-      <p>A G&amp;Ms é conduzida por <strong>Gabriel Magalhães Dias</strong>, engenheiro de
-         software formado em Ciência da Computação pela UFES, em Alegre. Ele atua na Zup
-         Innovation com sistemas de larga escala — a mesma engenharia que grandes empresas
-         do país usam — e trouxe esse padrão para atender de perto os negócios da região.</p>
-      <p>Ao longo dos anos foram montados nossos próprios kits de desenvolvimento, o
-         <a href="https://github.com/Gabriel-mDias/Java-GEMS-SDK">Java-GEMS-SDK</a> e o
-         <a href="https://github.com/Gabriel-mDias/Angular-GEMS-SDK">Angular-GEMS-SDK</a>, com
-         aquilo que se repete em todo projeto: autenticação, permissões, auditoria, cadastros e
-         relatórios. É por isso que um sistema sob medida aqui não começa do zero — e por isso
-         o prazo fecha.</p>
+<section class="band sobre" id="sobre">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-text">
+        <span class="sec__tag">Quem está por trás</span>
+        <h2>Engenharia de software com padrão corporativo para o seu negócio</h2>
+        <p>
+          A G&amp;Ms é conduzida por <strong>Gabriel Magalhães Dias</strong>, engenheiro de software formado em
+          <strong>Ciência da Computação pela UFES</strong> (Universidade Federal do Espírito Santo, Alegre).
+        </p>
+        <p>
+          Com experiência no desenvolvimento de softwares para setores de alta criticidade — como saúde, advocacia,
+          bancos e grandes corporações através da <strong>Zup Innovation</strong> —, Gabriel une a solidez técnica de sistemas
+          em larga escala com o atendimento próximo e humano aos empreendedores de <strong>Bom Jesus do Itabapoana e região</strong>.
+        </p>
+        <p>
+          <em>"Vejo que no norte e noroeste fluminense há poucas empresas de tecnologia focadas em dar valor de verdade ao cliente. Há muitas opções genéricas que não respeitam a particularidade de cada negócio. Minha missão é oferecer soluções com qualidade de engenharia e preço justo para quem quer crescer."</em>
+        </p>
+      </div>
+
+      <div class="specs-card">
+        <h3>Credenciais Técnicas</h3>
+        <dl class="specs-list">
+          <div class="specs-item">
+            <dt>Fundador &amp; Engenheiro</dt>
+            <dd>Gabriel Magalhães Dias</dd>
+          </div>
+          <div class="specs-item">
+            <dt>Formação Acadêmica</dt>
+            <dd>Ciência da Computação · UFES</dd>
+          </div>
+          <div class="specs-item">
+            <dt>Arquitetura &amp; Back-end</dt>
+            <dd>Java, Spring Boot, PostgreSQL</dd>
+          </div>
+          <div class="specs-item">
+            <dt>Front-end &amp; Interfaces</dt>
+            <dd>Angular, TypeScript, Clean CSS</dd>
+          </div>
+          <div class="specs-item">
+            <dt>Segurança e Acesso</dt>
+            <dd>Keycloak, RBAC, auditoria de dados</dd>
+          </div>
+          <div class="specs-item">
+            <dt>Sede &amp; Atendimento</dt>
+            <dd>Bom Jesus do Itabapoana, RJ (presencial e remoto)</dd>
+          </div>
+        </dl>
+      </div>
     </div>
-    <dl class="specs">
-      <div><dt>Back-end</dt><dd>Java, Spring Boot, PostgreSQL</dd></div>
-      <div><dt>Front-end</dt><dd>Angular, TypeScript</dd></div>
-      <div><dt>Acesso e segurança</dt><dd>Keycloak, permissões por perfil, auditoria</dd></div>
-      <div><dt>Qualidade</dt><dd>Testes automatizados, versionamento, revisão de código</dd></div>
-      <div><dt>Formação</dt><dd>Ciência da Computação — UFES, Alegre</dd></div>
-      <div><dt>Base</dt><dd>Bom Jesus do Itabapoana, RJ · atendimento em todo o Brasil</dd></div>
-    </dl>
   </div>
 </section>
 
 <!-- ─────────────────────────  FAQ  ───────────────────────── -->
-<section class="sec" id="faq">
-  <div class="wrap faq">
-    <h2 class="h2">Perguntas frequentes</h2>
+<section class="sec faq-section" id="faq">
+  <div class="wrap">
+    <div class="sec__head sec__head--center">
+      <span class="sec__tag">Tire Suas Dúvidas</span>
+      <h2 class="h2">Perguntas Frequentes</h2>
+      <p class="sec__sub">Transparência desde o primeiro contato.</p>
+    </div>
 
-    <details name="faq">
-      <summary>Quanto custa um sistema sob medida?</summary>
-      <p>Depende do tamanho do processo, e não daria para responder honestamente sem conhecê-lo.
-         Por isso a conversa inicial é gratuita: dela sai uma proposta com valor fechado por
-         etapa, para você decidir com o número na mão.</p>
-    </details>
-    <details name="faq">
-      <summary>Quanto tempo até eu conseguir usar?</summary>
-      <p>A primeira versão útil costuma ir ao ar em semanas. O projeto é dividido em etapas
-         justamente para você não esperar o sistema inteiro ficar pronto para começar a ganhar
-         tempo com ele.</p>
-    </details>
-    <details name="faq">
-      <summary>O código e os dados ficam comigo?</summary>
-      <p>Sim. O código-fonte e a base de dados são do seu negócio, e você recebe tudo o que
-         precisa para levá-los a outro fornecedor se um dia quiser.</p>
-    </details>
-    <details name="faq">
-      <summary>E depois que o sistema entra no ar?</summary>
-      <p>A publicação é assistida: ficamos junto nas primeiras semanas, treinamos a sua equipe
-         e acompanhamos o uso real. Depois disso, seguimos com a manutenção e a evolução
-         enquanto o sistema servir o negócio.</p>
-    </details>
-    <details name="faq">
-      <summary>Eu já tenho um sistema. Preciso jogar fora?</summary>
-      <p>Quase nunca. Na maioria dos casos dá para integrar o que já funciona e substituir aos
-         poucos só a parte que atrapalha.</p>
-    </details>
+    <div class="faq-list">
+      <details class="faq-item" name="faq">
+        <summary class="faq-summary">Quanto custa um sistema ou serviço sob medida?</summary>
+        <p class="faq-answer">
+          O investimento depende da complexidade do seu processo ou do serviço contratado (Landing Page, Consultoria ou ERP).
+          Por isso nossa conversa inicial é gratuita: dela elaboramos uma proposta detalhada com valor fechado por etapa,
+          sem custos ocultos ou cobranças inesperadas.
+        </p>
+      </details>
+
+      <details class="faq-item" name="faq">
+        <summary class="faq-summary">Quanto tempo leva até eu começar a utilizar?</summary>
+        <p class="faq-answer">
+          Landing pages costumam ser entregues em poucos dias. Para sistemas web sob medida, trabalhamos com entregas iterativas:
+          a primeira versão útil (MVP) costuma ir ao ar em poucas semanas, para que sua equipe comece a colher resultados antes
+          mesmo do projeto completo estar concluído.
+        </p>
+      </details>
+
+      <details class="faq-item" name="faq">
+        <summary class="faq-summary">O código-fonte e os dados do sistema pertencem à minha empresa?</summary>
+        <p class="faq-answer">
+          Sim, integralmente. O código-fonte, a base de dados e os backups pertencem ao seu negócio. Você não fica preso
+          à G&amp;Ms e recebe tudo o que precisa para hospedar onde quiser ou dar continuidade com outra equipe no futuro.
+        </p>
+      </details>
+
+      <details class="faq-item" name="faq">
+        <summary class="faq-summary">Eu já utilizo um sistema antigo ou planilhas. Preciso recomeçar do zero?</summary>
+        <p class="faq-answer">
+          Quase nunca. Nossa consultoria avalia o que você já possui. Podemos criar integrações automáticas com seus sistemas atuais,
+          importar seus dados históricos das planilhas e substituir aos poucos apenas as partes problemáticas, sem interromper o seu faturamento.
+        </p>
+      </details>
+
+      <details class="faq-item" name="faq">
+        <summary class="faq-summary">Vocês realizam atendimento presencial?</summary>
+        <p class="faq-answer">
+          Sim! Para clientes de Bom Jesus do Itabapoana e municípios vizinhos, temos disponibilidade para reuniões presenciais,
+          visitas técnicas e treinamento da sua equipe no seu próprio espaço de trabalho. Para outras regiões do Brasil, atendemos com a mesma proximidade de forma remota.
+        </p>
+      </details>
+    </div>
   </div>
 </section>
 
 <!-- ─────────────────────────  CONTATO  ───────────────────────── -->
-<section class="band" id="contato">
-  <div class="wrap contact">
-    <div class="contact__intro">
-      <h2 class="h2">Vamos conversar sobre o seu processo</h2>
-      <p>Conte como o seu negócio funciona hoje e onde trava. A gente responde com uma leitura
-         honesta do que dá para resolver — mesmo que a resposta seja que você não precisa de
-         um sistema novo.</p>
+<section class="band contato-section" id="contato">
+  <div class="wrap">
+    <div class="contato-layout">
+      <div class="contato-intro">
+        <span class="sec__tag">Vamos Conversar</span>
+        <h2>Conte-nos sobre os desafios do seu negócio</h2>
+        <p>
+          Explique como sua empresa funciona hoje e onde o trabalho trava. Retornamos com uma avaliação honesta
+          do que pode ser otimizado.
+        </p>
 
-      <ul class="channels">
-        <li>
-          <a data-contact="whatsapp" href="https://wa.me/5522999556956?text=Ol%C3%A1%2C%20Gabriel.%20Vim%20pelo%20site%20da%20G%26Ms%20e%20gostaria%20de%20conversar%20sobre%20um%20sistema%20sob%20medida.">
-            <svg class="brandico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.04 2A9.9 9.9 0 0 0 2.1 11.9c0 1.75.46 3.46 1.34 4.97L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01a9.9 9.9 0 0 0 9.94-9.9A9.9 9.9 0 0 0 12.04 2Zm0 18.15a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.39 8.24 8.24 0 1 1 8.23 8.25Zm4.52-6.17c-.25-.13-1.47-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.12-.15.16-.25.25-.42.08-.16.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.43h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.04s.88 2.37 1 2.53c.12.17 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.3Z"/></svg>
-            <span><strong>WhatsApp</strong><em data-contact="whatsapp-label">(22) 99955-6956</em></span>
-          </a>
-        </li>
-        <li>
-          <a data-contact="email" href="mailto:gemstecnologia@gmail.com?subject=Contato%20pelo%20site%20da%20G%26Ms">
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2.8" y="5" width="18.4" height="14" rx="2"/><path d="M3.4 6.4 12 12.6l8.6-6.2"/></svg>
-            <span><strong>E-mail</strong><em data-contact="email-label">gemstecnologia@gmail.com</em></span>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/gabriel-m-3a8463136/">
-            <svg class="brandico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14Zm1.78 13.02H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0Z"/></svg>
-            <span><strong>LinkedIn</strong><em>Gabriel Magalhães Dias</em></span>
-          </a>
-        </li>
-      </ul>
+        <ul class="channels">
+          <li>
+            <a data-contact="whatsapp" href="https://wa.me/5522999556956?text=Ol%C3%A1%2C%20Gabriel.%20Vim%20pelo%20site%20da%20G%26Ms%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.">
+              <svg class="brandico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.04 2A9.9 9.9 0 0 0 2.1 11.9c0 1.75.46 3.46 1.34 4.97L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01a9.9 9.9 0 0 0 9.94-9.9A9.9 9.9 0 0 0 12.04 2Zm0 18.15a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.39 8.24 8.24 0 1 1 8.23 8.25Zm4.52-6.17c-.25-.13-1.47-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.12-.15.16-.25.25-.42.08-.16.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.43h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.04s.88 2.37 1 2.53c.12.17 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.3Z"/></svg>
+              <div class="channels-info">
+                <span class="channels-label">WhatsApp</span>
+                <span class="channels-val" data-contact="whatsapp-label">(22) 99955-6956</span>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a data-contact="email" href="mailto:gemstecnologia@gmail.com?subject=Contato%20pelo%20site%20da%20G%26Ms">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2.8" y="5" width="18.4" height="14" rx="2"/><path d="M3.4 6.4 12 12.6l8.6-6.2"/></svg>
+              <div class="channels-info">
+                <span class="channels-label">E-mail Direto</span>
+                <span class="channels-val" data-contact="email-label">gemstecnologia@gmail.com</span>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.linkedin.com/in/gabriel-m-3a8463136/" target="_blank" rel="noopener noreferrer">
+              <svg class="brandico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14Zm1.78 13.02H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0Z"/></svg>
+              <div class="channels-info">
+                <span class="channels-label">LinkedIn</span>
+                <span class="channels-val">Gabriel Magalhães Dias</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <div class="local-note">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21.5s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10.4" r="2.6"/></svg>
+          <div>
+            <strong>Atendimento presencial em Bom Jesus do Itabapoana e Noroeste Fluminense:</strong>
+            reunimos com sua equipe presencialmente para entender a dinâmica de trabalho no olho no olho.
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulário com Web3Forms -->
+      <form class="form glass" id="contact-form" novalidate>
+        <div class="field">
+          <label for="f-nome">Seu Nome *</label>
+          <input id="f-nome" name="nome" type="text" required autocomplete="name" placeholder="Como podemos te chamar?">
+        </div>
+
+        <div class="field">
+          <label for="f-email">Seu E-mail *</label>
+          <input id="f-email" name="email" type="email" required autocomplete="email" placeholder="nome@empresa.com.br">
+        </div>
+
+        <div class="field">
+          <label for="f-fone">WhatsApp <span class="opt">(opcional)</span></label>
+          <input id="f-fone" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" placeholder="(22) 99999-9999">
+        </div>
+
+        <div class="field">
+          <label for="f-servico">Serviço de Interesse</label>
+          <select id="f-servico" name="servico">
+            <option value="Sistemas Web Customizados">Sistemas Web Customizados (ERP)</option>
+            <option value="Landing Pages">Landing Pages</option>
+            <option value="Consultorias em TI">Consultoria em TI e Automações</option>
+            <option value="Outro assunto">Outro assunto</option>
+          </select>
+        </div>
+
+        <div class="field field--full">
+          <label for="f-msg">Conte um pouco sobre sua empresa e o que você gostaria de melhorar *</label>
+          <textarea id="f-msg" name="mensagem" rows="5" required placeholder="Ex: Hoje controlo meus clientes e contas em planilhas, mas temos retrabalho e quero centralizar tudo em um sistema próprio..."></textarea>
+        </div>
+
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="form__foot">
+          <button class="btn btn--solid" type="submit" id="form-submit">Enviar Mensagem</button>
+          <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
     </div>
-
-    <form class="form glass" id="contact-form" novalidate>
-      <div class="field">
-        <label for="f-nome">Nome</label>
-        <input id="f-nome" name="nome" type="text" required autocomplete="name">
-      </div>
-      <div class="field">
-        <label for="f-email">E-mail</label>
-        <input id="f-email" name="email" type="email" required autocomplete="email">
-      </div>
-      <div class="field">
-        <label for="f-fone">WhatsApp <span class="opt">opcional</span></label>
-        <input id="f-fone" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel">
-      </div>
-      <div class="field">
-        <label for="f-seg">Tipo de negócio</label>
-        <select id="f-seg" name="segmento">
-          <option>Escritório de advocacia</option>
-          <option>Clínica ou consultório</option>
-          <option>Comércio ou prestação de serviço</option>
-          <option>Instituição de ensino</option>
-          <option>Outro</option>
-        </select>
-      </div>
-      <div class="field field--full">
-        <label for="f-msg">Como o seu negócio funciona hoje e onde trava?</label>
-        <textarea id="f-msg" name="mensagem" rows="5" required></textarea>
-      </div>
-
-      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-
-      <div class="form__foot">
-        <button class="btn btn--solid" type="submit" id="form-submit">Enviar mensagem</button>
-        <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
-      </div>
-    </form>
   </div>
 </section>
 
 </main>
 
+<!-- ─────────────────────────  FOOTER  ───────────────────────── -->
 <footer class="foot">
   <div class="wrap foot__inner">
     <div class="foot__brand">
-      <p class="foot__name">G<span class="brand__amp">&amp;</span>Ms <em>soluções tecnológicas</em></p>
+      <p class="foot__name">G<span class="brand__amp">&amp;</span>Ms <em>Soluções Tecnológicas</em></p>
       <p class="foot__tagline">Tecnologia que gera valor para pessoas</p>
     </div>
-    <nav class="foot__links" aria-label="Contato e perfis">
+
+    <nav class="foot__links" aria-label="Links institucionais">
       <a data-contact="email" href="mailto:gemstecnologia@gmail.com">gemstecnologia@gmail.com</a>
-      <a href="https://www.linkedin.com/in/gabriel-m-3a8463136/">LinkedIn</a>
-      <a href="https://github.com/Gabriel-mDias">GitHub</a>
+      <a href="https://www.linkedin.com/in/gabriel-m-3a8463136/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/Gabriel-mDias" target="_blank" rel="noopener noreferrer">GitHub</a>
     </nav>
-    <p class="foot__legal">© <span id="year">2026</span> G&amp;Ms Soluções Tecnológicas · Bom Jesus do Itabapoana, RJ</p>
+
+    <p class="foot__legal">
+      © <span id="year">2026</span> G&amp;Ms Soluções Tecnológicas · CNPJ registrado · Bom Jesus do Itabapoana, RJ
+    </p>
   </div>
 </footer>
 
+<!-- Metadados Estruturados Schema.org para SEO -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -781,7 +877,7 @@
       "name": "G&Ms Soluções Tecnológicas",
       "slogan": "Tecnologia que gera valor para pessoas",
       "url": "https://gems.tec.br/",
-      "description": "Desenvolvimento de software sob medida para escritórios de advocacia, clínicas multidisciplinares e empreendimentos de pequeno, médio e grande porte.",
+      "description": "Desenvolvimento de software sob medida, landing pages e consultorias em TI para pequenos e médios empreendimentos em Bom Jesus do Itabapoana e região.",
       "email": "gemstecnologia@gmail.com",
       "telephone": "+55-22-99955-6956",
       "founder": { "@id": "https://gems.tec.br/#gabriel" },
@@ -795,13 +891,42 @@
         "addressRegion": "RJ",
         "addressCountry": "BR"
       },
-      "knowsAbout": ["Software sob medida", "Automação de processos", "Sistemas de gestão", "Gestão escolar", "Java", "Angular"]
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Serviços de Tecnologia",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Landing Pages",
+              "description": "Criação de páginas institucionais e captação de leads com alta velocidade e design responsivo."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Consultorias em TI",
+              "description": "Diagnóstico de processos, automação de rotinas e levantamento de soluções técnicas."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sistemas Web Personalizados (ERP)",
+              "description": "Sistemas web sob medida para gestão completa de trabalho, equipe, finanças e estoque."
+            }
+          }
+        ]
+      }
     },
     {
       "@type": "Person",
       "@id": "https://gems.tec.br/#gabriel",
       "name": "Gabriel Magalhães Dias",
-      "jobTitle": "Engenheiro de software",
+      "jobTitle": "Engenheiro de Software",
       "email": "gemstecnologia@gmail.com",
       "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidade Federal do Espírito Santo" },
       "knowsLanguage": "pt-BR",
@@ -816,28 +941,18 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Quanto custa um sistema sob medida?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Depende do tamanho do processo. A conversa inicial é gratuita e dela sai uma proposta com valor fechado por etapa." }
+          "name": "Quanto custa um sistema ou serviço sob medida?",
+          "acceptedAnswer": { "@type": "Answer", "text": "O investimento depende da complexidade do processo. A conversa inicial é gratuita e resulta em uma proposta transparente com valor fechado por etapa." }
         },
         {
           "@type": "Question",
-          "name": "Quanto tempo até eu conseguir usar?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A primeira versão útil costuma ir ao ar em semanas. O projeto é dividido em etapas para que o cliente comece a ganhar tempo antes do sistema inteiro ficar pronto." }
+          "name": "Quanto tempo leva até eu começar a utilizar?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Landing pages são entregues em poucos dias. Para sistemas ERP, a primeira versão útil (MVP) costuma ir ao ar em poucas semanas." }
         },
         {
           "@type": "Question",
-          "name": "O código e os dados ficam comigo?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Sim. O código-fonte e a base de dados pertencem ao cliente, que recebe tudo o que precisa para levá-los a outro fornecedor." }
-        },
-        {
-          "@type": "Question",
-          "name": "E depois que o sistema entra no ar?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A publicação é assistida, com apoio intensificado nas primeiras semanas e treinamento da equipe, seguida de manutenção e evolução durante a vida útil do sistema." }
-        },
-        {
-          "@type": "Question",
-          "name": "Eu já tenho um sistema. Preciso jogar fora?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Na maioria dos casos é possível integrar o que já funciona e substituir gradualmente apenas a parte que atrapalha." }
+          "name": "O código-fonte e os dados pertencem à minha empresa?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim. O código-fonte, banco de dados e arquivos pertencem integralmente ao cliente sem travas de fornecedor." }
         }
       ]
     }
@@ -846,6 +961,6 @@
 </script>
 
 <script src="assets/js/config.js"></script>
-<script src="assets/js/main.js"></script>
+<script type="module" src="assets/js/main.js"></script>
 </body>
 </html>

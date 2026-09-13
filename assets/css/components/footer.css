@@ -1,0 +1,75 @@
+/* =========================================================================
+   G&Ms Soluções Tecnológicas — Components: Rodapé
+   ========================================================================= */
+
+.foot {
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  padding-block: clamp(3rem, 6vw, 4.5rem);
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+.foot__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.foot__brand {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.foot__name {
+  font-family: var(--display);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0;
+}
+.foot__name em {
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--text-xs);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-left: .35rem;
+}
+
+.foot__tagline {
+  font-size: var(--text-xs);
+  color: var(--muted);
+  margin: 0;
+}
+
+.foot__links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.foot__links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: var(--text-xs);
+  transition: color var(--t-fast);
+}
+.foot__links a:hover {
+  color: var(--ink);
+}
+
+.foot__legal {
+  width: 100%;
+  margin: 1.5rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  font-size: var(--text-xs);
+  color: var(--muted);
+  text-align: center;
+}

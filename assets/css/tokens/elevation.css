@@ -1,0 +1,52 @@
+/* =========================================================================
+   G&Ms Soluções Tecnológicas — Design Tokens: Elevação e Layout
+   Sombras suaves com tint navy, raios de borda e grids
+   ========================================================================= */
+
+:root {
+  /* Espaçamento responsivo de gutters e bays */
+  --gut: clamp(1.25rem, 5vw, 2.5rem);
+  --bay: clamp(4.5rem, 9vw, 7.5rem);
+  --bay-sm: clamp(2.5rem, 5vw, 4.5rem);
+
+  /* Raios de borda */
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --r-full: 9999px;
+
+  /* Sombras */
+  --lift-sm:
+    0 1px 2px rgba(23, 44, 59, .06),
+    0 8px 18px -12px rgba(23, 44, 59, .22);
+
+  --lift:
+    0 1px 2px rgba(23, 44, 59, .05),
+    0 18px 38px -20px rgba(23, 44, 59, .24),
+    0 46px 82px -56px rgba(23, 44, 59, .28);
+
+  --lift-lg:
+    0 2px 4px rgba(23, 44, 59, .06),
+    0 26px 54px -24px rgba(23, 44, 59, .32),
+    0 64px 104px -60px rgba(23, 44, 59, .36);
+
+  /* Transições padrão */
+  --t-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --t-base: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --t-slow: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --lift-sm: 0 4px 16px -8px rgba(0, 0, 0, .7);
+    --lift:    0 1px 2px rgba(0, 0, 0, .4), 0 24px 52px -24px rgba(0, 0, 0, .85);
+    --lift-lg: 0 2px 6px rgba(0, 0, 0, .5), 0 36px 72px -28px rgba(0, 0, 0, .95);
+  }
+}
+
+:root[data-theme="dark"] {
+  --lift-sm: 0 4px 16px -8px rgba(0, 0, 0, .7);
+  --lift:    0 1px 2px rgba(0, 0, 0, .4), 0 24px 52px -24px rgba(0, 0, 0, .85);
+  --lift-lg: 0 2px 6px rgba(0, 0, 0, .5), 0 36px 72px -28px rgba(0, 0, 0, .95);
+}

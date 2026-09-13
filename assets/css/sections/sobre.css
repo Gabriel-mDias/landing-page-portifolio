@@ -1,0 +1,88 @@
+/* =========================================================================
+   G&Ms Soluções Tecnológicas — Sections: Sobre Nós & Autoridade Técnica
+   ========================================================================= */
+
+.sobre {
+  position: relative;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.about-text h2 {
+  font-family: var(--display);
+  font-size: var(--text-3xl);
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 1.25rem;
+}
+
+.about-text p {
+  color: var(--muted);
+  font-size: var(--text-base);
+  line-height: var(--leading-base);
+  margin-bottom: 1.25rem;
+}
+
+.about-text strong {
+  color: var(--ink);
+}
+
+.specs-card {
+  background: var(--raised);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 1.75rem;
+  box-shadow: var(--lift-sm);
+}
+
+.specs-card h3 {
+  font-family: var(--display);
+  font-size: var(--text-base);
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gold-ink);
+  margin: 0 0 1.25rem;
+  padding-bottom: .75rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.specs-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 0;
+}
+
+.specs-item {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+
+.specs-item dt {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.specs-item dd {
+  font-size: var(--text-sm);
+  color: var(--ink);
+  font-weight: 500;
+  margin: 0;
+}
