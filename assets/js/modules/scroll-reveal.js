@@ -1,33 +1,67 @@
 /**
- * Módulo de Revelação Suave (Scroll Reveal)
- * Utiliza IntersectionObserver para animar a entrada de elementos da página
- * respeitando as preferências de redução de movimento do usuário.
+ * Módulo de Revelação e Scroll Cinematográfico
+ * Utiliza Lenis para Smooth Scroll e GSAP/ScrollTrigger para animações.
  */
 
 export function initScrollReveal() {
-  const elements = document.querySelectorAll('.reveal');
-  if (!elements.length) return;
+  if (typeof window.Lenis === 'undefined' || typeof window.gsap === 'undefined') return;
 
+  // 1. Inicializa Lenis Smooth Scroll
+  const lenis = new window.Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    direction: 'vertical',
+    gestureDirection: 'vertical',
+    smooth: true,
+    mouseMultiplier: 1,
+    smoothTouch: false,
+    touchMultiplier: 2,
+    infinite: false,
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+
+  // 2. Integração do GSAP com Lenis
+  window.gsap.registerPlugin(window.ScrollTrigger);
+  
+  // Opcional: Atualizar ScrollTrigger quando Lenis scrollar
+  lenis.on('scroll', window.ScrollTrigger.update);
+  
+  window.gsap.ticker.add((time)=>{
+    lenis.raf(time * 1000);
+  });
+  window.gsap.ticker.lagSmoothing(0);
+
+  // 3. Configuração de Animações
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  if (!window.IntersectionObserver || prefersReducedMotion) {
-    elements.forEach((el) => el.classList.add('is-in'));
+  if (prefersReducedMotion) {
+    // Apenas marca como visível
+    document.querySelectorAll('.reveal').forEach((el) => {
+      window.gsap.set(el, { opacity: 1, y: 0 });
+      el.classList.add('is-in');
+    });
     return;
   }
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-in');
-        observer.unobserve(entry.target);
-      });
-    },
-    {
-      rootMargin: '0px 0px -10% 0px',
-      threshold: 0.15
-    }
-  );
+  // Anima elementos com a classe .reveal
+  document.querySelectorAll('.reveal').forEach((el) => {
+    // Configura o estado inicial
+    window.gsap.set(el, { opacity: 0, y: 40 });
 
-  elements.forEach((el) => observer.observe(el));
+    window.gsap.to(el, {
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 85%',
+        toggleActions: 'play none none none',
+      },
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: 'power3.out'
+    });
+  });
 }

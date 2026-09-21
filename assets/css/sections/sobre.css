@@ -39,6 +39,30 @@
   color: var(--ink);
 }
 
+.profile-pic-wrapper {
+  margin: 1.5rem 0;
+  max-width: 250px;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  position: relative;
+}
+
+.profile-pic-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 60%, var(--paper) 100%);
+  pointer-events: none;
+}
+
+.profile-pic {
+  width: 100%;
+  height: auto;
+  display: block;
+  -webkit-mask-image: radial-gradient(circle at center, black 50%, transparent 100%);
+  mask-image: radial-gradient(circle at center, black 50%, transparent 100%);
+}
+
 .specs-card {
   background: var(--raised);
   border: 1px solid var(--line);
