@@ -1,0 +1,104 @@
+{
+  "source": "Centro Odontomédico",
+  "professionals": [
+    {
+      "id": "mayson-muzi",
+      "name": "Dr. Mayson Muzi",
+      "displayName": "Dr. Mayson",
+      "image": "mayson.webp",
+      "tags": ["cirurgia", "ortodontia"],
+      "roles": ["Fundador e responsável técnico do Centro Odontomédico", "Especialista em Cirurgia e Traumatologia Bucomaxilofacial, Implantodontia e Ortodontia Funcional dos Maxilares", "Mestrando em Implantodontia"],
+      "description": "Da cirurgia mais simples à mais complexa, seja protocolo, implante ou outras necessidades, é com o Dr. Mayson. São 20 anos de experiência."
+    },
+    {
+      "id": "viviane-couto",
+      "name": "Dra. Viviane Couto",
+      "displayName": "Dra. Viviane",
+      "image": "viviane.webp",
+      "tags": ["endodontia"],
+      "roles": ["Mestre e Especialista em Endodontia", "Especialista em Radiologia Oral e Imaginologia", "Professora de Endodontia no Instituto Dentalis"],
+      "description": "Exames e laudos radiológicos com precisão e cuidado."
+    },
+    {
+      "id": "ravenna-souza",
+      "name": "Dra. Ravenna O. Souza",
+      "displayName": "Dra. Ravenna",
+      "image": "ravenna.webp",
+      "tags": ["ortodontia"],
+      "roles": ["Especialista em Ortodontia", "Especializando em Radiologia"],
+      "description": "Aparelho convencional ou alinhadores invisíveis? Seu sorriso está em boas mãos."
+    },
+    {
+      "id": "vinicius-femeedes",
+      "name": "Dr. Vinicius Femeedes",
+      "displayName": "Dr. Vinicius",
+      "image": "vinicius.webp",
+      "tags": ["cirurgia", "estetica"],
+      "roles": ["Especialista e perito em Harmonização Orofacial e Cirurgias Odontológicas", "Especialista Bucomaxilofacial com ênfase em Cirurgias Estéticas da Face", "Pós-graduado em Saúde Estética"],
+      "description": "Harmonização com conhecimento, técnica, precisão e naturalidade."
+    },
+    {
+      "id": "cinthya-rangel",
+      "name": "Dra. Cinthya Rangel",
+      "displayName": "Dra. Cinthya",
+      "image": "cinthya.webp",
+      "tags": ["ortodontia", "estetica"],
+      "roles": ["Especialista em Ortodontia fixa e Odontopediatria", "Mestranda em Odontopediatria", "Atualizada em Ortopedia dos Maxilares, Prótese e Dentística"],
+      "description": "Cuidado especializado para acompanhar o sorriso das crianças."
+    },
+    {
+      "id": "kesia-amorim",
+      "name": "Dra. Késia Amorim",
+      "displayName": "Dra. Késia",
+      "image": "kesia.webp",
+      "tags": ["endodontia"],
+      "roles": ["Mestranda em Endodontia", "Especialista em Endodontia e Saúde Pública"],
+      "description": "Tecnologia e cuidado para transformar o medo da endodontia em tranquilidade, conforto e confiança."
+    },
+    {
+      "id": "gabrielly",
+      "name": "Dra. Gabrielly",
+      "displayName": "Dra. Gabrielly",
+      "image": "gabrielly.webp",
+      "tags": ["cirurgia", "estetica"],
+      "roles": ["Especialista em Dentística e Prótese", "Atualizada em Cirurgia Oral Menor"],
+      "description": "Atuação em próteses, dentística e cirurgias para devolver função e confiança ao sorriso."
+    },
+    {
+      "id": "fernando-basilio",
+      "name": "Dr. Fernando Basílio",
+      "displayName": "Dr. Fernando Basílio",
+      "image": "fernando-basilio.webp",
+      "tags": ["cirurgia"],
+      "roles": ["Médico Anestesista"],
+      "description": "Sedação anestésica para trazer mais tranquilidade e segurança aos procedimentos."
+    },
+    {
+      "id": "guilherme-lengrubber",
+      "name": "Dr. Guilherme Lengrubber",
+      "displayName": "Dr. Guilherme",
+      "image": "guilherme.webp",
+      "tags": ["cirurgia"],
+      "roles": ["Atualizado em Cirurgia Oral Menor", "Especializando em Implantodontia"],
+      "description": "Implantodontia e cirurgia oral para reconstruir função e sorriso."
+    },
+    {
+      "id": "nayara-salvato",
+      "name": "Dra. Nayara Salvato",
+      "displayName": "Dra. Nayara",
+      "image": "nayara.webp",
+      "tags": ["estetica"],
+      "roles": ["Especialista em Prótese", "Atualização em Dentística e Prótese"],
+      "description": "Da restauração às facetas naturais e próteses, um trabalho voltado à naturalidade e precisão."
+    },
+    {
+      "id": "anna-luiza-campos",
+      "name": "Dra. Anna Luiza C. Campos",
+      "displayName": "Dra. Anna Luiza",
+      "image": "anna-luiza.webp",
+      "tags": ["endodontia", "estetica"],
+      "roles": ["Especialista em Endodontia", "Especializando em Harmonização Orofacial"],
+      "description": "Tratamento com segurança, cuidado e precisão."
+    }
+  ]
+}

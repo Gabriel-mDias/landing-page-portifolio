@@ -6,9 +6,9 @@
 export function initContactForm(cfg = {}) {
   // Injeção de Contatos Dinâmicos vindos da configuração
   if (cfg.whatsapp) {
-    const waUrl = `https://wa.me/${cfg.whatsapp}?text=${encodeURIComponent(cfg.whatsappMessage || '')}`;
     document.querySelectorAll('[data-contact="whatsapp"]').forEach((el) => {
-      el.href = waUrl;
+      const message = el.dataset.contactMessage || cfg.whatsappMessage || '';
+      el.href = `https://wa.me/${cfg.whatsapp}?text=${encodeURIComponent(message)}`;
     });
   }
 

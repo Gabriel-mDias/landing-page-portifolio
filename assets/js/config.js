@@ -7,7 +7,7 @@ window.GEMS_CONFIG = {
   /* Só dígitos, com código do país. Vira o link wa.me. */
   whatsapp: '5522999556956',
   whatsappLabel: '(22) 99955-6956',
-  whatsappMessage: 'Olá, Gabriel. Vim pelo site da G&Ms e gostaria de conversar sobre um sistema sob medida.',
+  whatsappMessage: 'Olá, Gabriel. Vim pelo site da G&Ms e gostaria de conversar sobre tecnologia para o meu negócio.',
 
   email: 'gemstecnologia@gmail.com',
 

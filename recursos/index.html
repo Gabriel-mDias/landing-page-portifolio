@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>Experiências digitais em uso | G&amp;Ms</title>
+  <meta name="description" content="Explore comparadores, perfis profissionais, filtros, jornadas e outras interações desenvolvidas pela G&Ms para projetos reais.">
+  <link rel="canonical" href="https://gems.tec.br/recursos/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Experiências digitais em uso | G&amp;Ms">
+  <meta property="og:description" content="Uma vitrine interativa de componentes criados pela G&Ms para orientar, apresentar e converter.">
+  <meta property="og:image" content="https://gems.tec.br/assets/img/og-cover.png">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/recursos.css">
+  <script>(()=>{let t;try{t=localStorage.getItem('gems-theme')}catch{}if(t!=='dark'&&t!=='light')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t;document.querySelector('meta[name="theme-color"]').content=t==='dark'?'#0a0a0a':'#f6f4ef'})()</script>
+</head>
+<body class="resources-page">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topbar" id="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="/" aria-label="G&Ms, início"><img src="/assets/logos/gems-wordmark.svg" alt="G&Ms Soluções Tecnológicas" width="140" height="36"></a>
+      <nav class="nav" id="nav" aria-label="Navegação principal"><a href="/#servicos">Serviços</a><a href="/recursos/" aria-current="page">Recursos</a><a href="/#projetos">Projetos</a><a href="/#sobre">Sobre</a><a class="nav__cta" href="/#contato">Vamos conversar</a></nav>
+      <div class="topbar__tools"><button class="iconbtn" id="theme-toggle" type="button" aria-label="Alternar tema" aria-pressed="false"><span aria-hidden="true">◐</span></button><button class="iconbtn burger" id="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><span aria-hidden="true">☰</span></button></div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="rs-hero">
+      <div class="wrap rs-hero__grid">
+        <div>
+          <p class="eyebrow"><span class="eyebrow__dot"></span>Recursos em contexto</p>
+          <h1>Não são efeitos soltos. São experiências que <em>fazem sentido no projeto.</em></h1>
+        </div>
+        <div class="rs-hero__intro">
+          <p>Esta página reúne interações construídas para orientar escolhas, apresentar pessoas e transformar conteúdo em caminhos claros de contato.</p>
+          <a class="btn btn--solid" href="/#contato">Pensar meu projeto <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="wrap rs-origin"><span>01</span><p>Primeiro recorte</p><strong>Centro Odontomédico</strong><small>Comparador de resultados + corpo clínico</small></div>
+    </section>
+
+    <section class="rs-project" aria-labelledby="comparison-title">
+      <div class="wrap">
+        <header class="rs-project__heading">
+          <div><p class="rs-kicker">Centro Odontomédico · Resultados</p><h2 id="comparison-title">Transformações que você pode <em>ver e comparar.</em></h2></div>
+          <p>O componente preserva o tratamento visual e a interação do projeto de origem. Selecione um caso e arraste a divisão sobre a fotografia.</p>
+        </header>
+
+        <div class="rs-case-tabs" role="tablist" aria-label="Casos disponíveis" data-comparison-tabs>
+          <button type="button" role="tab" aria-selected="true" aria-controls="comparison-display" id="case-tab-1" data-aspect="landscape" data-before-src="/assets/img/recursos/clareamento-01-antes.webp" data-after-src="/assets/img/recursos/clareamento-01-depois.webp" data-before-alt="Sorriso antes do clareamento dental, caso 1" data-after-alt="Sorriso depois do clareamento dental, caso 1">Clareamento 01</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="comparison-display" id="case-tab-2" data-aspect="portrait" data-before-src="/assets/img/recursos/clareamento-02-antes.webp" data-after-src="/assets/img/recursos/clareamento-02-depois.webp" data-before-alt="Sorriso antes do clareamento dental, caso 2" data-after-alt="Sorriso depois do clareamento dental, caso 2">Clareamento 02</button>
+        </div>
+
+        <div class="rs-comparison" id="comparison-display" data-comparison style="--comparison-position:50%">
+          <img class="rs-comparison__image" data-comparison-after src="/assets/img/recursos/clareamento-01-depois.webp" alt="Sorriso depois do clareamento dental, caso 1" width="1448" height="1086" draggable="false">
+          <img class="rs-comparison__image rs-comparison__image--before" data-comparison-before src="/assets/img/recursos/clareamento-01-antes.webp" alt="Sorriso antes do clareamento dental, caso 1" width="1448" height="1086" draggable="false">
+          <span class="rs-comparison__label rs-comparison__label--before" aria-hidden="true">Antes</span><span class="rs-comparison__label rs-comparison__label--after" aria-hidden="true">Depois</span>
+          <div class="rs-comparison__handle" role="slider" tabindex="0" aria-label="Comparar antes e depois" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-valuetext="50 por cento da imagem anterior visível"><span class="rs-comparison__line" aria-hidden="true"></span><span class="rs-comparison__button" aria-hidden="true">‹&nbsp;›</span></div>
+        </div>
+        <p class="rs-disclaimer">Casos institucionais do Centro Odontológico Muzi Ltda. Imagens apresentadas no projeto de origem; resultados individuais podem variar conforme cada caso clínico.</p>
+      </div>
+    </section>
+
+    <section class="rs-team" aria-labelledby="team-title">
+      <div class="wrap">
+        <header class="rs-team__heading">
+          <div><p class="rs-kicker">Centro Odontomédico · Corpo clínico</p><h2 id="team-title">Diferentes formações. <em>Um cuidado conectado.</em></h2><p>Agora os perfis mantêm as fotografias e a modal lateral de referência. Abra qualquer profissional para explorar o conteúdo completo.</p></div>
+          <div class="rs-carousel-controls" aria-label="Controles do carrossel"><button type="button" data-carousel-prev aria-label="Profissional anterior">←</button><button type="button" data-carousel-next aria-label="Próximo profissional">→</button></div>
+        </header>
+
+        <div class="rs-team-filters" aria-label="Filtrar corpo clínico"><button type="button" data-team-filter="all" aria-pressed="true">Todos</button><button type="button" data-team-filter="cirurgia" aria-pressed="false">Cirurgia e implantes</button><button type="button" data-team-filter="ortodontia" aria-pressed="false">Ortodontia</button><button type="button" data-team-filter="endodontia" aria-pressed="false">Endodontia</button><button type="button" data-team-filter="estetica" aria-pressed="false">Estética e prótese</button></div>
+
+        <div class="rs-carousel" data-carousel>
+          <p class="visually-hidden" aria-live="polite" data-carousel-status>Carregando profissionais</p>
+          <div class="rs-carousel__track" data-carousel-track tabindex="0" aria-label="Carrossel do corpo clínico; use as setas para navegar" aria-busy="true"></div>
+          <div class="rs-carousel__pagination" data-carousel-pagination aria-label="Paginação do carrossel"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section rs-clarity" aria-labelledby="clarity-title">
+      <div class="wrap rs-clarity__grid">
+        <div class="section-heading"><p class="eyebrow">Arquitetura da informação</p><h2 id="clarity-title">Cada recurso responde a uma <em>dúvida real.</em></h2><p>A interação entra quando melhora entendimento, confiança ou acesso — nunca apenas para ocupar espaço.</p></div>
+        <ol class="rs-journey"><li><span>01</span><div><h3>Entender</h3><p>Conteúdo e hierarquia explicam a proposta antes do primeiro contato.</p></div></li><li><span>02</span><div><h3>Escolher</h3><p>Filtros, perfis e comparações ajudam a pessoa a encontrar o caminho adequado.</p></div></li><li><span>03</span><div><h3>Conversar</h3><p>Chamadas claras conduzem à ação sem interromper a experiência.</p></div></li></ol>
+      </div>
+    </section>
+
+    <section class="section section--soft" aria-labelledby="faq-resources-title">
+      <div class="wrap faq-grid">
+        <div class="section-heading"><p class="eyebrow">Decisões de projeto</p><h2 id="faq-resources-title">Interação com <em>propósito e contexto.</em></h2><p>Os exemplos desta página são recortes funcionais, não componentes genéricos desconectados da identidade que os originou.</p></div>
+        <div class="faq-list"><details><summary>Esses profissionais e resultados são fictícios?</summary><p>Não. Este recorte usa conteúdo do projeto Centro Odontomédico e identifica claramente sua origem. A apresentação aqui demonstra o trabalho de interface da G&amp;Ms.</p></details><details><summary>Meu projeto precisa ter os mesmos recursos?</summary><p>Não. A escolha depende das perguntas do seu público, do conteúdo disponível e do objetivo da página.</p></details><details><summary>Os componentes funcionam no celular e por teclado?</summary><p>Sim. Comparador, carrossel, filtros e modal foram construídos para toque, mouse e teclado, com redução de movimento quando solicitada pelo sistema.</p></details></div>
+      </div>
+    </section>
+
+    <section class="section section--ink"><div class="wrap rs-cta"><div><p class="eyebrow">Próximo passo</p><h2>Que experiência o seu negócio <em>precisa oferecer?</em></h2></div><div><a class="btn btn--solid" href="https://wa.me/5522999556956">Conversar pelo WhatsApp <span aria-hidden="true">↗</span></a><a class="btn btn--text" href="/">Voltar ao portfólio <span aria-hidden="true">←</span></a></div></div></section>
+  </main>
+
+  <footer class="foot"><div class="wrap foot__inner"><a class="brand" href="/"><img src="/assets/logos/gems-wordmark.svg" alt="G&Ms" width="120" height="31"></a><p>Tecnologia próxima para negócios de verdade.</p><span>© 2026 G&amp;Ms Soluções Tecnológicas</span></div></footer>
+
+  <dialog class="rs-profile-dialog" id="professional-dialog" aria-label="Perfil profissional"><div class="rs-profile-dialog__shell"><button class="rs-profile-dialog__close" type="button" data-dialog-close aria-label="Fechar perfil">×</button><div data-dialog-content></div></div></dialog>
+  <script type="module" src="/assets/js/recursos.js"></script>
+</body>
+</html>
