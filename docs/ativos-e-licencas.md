@@ -1,23 +1,29 @@
 # Inventário de ativos e licenças
 
-A home usa o retrato próprio de Gabriel. A rota `/recursos/` apresenta fotografias e resultados do projeto Centro Odontomédico, identificados como conteúdo do projeto de origem. Não há imagens remotas, fotografias de banco ou imagens geradas por IA.
+A home usa o retrato próprio de Gabriel Magalhães. A rota `/recursos/` usa apenas conteúdo local criado para uma demonstração fictícia. Nenhum profissional, paciente, clínica, atendimento ou resultado apresentado nessa rota é real.
 
-| Ativo | Origem/autoria | Licença ou condição | Uso |
+| Ativo | Origem/autoria | Data | Finalidade e condição |
 |---|---|---|---|
-| `assets/logos/gems-wordmark.svg` | Marca fornecida pela G&Ms | Ativo próprio; uso autorizado conforme premissa do projeto | Cabeçalho e rodapé |
-| `assets/logos/gems-symbol-g.svg` | Marca fornecida pela G&Ms | Ativo próprio; uso autorizado conforme premissa do projeto | Apresentação institucional |
-| `assets/logos/gems-full-logo.png` | Marca fornecida pela G&Ms | Ativo próprio; uso autorizado conforme premissa do projeto | Arquivo de marca preservado |
-| `assets/img/favicon.svg` | Vetor local da marca G&Ms | Ativo próprio | Favicon e ícone web |
-| `assets/img/profile_gabriel.png` | Retrato já existente, declarado próprio na premissa | Ativo próprio; uso autorizado | Seção “Sobre” |
-| `assets/img/og-cover.png` | Composição gráfica criada por código para este redesign em 21/09/2026 | Arte própria; não é fotografia nem imagem gerada por IA | Compartilhamento social |
-| `assets/hero/sugestion_hero_1_1080p.mp4` | Vídeo local fornecido para o projeto | Ativo fornecido; uso autorizado | Plano de fundo da hero; reprodução sem áudio. A versão 4K não integra os arquivos publicados. |
-| `assets/img/recursos/clareamento-*.webp` | Projeto Centro Odontomédico; cópias locais de `public/assets/images/` do repositório de origem | Ativos clínicos fornecidos ao projeto de origem; uso nesta página limitado à apresentação identificada do trabalho | Comparador antes/depois em `/recursos/` |
-| `assets/img/recursos/team/*.webp` | Projeto Centro Odontomédico; derivados otimizados dos PNGs locais de `public/assets/team/` | Retratos fornecidos ao projeto de origem; uso nesta página limitado à apresentação identificada do trabalho | Cards e modal do corpo clínico em `/recursos/` |
-| `assets/fonts/cormorant-*.ttf` | Google Fonts, repositório Google Fonts | SIL Open Font License 1.1; licença incluída em `OFL-Cormorant-Garamond.txt` | Títulos |
-| `assets/fonts/jakarta-*.ttf` | Google Fonts, repositório Google Fonts | SIL Open Font License 1.1; licença incluída em `OFL-Plus-Jakarta-Sans.txt` | Textos e interface |
-| Composições dos projetos e demos | Código HTML/CSS deste repositório e componentes adaptados do projeto Centro Odontomédico | Código dos projetos | Demonstração de interface com origem identificada |
+| `assets/logos/gems-wordmark.svg` | Marca fornecida pela G&Ms | Existente | Cabeçalho e rodapé; ativo próprio |
+| `assets/logos/gems-symbol-g.svg` | Marca fornecida pela G&Ms | Existente | Apresentação institucional; ativo próprio |
+| `assets/logos/gems-full-logo.png` | Marca fornecida pela G&Ms | Existente | Arquivo de marca preservado; ativo próprio |
+| `assets/img/favicon.svg` | Vetor local da marca G&Ms | Existente | Favicon e ícone web; ativo próprio |
+| `assets/img/profile_gabriel.png` | Retrato próprio de Gabriel Magalhães | Existente | Seção “Sobre”; uso autorizado |
+| `assets/img/og-cover.png` | Composição gráfica criada por código | 21/09/2026 | Compartilhamento social; arte própria |
+| `assets/hero/sugestion_hero_1_1080p.mp4` | Vídeo local fornecido para o projeto | Existente | Plano de fundo da hero; reprodução sem áudio |
+| `assets/img/recursos/clinica-virtual.svg` | Símbolo original criado em SVG para este site | 21/09/2026 | Identidade exclusivamente fictícia da demonstração |
+| `assets/img/recursos/team/*.webp` | Seis retratos gerados com a ferramenta de imagens da OpenAI e otimizados localmente | 21/09/2026 | Perfis fictícios; não retratam profissionais reais |
+| `assets/img/recursos/simulacao-sorriso-*.webp` | Dois dípticos gerados com a ferramenta de imagens da OpenAI, divididos e otimizados localmente | 21/09/2026 | Simulações visuais de comparador; não são pacientes, documentação clínica, tratamentos ou promessas de resultado |
+| `assets/fonts/cormorant-*.ttf` | Google Fonts | Existente | Títulos; SIL Open Font License 1.1 incluída |
+| `assets/fonts/jakarta-*.ttf` | Google Fonts | Existente | Textos e interface; SIL Open Font License 1.1 incluída |
+| Composições e demos | HTML, CSS e JavaScript deste repositório | 21/09/2026 | Demonstração local de interface |
 
-As fontes foram baixadas em 21/09/2026 dos arquivos publicados por Google Fonts (`fonts.gstatic.com`); as licenças vieram do repositório público Google Fonts: `ofl/cormorantgaramond/OFL.txt` e `ofl/plusjakartasans/OFL.txt`.
+As fontes foram baixadas dos arquivos publicados pelo Google Fonts; as licenças estão em `assets/fonts/OFL-Cormorant-Garamond.txt` e `assets/fonts/OFL-Plus-Jakarta-Sans.txt`.
 
-As três demonstrações setoriais da home continuam sendo protótipos ilustrativos. Já o recorte do Centro Odontomédico em `/recursos/` usa conteúdo real do projeto, mantém a identificação institucional e informa que resultados clínicos são individuais.
+## Prompts dos ativos gerados
 
+Os seis retratos foram solicitados como fotografias editoriais de adultos brasileiros completamente fictícios, com enquadramento vertical 4:5, fundo carvão, jaleco creme, luz suave e sem marcas, textos ou instrumentos. Cada prompt variou identidade visual, idade aparente e cor da roupa para construir uma equipe diversa sem reproduzir pessoas reais.
+
+Os dois pares de sorriso foram solicitados como dípticos de uma mesma pessoa fictícia, com pose e iluminação consistentes entre as metades e diferenças discretas de tonalidade ou alinhamento. Os prompts registraram explicitamente o uso como simulação de interface, sem paciente real, alegação clínica ou promessa de resultado.
+
+Os arquivos finais foram convertidos para WebP e hospedados localmente. Não há imagens remotas na Clínica Virtual.

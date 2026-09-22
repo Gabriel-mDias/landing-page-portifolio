@@ -33,7 +33,7 @@ O site é estático e publicado diretamente no GitHub Pages. HTML semântico, CS
 - `[data-preview-size="mobile|desktop"]` define a largura da demonstração; `aria-pressed` acompanha a escolha.
 - `window.GEMS_CONFIG` é a fonte única de telefone, e-mail e chave Web3Forms.
 - Os links de contato têm URLs de fallback no HTML, antes da inicialização JavaScript.
-- Os templates setoriais da home são conceituais. Em `/recursos/`, cada recorte real identifica explicitamente o projeto de origem e mantém seus avisos de contexto.
+- Os templates setoriais da home são conceituais. Em `/recursos/`, a Clínica Virtual, seus profissionais e suas simulações são explicitamente fictícios e existem apenas para demonstrar os contratos de interface.
 
 ## Tema e movimento
 
@@ -44,6 +44,6 @@ Uma pequena rotina no `<head>` aplica o tema salvo ou a preferência do sistema 
 Analytics, Web3Forms e os serviços de WhatsApp/e-mail são integrações externas. Fontes, ícones, composições visuais e demonstrações são carregados localmente ou escritos no próprio site. Não há GSAP, Lenis, Google Fonts ou imagens remotas.
 ## Rota de recursos
 
-O site não requer build. A home (`/`) inicializa `assets/js/main.js`; a vitrine (`/recursos/`) inicializa `assets/js/recursos.js` e usa a folha isolada `assets/css/recursos.css` para preservar a linguagem visual do projeto apresentado sem contaminar os componentes da home.
+O site não requer build. A home (`/`) inicializa `assets/js/main.js`; a vitrine (`/recursos/`) inicializa `assets/js/recursos.js` e usa a folha isolada `assets/css/recursos.css` para preservar sua linguagem visual sem contaminar os componentes da home.
 
-O comparador é um `role="slider"` com `aria-valuenow`, `aria-valuetext`, abas, setas e Home/End. O carrossel usa controles de pelo menos 44px, indicadores com `aria-current`, arraste e setas. Filtros usam `aria-pressed`; a modal usa o elemento nativo `dialog`, devolve o foco ao cartão de origem e bloqueia a rolagem do documento enquanto aberta.
+O comparador é um `role="slider"` com `aria-valuenow`, `aria-valuetext`, abas, setas e Home/End. O carrossel usa controles de pelo menos 44px, indicadores com `aria-current`, arraste e setas. Filtros usam `aria-pressed`; a modal usa o elemento nativo `dialog`, devolve o foco ao cartão de origem e bloqueia a rolagem do documento enquanto aberta. O JSON local contém apenas seis perfis fictícios e referencia somente retratos gerados e hospedados no projeto.

@@ -1,104 +1,60 @@
 {
-  "source": "Centro Odontomédico",
+  "source": "Clínica Virtual — conceito fictício",
+  "fictional": true,
   "professionals": [
     {
-      "id": "mayson-muzi",
-      "name": "Dr. Mayson Muzi",
-      "displayName": "Dr. Mayson",
-      "image": "mayson.webp",
-      "tags": ["cirurgia", "ortodontia"],
-      "roles": ["Fundador e responsável técnico do Centro Odontomédico", "Especialista em Cirurgia e Traumatologia Bucomaxilofacial, Implantodontia e Ortodontia Funcional dos Maxilares", "Mestrando em Implantodontia"],
-      "description": "Da cirurgia mais simples à mais complexa, seja protocolo, implante ou outras necessidades, é com o Dr. Mayson. São 20 anos de experiência."
+      "id": "helena-duarte",
+      "name": "Dra. Helena Duarte",
+      "displayName": "Dra. Helena Duarte",
+      "image": "helena-duarte.webp",
+      "tags": ["clinica", "prevencao"],
+      "roles": ["Clínica geral", "Cuidado preventivo", "Perfil criado exclusivamente para demonstração"],
+      "description": "Personagem fictícia que ilustra como um perfil pode apresentar abordagem, áreas de interesse e caminhos de atendimento com clareza."
     },
     {
-      "id": "viviane-couto",
-      "name": "Dra. Viviane Couto",
-      "displayName": "Dra. Viviane",
-      "image": "viviane.webp",
-      "tags": ["endodontia"],
-      "roles": ["Mestre e Especialista em Endodontia", "Especialista em Radiologia Oral e Imaginologia", "Professora de Endodontia no Instituto Dentalis"],
-      "description": "Exames e laudos radiológicos com precisão e cuidado."
+      "id": "caio-nascimento",
+      "name": "Dr. Caio Nascimento",
+      "displayName": "Dr. Caio Nascimento",
+      "image": "caio-nascimento.webp",
+      "tags": ["reabilitacao", "cirurgia"],
+      "roles": ["Reabilitação oral", "Cirurgia ambulatorial", "Perfil criado exclusivamente para demonstração"],
+      "description": "Personagem fictício usado para demonstrar uma apresentação acolhedora de experiência, foco de atuação e informações de contato."
     },
     {
-      "id": "ravenna-souza",
-      "name": "Dra. Ravenna O. Souza",
-      "displayName": "Dra. Ravenna",
-      "image": "ravenna.webp",
-      "tags": ["ortodontia"],
-      "roles": ["Especialista em Ortodontia", "Especializando em Radiologia"],
-      "description": "Aparelho convencional ou alinhadores invisíveis? Seu sorriso está em boas mãos."
+      "id": "livia-sato",
+      "name": "Dra. Lívia Sato",
+      "displayName": "Dra. Lívia Sato",
+      "image": "livia-sato.webp",
+      "tags": ["ortodontia", "prevencao"],
+      "roles": ["Ortodontia", "Acompanhamento preventivo", "Perfil criado exclusivamente para demonstração"],
+      "description": "Personagem fictícia que mostra como especialidades e formas de acompanhamento podem ser organizadas em uma jornada simples."
     },
     {
-      "id": "vinicius-femeedes",
-      "name": "Dr. Vinicius Femeedes",
-      "displayName": "Dr. Vinicius",
-      "image": "vinicius.webp",
-      "tags": ["cirurgia", "estetica"],
-      "roles": ["Especialista e perito em Harmonização Orofacial e Cirurgias Odontológicas", "Especialista Bucomaxilofacial com ênfase em Cirurgias Estéticas da Face", "Pós-graduado em Saúde Estética"],
-      "description": "Harmonização com conhecimento, técnica, precisão e naturalidade."
+      "id": "rafael-mendes",
+      "name": "Dr. Rafael Mendes",
+      "displayName": "Dr. Rafael Mendes",
+      "image": "rafael-mendes.webp",
+      "tags": ["estetica", "reabilitacao"],
+      "roles": ["Estética do sorriso", "Prótese e reabilitação", "Perfil criado exclusivamente para demonstração"],
+      "description": "Personagem fictício que exemplifica a combinação de resumo profissional, áreas de interesse e chamada para contato."
     },
     {
-      "id": "cinthya-rangel",
-      "name": "Dra. Cinthya Rangel",
-      "displayName": "Dra. Cinthya",
-      "image": "cinthya.webp",
-      "tags": ["ortodontia", "estetica"],
-      "roles": ["Especialista em Ortodontia fixa e Odontopediatria", "Mestranda em Odontopediatria", "Atualizada em Ortopedia dos Maxilares, Prótese e Dentística"],
-      "description": "Cuidado especializado para acompanhar o sorriso das crianças."
+      "id": "joana-ribeiro",
+      "name": "Dra. Joana Ribeiro",
+      "displayName": "Dra. Joana Ribeiro",
+      "image": "joana-ribeiro.webp",
+      "tags": ["prevencao", "estetica"],
+      "roles": ["Saúde preventiva", "Cuidado estético", "Perfil criado exclusivamente para demonstração"],
+      "description": "Personagem fictícia criada para mostrar como um site pode comunicar cuidado contínuo sem prometer resultados."
     },
     {
-      "id": "kesia-amorim",
-      "name": "Dra. Késia Amorim",
-      "displayName": "Dra. Késia",
-      "image": "kesia.webp",
-      "tags": ["endodontia"],
-      "roles": ["Mestranda em Endodontia", "Especialista em Endodontia e Saúde Pública"],
-      "description": "Tecnologia e cuidado para transformar o medo da endodontia em tranquilidade, conforto e confiança."
-    },
-    {
-      "id": "gabrielly",
-      "name": "Dra. Gabrielly",
-      "displayName": "Dra. Gabrielly",
-      "image": "gabrielly.webp",
-      "tags": ["cirurgia", "estetica"],
-      "roles": ["Especialista em Dentística e Prótese", "Atualizada em Cirurgia Oral Menor"],
-      "description": "Atuação em próteses, dentística e cirurgias para devolver função e confiança ao sorriso."
-    },
-    {
-      "id": "fernando-basilio",
-      "name": "Dr. Fernando Basílio",
-      "displayName": "Dr. Fernando Basílio",
-      "image": "fernando-basilio.webp",
-      "tags": ["cirurgia"],
-      "roles": ["Médico Anestesista"],
-      "description": "Sedação anestésica para trazer mais tranquilidade e segurança aos procedimentos."
-    },
-    {
-      "id": "guilherme-lengrubber",
-      "name": "Dr. Guilherme Lengrubber",
-      "displayName": "Dr. Guilherme",
-      "image": "guilherme.webp",
-      "tags": ["cirurgia"],
-      "roles": ["Atualizado em Cirurgia Oral Menor", "Especializando em Implantodontia"],
-      "description": "Implantodontia e cirurgia oral para reconstruir função e sorriso."
-    },
-    {
-      "id": "nayara-salvato",
-      "name": "Dra. Nayara Salvato",
-      "displayName": "Dra. Nayara",
-      "image": "nayara.webp",
-      "tags": ["estetica"],
-      "roles": ["Especialista em Prótese", "Atualização em Dentística e Prótese"],
-      "description": "Da restauração às facetas naturais e próteses, um trabalho voltado à naturalidade e precisão."
-    },
-    {
-      "id": "anna-luiza-campos",
-      "name": "Dra. Anna Luiza C. Campos",
-      "displayName": "Dra. Anna Luiza",
-      "image": "anna-luiza.webp",
-      "tags": ["endodontia", "estetica"],
-      "roles": ["Especialista em Endodontia", "Especializando em Harmonização Orofacial"],
-      "description": "Tratamento com segurança, cuidado e precisão."
+      "id": "miguel-arua",
+      "name": "Dr. Miguel Aruã",
+      "displayName": "Dr. Miguel Aruã",
+      "image": "miguel-arua.webp",
+      "tags": ["clinica", "cirurgia"],
+      "roles": ["Clínica integrada", "Cirurgia ambulatorial", "Perfil criado exclusivamente para demonstração"],
+      "description": "Personagem fictício que demonstra como perfis detalhados ajudam visitantes a compreender atuações diferentes dentro de uma equipe."
     }
   ]
 }

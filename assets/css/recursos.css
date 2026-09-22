@@ -6,6 +6,7 @@
 .rs-hero__intro p{max-width:520px;margin-bottom:28px;color:var(--muted);font-size:17px;line-height:1.75}
 .rs-origin{display:grid;grid-template-columns:48px 150px 1fr auto;align-items:center;gap:20px;margin-top:clamp(72px,10vw,132px);padding:22px 0;border-top:1px solid var(--line);color:var(--muted)}
 .rs-origin span{color:var(--gold);font-size:12px;letter-spacing:.12em}.rs-origin p{margin:0;font-size:12px;text-transform:uppercase;letter-spacing:.12em}.rs-origin strong{color:var(--ink);font:600 22px/1 var(--serif)}.rs-origin small{font-size:12px}
+.rs-origin__logo{display:block;width:180px;max-width:100%;height:auto;padding:6px 10px;border-radius:6px;background:#171717}
 
 .rs-project,.rs-team{background:#0a0a0a;color:#f2f0ea}
 .rs-project{padding:clamp(90px,11vw,150px) 0 clamp(96px,11vw,150px);border-top:1px solid #2a2926}

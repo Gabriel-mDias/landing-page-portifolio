@@ -26,7 +26,7 @@ export async function initProfessionalShowcase() {
         </div>
         <div class="rs-profile__body">
           <div>
-            <p class="rs-profile__kicker">Centro Odontomédico · Corpo clínico</p>
+            <p class="rs-profile__kicker">Clínica Virtual · Perfil fictício</p>
             <h2 id="professional-dialog-title">${escapeHtml(professional.name)}</h2>
             <p class="rs-profile__description">${escapeHtml(professional.description)}</p>
           </div>

@@ -4,7 +4,7 @@ Portfólio estático de G&Ms Soluções Tecnológicas, publicado em [gems.tec.br
 
 ## Sobre o site
 
-A página apresenta três frentes com o mesmo peso: landing pages e presença digital, consultoria em TI e sistemas personalizados. A rota `/recursos/` reúne recortes interativos de projetos identificados, começando pelo comparador de sorrisos e pelo corpo clínico com perfis completos do Centro Odontomédico. A experiência também inclui demonstrações conceituais por segmento, formulário Web3Forms e alternativas de contato por WhatsApp e e-mail.
+A página apresenta três frentes com o mesmo peso: landing pages e presença digital, consultoria em TI e sistemas personalizados. A rota `/recursos/` reúne comparadores, filtros, carrossel e perfis em uma “Clínica Virtual” inteiramente fictícia. Nenhuma clínica, pessoa, paciente ou variação visual apresentada nessa rota é real. A experiência também inclui demonstrações conceituais por segmento, formulário Web3Forms e alternativas de contato por WhatsApp e e-mail.
 
 O site usa HTML semântico, CSS modular e JavaScript ES Modules nativos. Não há etapa de build ou framework. O conteúdo principal permanece legível sem JavaScript; as demonstrações e controles avançados são aprimoramentos interativos.
 
