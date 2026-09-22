@@ -51,7 +51,7 @@ export async function initProfessionalShowcase() {
     track.innerHTML = professionals.map((professional, index) => `
       <div class="rs-team-slide" data-name="${escapeHtml(professional.displayName)}" data-tags="${escapeHtml(professional.tags.join(' '))}">
         <button class="rs-team-card" type="button" data-professional="${escapeHtml(professional.id)}" aria-haspopup="dialog">
-          <span class="rs-team-card__media"><img src="/assets/img/recursos/team/${encodeURIComponent(professional.image)}" alt="" width="720" height="900" loading="lazy"><span class="rs-team-card__view" aria-hidden="true">⌁</span></span>
+          <span class="rs-team-card__media"><img src="/assets/img/recursos/team/${encodeURIComponent(professional.image)}" alt="" width="720" height="900" loading="lazy"><span class="rs-team-card__view" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="12" r="2.8" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></span></span>
           <span class="rs-team-card__body"><span class="rs-team-card__index">${String(index + 1).padStart(2, '0')}</span><span class="rs-team-card__name">${escapeHtml(professional.displayName)}</span><span class="rs-team-card__role">${escapeHtml(professional.roles[0])}</span></span>
         </button>
       </div>`).join('');

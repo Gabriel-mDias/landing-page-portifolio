@@ -12,7 +12,7 @@ A home usa o retrato próprio de Gabriel Magalhães. A rota `/recursos/` usa ape
 | `assets/img/og-cover.png` | Composição gráfica criada por código | 21/09/2026 | Compartilhamento social; arte própria |
 | `assets/hero/sugestion_hero_1_1080p.mp4` | Vídeo local fornecido para o projeto | Existente | Plano de fundo da hero; reprodução sem áudio |
 | `assets/img/recursos/clinica-virtual.svg` | Símbolo original criado em SVG para este site | 21/09/2026 | Identidade exclusivamente fictícia da demonstração |
-| `assets/img/recursos/team/*.webp` | Seis retratos gerados com a ferramenta de imagens da OpenAI e otimizados localmente | 21/09/2026 | Perfis fictícios; não retratam profissionais reais |
+| `assets/img/recursos/team/*.webp` | Seis retratos gerados com a ferramenta de imagens da OpenAI; versões `*-cutout.webp` tiveram o fundo removido localmente | 21/09/2026 | Perfis fictícios com recorte transparente para cards e modal; não retratam profissionais reais |
 | `assets/img/recursos/simulacao-sorriso-*.webp` | Dois dípticos gerados com a ferramenta de imagens da OpenAI, divididos e otimizados localmente | 21/09/2026 | Simulações visuais de comparador; não são pacientes, documentação clínica, tratamentos ou promessas de resultado |
 | `assets/fonts/cormorant-*.ttf` | Google Fonts | Existente | Títulos; SIL Open Font License 1.1 incluída |
 | `assets/fonts/jakarta-*.ttf` | Google Fonts | Existente | Textos e interface; SIL Open Font License 1.1 incluída |
@@ -22,7 +22,7 @@ As fontes foram baixadas dos arquivos publicados pelo Google Fonts; as licenças
 
 ## Prompts dos ativos gerados
 
-Os seis retratos foram solicitados como fotografias editoriais de adultos brasileiros completamente fictícios, com enquadramento vertical 4:5, fundo carvão, jaleco creme, luz suave e sem marcas, textos ou instrumentos. Cada prompt variou identidade visual, idade aparente e cor da roupa para construir uma equipe diversa sem reproduzir pessoas reais.
+Os seis retratos foram solicitados como fotografias editoriais de adultos brasileiros completamente fictícios, com enquadramento vertical 4:5, fundo carvão, jaleco creme, luz suave e sem marcas, textos ou instrumentos. Cada prompt variou identidade visual, idade aparente e cor da roupa para construir uma equipe diversa sem reproduzir pessoas reais. Em 21/09/2026, foram criadas versões `*-cutout.webp`: a tentativa de extração pela ferramenta de imagens foi conferida e descartada por não produzir canal alfa; o fundo dos originais foi então removido localmente, preservando rosto, roupa, pose e enquadramento, e os recortes foram otimizados em WebP com transparência real.
 
 Os dois pares de sorriso foram solicitados como dípticos de uma mesma pessoa fictícia, com pose e iluminação consistentes entre as metades e diferenças discretas de tonalidade ou alinhamento. Os prompts registraram explicitamente o uso como simulação de interface, sem paciente real, alegação clínica ou promessa de resultado.
 

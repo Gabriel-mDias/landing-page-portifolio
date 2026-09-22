@@ -28,6 +28,17 @@ export function initContactForm(cfg = {}) {
     });
   }
 
+  const floatingWhatsapp = document.querySelector('.floating-whatsapp');
+  const floatingObstructions = document.querySelectorAll('.contact, .foot');
+  if (floatingWhatsapp && floatingObstructions.length && 'IntersectionObserver' in window) {
+    const visibleObstructions = new Set();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => entry.isIntersecting ? visibleObstructions.add(entry.target) : visibleObstructions.delete(entry.target));
+      floatingWhatsapp.classList.toggle('is-hidden', visibleObstructions.size > 0);
+    });
+    floatingObstructions.forEach((element) => observer.observe(element));
+  }
+
   const yearEl = document.getElementById('year');
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());

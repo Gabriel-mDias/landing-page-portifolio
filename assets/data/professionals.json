@@ -6,7 +6,7 @@
       "id": "helena-duarte",
       "name": "Dra. Helena Duarte",
       "displayName": "Dra. Helena Duarte",
-      "image": "helena-duarte.webp",
+      "image": "helena-duarte-cutout.webp",
       "tags": ["clinica", "prevencao"],
       "roles": ["Clínica geral", "Cuidado preventivo", "Perfil criado exclusivamente para demonstração"],
       "description": "Personagem fictícia que ilustra como um perfil pode apresentar abordagem, áreas de interesse e caminhos de atendimento com clareza."
@@ -15,7 +15,7 @@
       "id": "caio-nascimento",
       "name": "Dr. Caio Nascimento",
       "displayName": "Dr. Caio Nascimento",
-      "image": "caio-nascimento.webp",
+      "image": "caio-nascimento-cutout.webp",
       "tags": ["reabilitacao", "cirurgia"],
       "roles": ["Reabilitação oral", "Cirurgia ambulatorial", "Perfil criado exclusivamente para demonstração"],
       "description": "Personagem fictício usado para demonstrar uma apresentação acolhedora de experiência, foco de atuação e informações de contato."
@@ -24,7 +24,7 @@
       "id": "livia-sato",
       "name": "Dra. Lívia Sato",
       "displayName": "Dra. Lívia Sato",
-      "image": "livia-sato.webp",
+      "image": "livia-sato-cutout.webp",
       "tags": ["ortodontia", "prevencao"],
       "roles": ["Ortodontia", "Acompanhamento preventivo", "Perfil criado exclusivamente para demonstração"],
       "description": "Personagem fictícia que mostra como especialidades e formas de acompanhamento podem ser organizadas em uma jornada simples."
@@ -33,7 +33,7 @@
       "id": "rafael-mendes",
       "name": "Dr. Rafael Mendes",
       "displayName": "Dr. Rafael Mendes",
-      "image": "rafael-mendes.webp",
+      "image": "rafael-mendes-cutout.webp",
       "tags": ["estetica", "reabilitacao"],
       "roles": ["Estética do sorriso", "Prótese e reabilitação", "Perfil criado exclusivamente para demonstração"],
       "description": "Personagem fictício que exemplifica a combinação de resumo profissional, áreas de interesse e chamada para contato."
@@ -42,7 +42,7 @@
       "id": "joana-ribeiro",
       "name": "Dra. Joana Ribeiro",
       "displayName": "Dra. Joana Ribeiro",
-      "image": "joana-ribeiro.webp",
+      "image": "joana-ribeiro-cutout.webp",
       "tags": ["prevencao", "estetica"],
       "roles": ["Saúde preventiva", "Cuidado estético", "Perfil criado exclusivamente para demonstração"],
       "description": "Personagem fictícia criada para mostrar como um site pode comunicar cuidado contínuo sem prometer resultados."
@@ -51,7 +51,7 @@
       "id": "miguel-arua",
       "name": "Dr. Miguel Aruã",
       "displayName": "Dr. Miguel Aruã",
-      "image": "miguel-arua.webp",
+      "image": "miguel-arua-cutout.webp",
       "tags": ["clinica", "cirurgia"],
       "roles": ["Clínica integrada", "Cirurgia ambulatorial", "Perfil criado exclusivamente para demonstração"],
       "description": "Personagem fictício que demonstra como perfis detalhados ajudam visitantes a compreender atuações diferentes dentro de uma equipe."
