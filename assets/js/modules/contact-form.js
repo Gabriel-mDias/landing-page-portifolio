@@ -6,9 +6,9 @@
 export function initContactForm(cfg = {}) {
   // Injeção de Contatos Dinâmicos vindos da configuração
   if (cfg.whatsapp) {
-    const waUrl = `https://wa.me/${cfg.whatsapp}?text=${encodeURIComponent(cfg.whatsappMessage || '')}`;
     document.querySelectorAll('[data-contact="whatsapp"]').forEach((el) => {
-      el.href = waUrl;
+      const message = el.dataset.contactMessage || cfg.whatsappMessage || '';
+      el.href = `https://wa.me/${cfg.whatsapp}?text=${encodeURIComponent(message)}`;
     });
   }
 
@@ -26,6 +26,17 @@ export function initContactForm(cfg = {}) {
     document.querySelectorAll('[data-contact="email-label"]').forEach((el) => {
       el.textContent = cfg.email;
     });
+  }
+
+  const floatingWhatsapp = document.querySelector('.floating-whatsapp');
+  const floatingObstructions = document.querySelectorAll('.contact, .foot');
+  if (floatingWhatsapp && floatingObstructions.length && 'IntersectionObserver' in window) {
+    const visibleObstructions = new Set();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => entry.isIntersecting ? visibleObstructions.add(entry.target) : visibleObstructions.delete(entry.target));
+      floatingWhatsapp.classList.toggle('is-hidden', visibleObstructions.size > 0);
+    });
+    floatingObstructions.forEach((element) => observer.observe(element));
   }
 
   const yearEl = document.getElementById('year');

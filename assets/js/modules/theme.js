@@ -1,42 +1,25 @@
-/**
- * Módulo de Tematização (Tema Claro / Escuro)
- * Gerencia a alternância de tema com persistência em localStorage e sincronização
- * com as preferências do sistema operacional (prefers-color-scheme).
- */
-
-export function initTheme() {
+﻿export function initTheme() {
   const root = document.documentElement;
   const themeBtn = document.getElementById('theme-toggle');
+  const media = window.matchMedia('(prefers-color-scheme: dark)');
+  const savedTheme = () => { try { return localStorage.getItem('gems-theme'); } catch { return null; } };
   if (!themeBtn) return;
-
-  const colorSchemeMedia = window.matchMedia('(prefers-color-scheme: dark)');
-
-  function getCurrentTheme() {
-    const explicit = root.getAttribute('data-theme');
-    if (explicit) return explicit;
-    return colorSchemeMedia.matches ? 'dark' : 'light';
-  }
-
-  function paintToggle() {
-    const isDark = getCurrentTheme() === 'dark';
-    themeBtn.setAttribute('aria-pressed', String(isDark));
-    const label = themeBtn.querySelector('.iconbtn__label');
-    if (label) {
-      label.textContent = isDark ? 'Voltar ao tema claro' : 'Usar tema escuro';
-    }
-  }
-
+  const saved = savedTheme();
+  root.dataset.theme = saved === 'dark' || saved === 'light' ? saved : (media.matches ? 'dark' : 'light');
+  const paint = () => {
+    const dark = root.dataset.theme === 'dark';
+    themeBtn.setAttribute('aria-pressed', String(dark));
+    themeBtn.setAttribute('aria-label', dark ? 'Mudar para tema claro' : 'Mudar para tema escuro');
+    themeBtn.querySelector('span').textContent = dark ? '☼' : '◐';
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', dark ? '#0a0a0a' : '#f6f4ef');
+  };
   themeBtn.addEventListener('click', () => {
-    const next = getCurrentTheme() === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    try {
-      localStorage.setItem('gems-theme', next);
-    } catch (e) {
-      // Ignora erro de cota ou navegação privada restrita
-    }
-    paintToggle();
+    root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    try { localStorage.setItem('gems-theme', root.dataset.theme); } catch { /* armazenamento indisponível */ }
+    paint();
   });
-
-  colorSchemeMedia.addEventListener('change', paintToggle);
-  paintToggle();
+  media.addEventListener('change', () => {
+    if (!savedTheme()) { root.dataset.theme = media.matches ? 'dark' : 'light'; paint(); }
+  });
+  paint();
 }

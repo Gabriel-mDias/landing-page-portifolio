@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 64" role="img" aria-labelledby="title desc">
+  <title id="title">Clínica Virtual</title>
+  <desc id="desc">Símbolo abstrato formado por dois arcos e o nome Clínica Virtual.</desc>
+  <g fill="none" stroke="#c6a15b" stroke-width="3">
+    <path d="M16 32c0-11 8-20 19-20s19 9 19 20-8 20-19 20"/>
+    <path d="M54 32c0-11 8-20 19-20s19 9 19 20-8 20-19 20"/>
+  </g>
+  <text x="108" y="28" fill="#f2f0ea" font-family="Georgia,serif" font-size="18">Clínica</text>
+  <text x="108" y="47" fill="#c6a15b" font-family="Arial,sans-serif" font-size="12" letter-spacing="2">VIRTUAL</text>
+</svg>

@@ -1,28 +1,20 @@
-/**
- * Entrypoint Principal da Aplicação (ES Module)
- * Orquestra a inicialização dos módulos desacoplados seguindo Clean Code.
- */
-
-import { initTheme } from './modules/theme.js';
+﻿import { initTheme } from './modules/theme.js';
 import { initNavigation } from './modules/navigation.js';
-import { initShowcaseTabs } from './modules/showcase-tabs.js';
-import { initPillarsToggle } from './modules/pillars-toggle.js';
 import { initScrollReveal } from './modules/scroll-reveal.js';
 import { initContactForm } from './modules/contact-form.js';
+import { initAudienceDialog } from './modules/audience-dialog.js';
+import { initProjectNavigation } from './modules/project-navigation.js';
+import { initHeroVideo } from './modules/hero-video.js';
 
 function bootstrap() {
-  const config = window.GEMS_CONFIG || {};
-
   initTheme();
   initNavigation();
-  initShowcaseTabs();
-  initPillarsToggle();
   initScrollReveal();
-  initContactForm(config);
+  initContactForm(window.GEMS_CONFIG || {});
+  initAudienceDialog();
+  initProjectNavigation();
+  initHeroVideo();
 }
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', bootstrap);
-} else {
-  bootstrap();
-}
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', bootstrap);
+else bootstrap();
+document.documentElement.classList.add('js-enabled');

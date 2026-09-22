@@ -5,8 +5,8 @@
    ========================================================================= */
 
 :root {
-  --display: 'Outfit', 'Segoe UI', system-ui, -apple-system, sans-serif;
-  --body:    'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --display: 'Playfair Display', Georgia, serif;
+  --body:    'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --code:    ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace;
 
   /* Escalas Fluidas */
