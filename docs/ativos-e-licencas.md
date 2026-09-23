@@ -10,6 +10,7 @@ A home usa o retrato próprio de Gabriel Magalhães. A rota `/recursos/` usa ape
 | `assets/img/favicon.svg` | Vetor local da marca G&Ms | Existente | Favicon e ícone web; ativo próprio |
 | `assets/img/profile_gabriel.png` | Retrato próprio de Gabriel Magalhães | Existente | Seção “Sobre”; uso autorizado |
 | `assets/img/og-cover.png` | Composição gráfica criada por código | 21/09/2026 | Compartilhamento social; arte própria |
+| `assets/img/og-cover-social-v2.png` | Composição gráfica corrigida a partir do cover social, com caracteres Unicode renderizados corretamente | 23/09/2026 | Preview de compartilhamento social da home e de `/recursos/`; arte própria |
 | `assets/hero/sugestion_hero_1_1080p.mp4` | Vídeo local fornecido para o projeto | Existente | Plano de fundo da hero; reprodução sem áudio |
 | `assets/img/recursos/clinica-virtual.svg` | Símbolo original criado em SVG para este site | 21/09/2026 | Identidade exclusivamente fictícia da demonstração |
 | `assets/img/recursos/team/*.webp` | Seis retratos gerados com a ferramenta de imagens da OpenAI; versões `*-cutout.webp` tiveram o fundo removido localmente | 21/09/2026 | Perfis fictícios com recorte transparente para cards e modal; não retratam profissionais reais |
